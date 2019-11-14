@@ -315,6 +315,9 @@ public class Pokefly extends Service {
             GoIVSettings.reloadPreferences(this);
             trainerLevel = intent.getIntExtra(KEY_TRAINER_LEVEL, Data.MINIMUM_TRAINER_LEVEL);
 
+            Data.trainerLevel = trainerLevel;
+            Data.maximumPokemonCurrentLevel = Data.trainerLevelToMaxPokeLevel(trainerLevel);
+
             setupDisplaySizeInfo();
 
             createFlyingComponents();
