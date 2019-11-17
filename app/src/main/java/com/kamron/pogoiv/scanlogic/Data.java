@@ -41,7 +41,7 @@ public class Data {
     public static int[] arcY;
 
     public static int trainerLevel;
-    public static double maximumPokemonCurrentLevel;
+    public static double maximumPokemonCurrentLevel=10;
 
     /**
      * setupArcPoints
