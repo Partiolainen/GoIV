@@ -99,14 +99,15 @@ public class PartIndexToken extends ClipboardToken {
                 mark = mlcp_mark;
             }
             String returner = "" + whiteLetters[rate] + whiteDigits[mark]
-                    + (!scanResult.getHasBeenAppraised() ? "◦" : "")
-                    + (perf<49 ? "·" : "")
-                    + (perf>=49 && perf < 65 ? "·" : "")
-                    + (perf>=65 && perf <= 80 && !scanResult.isLucky ? "∶" : "")
-                    + (perf>80 && perf < 86 && !scanResult.isLucky || perf <= 80 && scanResult.isLucky ? "∴" : "")
-                    + (perf>=86 && perf < 93 && !scanResult.isLucky || perf>80 && perf < 86 && scanResult.isLucky ? "∵" : "")
-                    + (perf>=93 && perf < 100 && !scanResult.isLucky || perf>=86 && perf < 93 && scanResult.isLucky ? "∷" : "")
-                    + (perf==100 && !scanResult.isLucky || perf >= 93 && scanResult.isLucky ? "★" : "");
+                    + (!scanResult.getHasBeenAppraised() ? "◦" :
+                      (perf<49 ? "·" : "")
+                    + (perf>=49 && perf < 65 ? "*" : "")
+                    + (perf>=65 && perf <= 80 && !scanResult.isLucky ? "⁑" : "")
+                    + (perf>80 && perf < 90 && !scanResult.isLucky ? "⁂" : "")
+                    //+ (perf>80 && perf < 85 && !scanResult.isLucky || perf <= 80 && scanResult.isLucky ? "∴" : "")
+                    //+ (perf>=86 && perf < 90 && !scanResult.isLucky || perf>80 && perf < 85 && scanResult.isLucky ? "∵" : "")
+                    + (perf>=90 && perf < 100 && !scanResult.isLucky || /*perf>80 &&*/ perf < 90 && scanResult.isLucky ? "☆" : "")
+                    + (perf==100 && !scanResult.isLucky || perf >= 90 && scanResult.isLucky ? "★" : "")            );
 
             return returner;
         } catch (Throwable t) {
