@@ -79,7 +79,7 @@ public class PartIndexToken extends ClipboardToken {
             cost = pokeInfoCalculator.getUpgradeCost(40, scanResult.levelRange.max, scanResult.isLucky);
             double ml_cost = max((cost.candy + candy_dust_rate * cost.dust / 1000)/10 - cl_cost, 0);
 
-            int maxCP = 4431;
+            //int maxCP = 4431;
             //double coef_a = 1.0;
             int perf = iv.percentPerfect;
             int cp = scanResult.cp;
@@ -100,9 +100,9 @@ public class PartIndexToken extends ClipboardToken {
             }
             String returner = "" + whiteLetters[rate] + whiteDigits[mark]
                     + (!scanResult.getHasBeenAppraised() ? "◦" :
-                      (perf<49 ? "·" : "")
-                    + (perf>=49 && perf < 65 ? "*" : "")
-                    + (perf>=65 && perf <= 80 && !scanResult.isLucky ? "⁑" : "")
+                      (perf<=48.9 ? "·" : "")
+                    + (perf>48.9 && perf < 64.4 ? "*" : "")
+                    + (perf>=64.4 && perf <= 80 && !scanResult.isLucky ? "⁑" : "")
                     + (perf>80 && perf < 90 && !scanResult.isLucky ? "⁂" : "")
                     //+ (perf>80 && perf < 85 && !scanResult.isLucky || perf <= 80 && scanResult.isLucky ? "∴" : "")
                     //+ (perf>=86 && perf < 90 && !scanResult.isLucky || perf>80 && perf < 85 && scanResult.isLucky ? "∵" : "")
@@ -117,7 +117,7 @@ public class PartIndexToken extends ClipboardToken {
 
     @Override
     public String getPreview() {
-        return "㊿㊹";
+        return "Ⓩ㊹";
     }
 
     @Override
