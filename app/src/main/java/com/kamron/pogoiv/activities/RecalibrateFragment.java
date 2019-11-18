@@ -77,7 +77,7 @@ public class RecalibrateFragment extends Fragment {
         setupTutorialButton();
 
         // Hide
-        if (BuildConfig.FLAVOR.toLowerCase().contains("offline")) {
+        if (BuildConfig.FLAVOR.toLowerCase().contains("offline") || BuildConfig.FLAVOR.toLowerCase().contains("part")) {
             optimizationVideoTutorial.setVisibility(View.GONE);
         }
     }
