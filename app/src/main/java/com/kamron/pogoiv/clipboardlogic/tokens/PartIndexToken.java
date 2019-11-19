@@ -12,6 +12,7 @@ import com.kamron.pogoiv.scanlogic.ScanResult;
 import com.kamron.pogoiv.scanlogic.UpgradeCost;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static java.lang.Math.max;
 import static java.lang.Math.min;
@@ -34,8 +35,8 @@ public class PartIndexToken extends ClipboardToken {
     private String[] whiteLetters = {"Ⓐ", "Ⓑ", "Ⓒ", "Ⓓ", "Ⓔ", "Ⓕ", "Ⓖ", "Ⓗ", "Ⓘ", "Ⓙ", "Ⓚ", "Ⓛ",
             "Ⓜ", "Ⓝ", "Ⓞ", "Ⓟ", "Ⓠ", "Ⓡ", "Ⓢ", "Ⓣ", "Ⓤ", "Ⓥ", "Ⓦ", "Ⓧ", "Ⓨ", "Ⓩ"};
 
-    private String[] blackLetters ={"🅐", "🅑", "🅒", "🅓", "🅔", "🅕", "🅖", "🅗", "🅘", "🅙", "🅚", "🅛",
-            "🅜", "🅝", "🅞", "🅟", "🅠", "🅡", "🅢", "🅣", "🅤", "🅥", "🅦", "🅧", "🅨", "🅩"};
+    /*private String[] blackLetters ={"🅐", "🅑", "🅒", "🅓", "🅔", "🅕", "🅖", "🅗", "🅘", "🅙", "🅚", "🅛",
+            "🅜", "🅝", "🅞", "🅟", "🅠", "🅡", "🅢", "🅣", "🅤", "🅥", "🅦", "🅧", "🅨", "🅩"};*/
 
     /**
      * Create a clipboard token.
@@ -55,8 +56,8 @@ public class PartIndexToken extends ClipboardToken {
         try {
 
             Pokemon pokemon = scanResult.pokemon;
-            ArrayList<Pokemon> evolutionLine = pokeInfoCalculator.getEvolutionLine(pokemon);
-            Pokemon evolvedPokemon = evolutionLine.get(evolutionLine.size() - 1);
+            List<Pokemon> evolutionLine = pokemon.getEvolutions(); //pokeInfoCalculator.getEvolutionLine(pokemon);
+            Pokemon evolvedPokemon = evolutionLine.size()==0 ? pokemon : evolutionLine.get(evolutionLine.size() - 1);
 
             IVCombination lowiv = scanResult.getLowestIVCombination();
             IVCombination iv = scanResult.getHighestIVCombination();
@@ -91,17 +92,14 @@ public class PartIndexToken extends ClipboardToken {
             int rate = max(0, min(25, (int)round((cp_rate * 1 + ae_rate * 2 + cl_rate * 6 + ml_rate * 1)
                                                 *(40/Data.trainerLevel) / 10)));
             int mark = 0;
-            if (scanResult.cp < aecp) {
-                mark = aecp_mark;
-            } else if (scanResult.cp >= aecp && scanResult.cp < clcp) {
-                mark = clcp_mark;
-            } else if (scanResult.cp >= clcp) {
-                mark = mlcp_mark;
-            }
+            if (scanResult.cp < aecp) mark = aecp_mark;
+            else if (scanResult.cp >= aecp && scanResult.cp < clcp) mark = clcp_mark;
+            else if (scanResult.cp >= clcp) mark = mlcp_mark;
+
             String returner = "" + whiteLetters[rate] + whiteDigits[mark]
                     + (!scanResult.getHasBeenAppraised() ? "◦" :
-                      (perf<=48.9 ? "·" : "")
-                    + (perf>48.9 && perf < 64.4 ? "*" : "")
+                      (perf<=49 ? "·" : "")
+                    + (perf>49 && perf < 64.4 ? "*" : "")
                     + (perf>=64.4 && perf <= 80 && !scanResult.isLucky ? "⁑" : "")
                     + (perf>80 && perf < 90 && !scanResult.isLucky ? "⁂" : "")
                     //+ (perf>80 && perf < 85 && !scanResult.isLucky || perf <= 80 && scanResult.isLucky ? "∴" : "")
