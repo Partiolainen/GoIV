@@ -58,6 +58,8 @@ public class PartIndexToken extends ClipboardToken {
             Pokemon pokemon = scanResult.pokemon;
             List<Pokemon> evolutionLine = pokemon.getEvolutions(); //pokeInfoCalculator.getEvolutionLine(pokemon);
             Pokemon evolvedPokemon = evolutionLine.size()==0 ? pokemon : evolutionLine.get(evolutionLine.size() - 1);
+            evolutionLine = evolvedPokemon.getEvolutions();
+            evolvedPokemon = evolutionLine.size()==0 ? evolvedPokemon : evolutionLine.get(evolutionLine.size() - 1);
 
             IVCombination lowiv = scanResult.getLowestIVCombination();
             IVCombination iv = scanResult.getHighestIVCombination();
