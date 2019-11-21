@@ -62,9 +62,11 @@ public class MovesetFetchUtil {
         FileWriter writer = null;
         try {
             writer = new FileWriter(new File
-                    ("app/src/main/assets/movesets/movesets.json"));
+                    ("../app/src/main/assets/movesets/movesets.json"));
             writer.write(toDump.toString(2));
             //System.out.println(toDump.toString(2));
+            writer.flush();
+            writer.close();
         } catch (FileNotFoundException e) {
 
             System.out.println(toDump.toString(2));

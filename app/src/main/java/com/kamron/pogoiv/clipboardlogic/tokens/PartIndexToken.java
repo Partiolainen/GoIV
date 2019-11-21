@@ -48,7 +48,7 @@ public class PartIndexToken extends ClipboardToken {
 
     @Override
     public int getMaxLength() {
-        return 2;
+        return 3;
     }
 
     @Override
@@ -82,14 +82,19 @@ public class PartIndexToken extends ClipboardToken {
             cost = pokeInfoCalculator.getUpgradeCost(40, scanResult.levelRange.max, scanResult.isLucky);
             double ml_cost = max((cost.candy + candy_dust_rate * cost.dust / 1000)/10 - cl_cost, 0);
 
-            //int maxCP = 4431;
-            //double coef_a = 1.0;
-            int perf = iv.percentPerfect;
+            double perfc = iv.percentPerfect;
+            if(pokemon.getEvolutions().isEmpty() && scanResult.selectedMoveset!=null){
+                Double atk = scanResult.selectedMoveset.getAtkScore();
+                Double def = scanResult.selectedMoveset.getDefScore();
+                if(atk!=null && def!=null)
+                   perfc = Math.round((iv.att*atk + iv.def*def + iv.sta)/45f * 100);
+            }
+
             int cp = scanResult.cp;
-            double cp_rate = perf*cp/10000;
-            double ae_rate = aecp*(perf-evo_cost)/10000;
-            double cl_rate = clcp*(perf-cl_cost)/10000;
-            double ml_rate = mlcp*(perf-ml_cost)/10000;
+            double cp_rate = perfc*cp/10000;
+            double ae_rate = aecp*(perfc-evo_cost)/10000;
+            double cl_rate = clcp*(perfc-cl_cost)/10000;
+            double ml_rate = mlcp*(perfc-ml_cost)/10000;
 
             int rate = max(0, min(25, (int)round((cp_rate * 1 + ae_rate * 2 + cl_rate * 6 + ml_rate * 1)
                                                 *(40/Data.trainerLevel) / 10)));
@@ -97,7 +102,7 @@ public class PartIndexToken extends ClipboardToken {
             if (scanResult.cp < aecp) mark = aecp_mark;
             else if (scanResult.cp >= aecp && scanResult.cp < clcp) mark = clcp_mark;
             else if (scanResult.cp >= clcp) mark = mlcp_mark;
-
+            int perf = iv.percentPerfect;
             String returner = "" + whiteLetters[rate] + whiteDigits[mark]
                     + (!scanResult.getHasBeenAppraised() ? "◦" :
                       (perf<=49 ? "·" : "")
@@ -107,7 +112,7 @@ public class PartIndexToken extends ClipboardToken {
                     //+ (perf>80 && perf < 85 && !scanResult.isLucky || perf <= 80 && scanResult.isLucky ? "∴" : "")
                     //+ (perf>=86 && perf < 90 && !scanResult.isLucky || perf>80 && perf < 85 && scanResult.isLucky ? "∵" : "")
                     + (perf>=90 && perf < 100 && !scanResult.isLucky || /*perf>80 &&*/ perf < 90 && scanResult.isLucky ? "☆" : "")
-                    + (perf==100 && !scanResult.isLucky || perf >= 90 && scanResult.isLucky ? "★" : "")            );
+                    + (perf==100 && !scanResult.isLucky || perf >= 90 && scanResult.isLucky ? "★" : "") );
 
             return returner;
         } catch (Throwable t) {
@@ -117,7 +122,7 @@ public class PartIndexToken extends ClipboardToken {
 
     @Override
     public String getPreview() {
-        return "Ⓩ㊹";
+        return "Ⓩ㊹★";
     }
 
     @Override
