@@ -71,6 +71,10 @@ public class PartIndexToken extends ClipboardToken {
             int clcp = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, lowiv, iv, Data.maximumPokemonCurrentLevel).high;
             int mlcp = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, lowiv, iv, 40).high;
 
+            int aehp = maxEv ? pokeInfoCalculator.getHPAtLevel(scanResult, scanResult.levelRange.min, evolvedPokemon) : 0;
+            int clhp = maxEv ? pokeInfoCalculator.getHPAtLevel(scanResult, Data.maximumPokemonCurrentLevel, evolvedPokemon) : 0;
+            int mlhp = maxEv ? pokeInfoCalculator.getHPAtLevel(scanResult, 40, evolvedPokemon) : 0;
+
             int aecp_mark = round(aecp / 100);
             int clcp_mark = round(clcp / 100);
             int mlcp_mark = round(mlcp / 100);
@@ -94,10 +98,11 @@ public class PartIndexToken extends ClipboardToken {
             }*/
 
             int cp = scanResult.cp;
-            double cp_rate = perfc*cp/10000;
-            double ae_rate = aecp*(perfc-evo_cost)/10000;
-            double cl_rate = clcp*(perfc-cl_cost)/10000;
-            double ml_rate = mlcp*(perfc-ml_cost)/10000;
+            int hp = maxEv ? scanResult.hp : 0;
+            double cp_rate = perfc*(cp + 2*hp)/10000;
+            double ae_rate = (aecp+2*aehp)*(perfc-evo_cost)/10000;
+            double cl_rate = (clcp+2*clhp)*(perfc-cl_cost)/10000;
+            double ml_rate = (mlcp+2*mlhp)*(perfc-ml_cost)/10000;
 
             int rate = max(0, min(25, (int)round((cp_rate * 1 + ae_rate * 2 + cl_rate * 6 + ml_rate * 1)
                                                 *(40/Data.trainerLevel) / 10)));
@@ -150,6 +155,6 @@ public class PartIndexToken extends ClipboardToken {
 
     @Override
     public String getStringRepresentation() {
-        return "." + this.getClass().getSimpleName() + _sep;
+        return "." + (maxEv ? "max" : "") + this.getClass().getSimpleName() + _sep;
     }
 }
