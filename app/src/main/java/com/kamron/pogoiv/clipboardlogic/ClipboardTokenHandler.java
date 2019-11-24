@@ -8,6 +8,7 @@ import com.google.common.collect.ListMultimap;
 import com.kamron.pogoiv.GoIVSettings;
 import com.kamron.pogoiv.R;
 import com.kamron.pogoiv.clipboardlogic.tokens.HasBeenAppraisedToken;
+import com.kamron.pogoiv.clipboardlogic.tokens.PartIndexToken;
 import com.kamron.pogoiv.clipboardlogic.tokens.PokemonNameToken;
 import com.kamron.pogoiv.clipboardlogic.tokens.SeparatorToken;
 import com.kamron.pogoiv.scanlogic.PokeInfoCalculator;
@@ -130,6 +131,13 @@ public class ClipboardTokenHandler {
                 saveTo.add(new HasBeenAppraisedToken(true,
                         representation.substring(classLength,classLength+1),
                         representation.substring(classLength+1, classLength+2)));
+                continue;
+            }
+            String partClassName = PartIndexToken.class.getSimpleName();
+            if (representation.contains(partClassName)) {
+                int classLength = partClassName.length();
+                saveTo.add(new PartIndexToken(false,
+                        representation.substring(classLength)));
                 continue;
             }
 

@@ -26,7 +26,7 @@ import static java.lang.Math.round;
 
 public class PartIndexToken extends ClipboardToken {
 
-    //String half = "½";
+    //protected String string = "";
     private String[] whiteDigits = {"⓪", "①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩", "⑪",
             "⑫", "⑬", "⑭", "⑮", "⑯", "⑰", "⑱", "⑲", "⑳", "㉑", "㉒", "㉓", "㉔", "㉕", "㉖", "㉗", "㉘", "㉙",
             "㉚", "㉛", "㉜", "㉝", "㉞", "㉟", "㊱", "㊲", "㊳", "㊴", "㊵", "㊶", "㊷", "㊸", "㊹", "㊺", "㊻", "㊼",
@@ -42,9 +42,12 @@ public class PartIndexToken extends ClipboardToken {
      * Create a clipboard token.
      * The boolean in the constructor can be set to false if pokemon evolution is not applicable.
      **/
-    public PartIndexToken(boolean maxEv) {
+    public PartIndexToken(boolean maxEv, String sep) {
         super(maxEv);
+        _sep = sep;
     }
+
+    private String _sep;
 
     @Override
     public int getMaxLength() {
@@ -83,12 +86,12 @@ public class PartIndexToken extends ClipboardToken {
             double ml_cost = max((cost.candy + candy_dust_rate * cost.dust / 1000)/10 - cl_cost, 0);
 
             double perfc = iv.percentPerfect;
-            if(pokemon.getEvolutions().isEmpty() && scanResult.selectedMoveset!=null){
+            /*if(pokemon.getEvolutions().isEmpty() && scanResult.selectedMoveset!=null){
                 Double atk = scanResult.selectedMoveset.getAtkScore();
                 Double def = scanResult.selectedMoveset.getDefScore();
                 if(atk!=null && def!=null)
                    perfc = Math.round((iv.att*atk + iv.def*def + iv.sta)/45f * 100);
-            }
+            }*/
 
             int cp = scanResult.cp;
             double cp_rate = perfc*cp/10000;
@@ -103,7 +106,7 @@ public class PartIndexToken extends ClipboardToken {
             else if (scanResult.cp >= aecp && scanResult.cp < clcp) mark = clcp_mark;
             else if (scanResult.cp >= clcp) mark = mlcp_mark;
             int perf = iv.percentPerfect;
-            String returner = "" + whiteLetters[rate] + whiteDigits[mark]
+            String returner = "" + whiteLetters[rate] + whiteDigits[mark] + _sep
                     + (!scanResult.getHasBeenAppraised() ? "◦" :
                       (perf<=49 ? "·" : "")
                     + (perf>49 && perf < 64.4 ? "*" : "")
@@ -142,6 +145,11 @@ public class PartIndexToken extends ClipboardToken {
 
     @Override
     public boolean changesOnEvolutionMax() {
-        return false;
+        return true;
+    }
+
+    @Override
+    public String getStringRepresentation() {
+        return "." + this.getClass().getSimpleName() + _sep;
     }
 }
