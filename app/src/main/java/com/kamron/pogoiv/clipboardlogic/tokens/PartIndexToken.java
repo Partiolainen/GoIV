@@ -99,10 +99,10 @@ public class PartIndexToken extends ClipboardToken {
 
             int cp = scanResult.cp;
             int hp = maxEv ? scanResult.hp : 0;
-            double cp_rate = perfc*(cp + 2*hp)/10000;
-            double ae_rate = (aecp+2*aehp)*(perfc-evo_cost)/10000;
-            double cl_rate = (clcp+2*clhp)*(perfc-cl_cost)/10000;
-            double ml_rate = (mlcp+2*mlhp)*(perfc-ml_cost)/10000;
+            double cp_rate = perfc*(cp /*+ 2*hp*/)/10000;
+            double ae_rate = (aecp/*+2*aehp*/)*(perfc-evo_cost)/10000;
+            double cl_rate = (clcp+3*clhp)*(perfc-cl_cost)/10000;
+            double ml_rate = (mlcp+3*mlhp)*(perfc-ml_cost)/10000;
 
             int rate = max(0, min(25, (int)round((cp_rate * 1 + ae_rate * 2 + cl_rate * 6 + ml_rate * 1)
                                                 *(40/Data.trainerLevel) / 10)));
