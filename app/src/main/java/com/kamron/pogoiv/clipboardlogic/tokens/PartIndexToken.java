@@ -80,14 +80,14 @@ public class PartIndexToken extends ClipboardToken {
             int mlcp_mark = round(mlcp / 100);
 
             double candy_dust_rate = 10/3;
-            double evo_cost = pokeInfoCalculator.getCandyCostForEvolution(pokemon, evolvedPokemon) / 10;
+            double evo_cost = ((double) pokeInfoCalculator.getCandyCostForEvolution(pokemon, evolvedPokemon)) / 10.0;
             UpgradeCost cost = new UpgradeCost(0, 0);
             if(Data.maximumPokemonCurrentLevel >= scanResult.levelRange.max)
                cost=pokeInfoCalculator.getUpgradeCost(Data.maximumPokemonCurrentLevel, scanResult.levelRange.max, scanResult.isLucky);
-            double cl_cost = max((cost.candy + candy_dust_rate * cost.dust / 1000)/10 - evo_cost, 0);
+            double cl_cost = max(((double) cost.candy + candy_dust_rate * (double) cost.dust / 1000.0)/10.0 - evo_cost, 0.0);
 
             cost = pokeInfoCalculator.getUpgradeCost(40, scanResult.levelRange.max, scanResult.isLucky);
-            double ml_cost = max((cost.candy + candy_dust_rate * cost.dust / 1000)/10 - cl_cost, 0);
+            double ml_cost = max(((double) cost.candy + candy_dust_rate * (double) cost.dust / 1000.0)/10.0 - cl_cost, 0.0);
 
             double perfc = iv.percentPerfect;
             /*if(pokemon.getEvolutions().isEmpty() && scanResult.selectedMoveset!=null){
@@ -99,13 +99,13 @@ public class PartIndexToken extends ClipboardToken {
 
             int cp = scanResult.cp;
             int hp = maxEv ? scanResult.hp : 0;
-            double cp_rate = perfc*(cp /*+ 2*hp*/)/10000;
-            double ae_rate = (aecp/*+2*aehp*/)*(perfc-evo_cost)/10000;
-            double cl_rate = (clcp+3*clhp)*(perfc-cl_cost)/10000;
-            double ml_rate = (mlcp+3*mlhp)*(perfc-ml_cost)/10000;
+            double cp_rate = perfc*((double)cp /*+ 2*hp*/)/10000.0;
+            double ae_rate = ((double)aecp/*+2*aehp*/)*(perfc-evo_cost)/10000.0;
+            double cl_rate = ((double)clcp+2*(double)clhp)*(perfc-cl_cost)/10000.0;
+            double ml_rate = ((double)mlcp+2*(double)mlhp)*(perfc-ml_cost)/10000.0;
 
-            int rate = max(0, min(25, (int)round((cp_rate * 1 + ae_rate * 2 + cl_rate * 6 + ml_rate * 1)
-                                                *(40/Data.trainerLevel) / 10)));
+            int rate = max(0, min(25, (int)round((cp_rate * 1.0 + ae_rate * 3.0 + cl_rate * 6.0 + ml_rate * 2.0)
+                                                *(40.0/(double) Data.trainerLevel) / 12.0)));
             int mark = 0;
             if (scanResult.cp < aecp) mark = aecp_mark;
             else if (scanResult.cp >= aecp && scanResult.cp < clcp) mark = clcp_mark;

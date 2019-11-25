@@ -121,7 +121,7 @@ android {
             ext.enableCrashlytics = false
             dimension "default"
             versionCode 65
-            versionName '5.4.4.p.6'
+            versionName '5.4.4.p.7'
         }
 
         online {
