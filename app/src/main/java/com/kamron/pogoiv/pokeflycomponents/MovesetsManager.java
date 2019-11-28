@@ -149,6 +149,11 @@ public class MovesetsManager {
 
             LinkedHashSet<MovesetData> movesetList;
             if (result.indexOfKey(dexIndex) < 0) {
+                if(jsonMovesets==null){
+                    Timber.w("Missing Movesets"
+                            + " for " + monName);
+                    continue;
+                }
                 movesetList = new LinkedHashSet<>(jsonMovesets.size());
             } else {
                 // This might happen for different forms of the same species. Add the movesets to the list of the

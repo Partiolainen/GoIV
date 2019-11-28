@@ -121,7 +121,7 @@ android {
             ext.enableCrashlytics = false
             dimension "default"
             versionCode 65
-            versionName '5.4.4.p.7'
+            versionName '5.4.4.p.8.0'
         }
 
         online {
@@ -170,7 +170,7 @@ android {
         abi {
             enable true
             reset()
-            include 'armeabi-v7a'/**, 'x86', 'arm64-v8a', 'x86_64'**/
+            include 'armeabi-v7a', 'x86'/**, 'arm64-v8a', 'x86_64'**/
         }
     }
     sourceSets {
