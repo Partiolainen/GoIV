@@ -59,6 +59,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.86,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "VINE_WHIP_FAST",
+  "defScore": 0.75,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.72,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.54,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.6,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "VINE_WHIP_FAST",
+  "defScore": 0.49,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.43,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.33,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "BULBASAUR_PURIFIED_FORM": [
@@ -585,11 +625,11 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.89,
+  "atkScore": 0.9,
   "chargeIsLegacy": false,
   "charge": "SOLAR_BEAM",
   "fast": "BULLET_SEED_FAST",
-  "defScore": 0.75,
+  "defScore": 0.95,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -625,11 +665,51 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.8,
+  "atkScore": 0.81,
   "chargeIsLegacy": false,
   "charge": "SEED_BOMB",
   "fast": "BULLET_SEED_FAST",
-  "defScore": 0.66,
+  "defScore": 0.83,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "SOLAR_BEAM",
+  "fast": "DRAGON_TAIL_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.92,
+  "chargeIsLegacy": false,
+  "charge": "SEED_BOMB",
+  "fast": "DRAGON_TAIL_FAST",
+  "defScore": 0.9,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.92,
+  "chargeIsLegacy": false,
+  "charge": "DRAGON_PULSE",
+  "fast": "DRAGON_TAIL_FAST",
+  "defScore": 0.95,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.81,
+  "chargeIsLegacy": false,
+  "charge": "DRAGON_PULSE",
+  "fast": "BULLET_SEED_FAST",
+  "defScore": 0.9,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -754,6 +834,46 @@
   "charge": "BONE_CLUB",
   "fast": "ROCK_SMASH_FAST",
   "defScore": 0.71,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "MUD_SLAP_FAST",
+  "defScore": 0.74,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "ROCK_SMASH_FAST",
+  "defScore": 0.65,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.71,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "MUD_SLAP_FAST",
+  "defScore": 0.49,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.63,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "ROCK_SMASH_FAST",
+  "defScore": 0.44,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -980,6 +1100,156 @@
   "charge": "BONE_CLUB",
   "fast": "ROCK_SMASH_FAST",
   "defScore": 0.71,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.98,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "MUD_SLAP_FAST",
+  "defScore": 0.74,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.89,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "ROCK_SMASH_FAST",
+  "defScore": 0.65,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.69,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "MUD_SLAP_FAST",
+  "defScore": 0.49,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.62,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "ROCK_SMASH_FAST",
+  "defScore": 0.44,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "SHADOW_BALL",
+  "fast": "FIRE_SPIN_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.96,
+  "chargeIsLegacy": false,
+  "charge": "SHADOW_BALL",
+  "fast": "HEX_FAST",
+  "defScore": 0.97,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "FIRE_BLAST",
+  "fast": "FIRE_SPIN_FAST",
+  "defScore": 0.81,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.85,
+  "chargeIsLegacy": false,
+  "charge": "SHADOW_BALL",
+  "fast": "ROCK_SMASH_FAST",
+  "defScore": 0.84,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.85,
+  "chargeIsLegacy": false,
+  "charge": "FIRE_BLAST",
+  "fast": "HEX_FAST",
+  "defScore": 0.79,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.81,
+  "chargeIsLegacy": false,
+  "charge": "FLAME_WHEEL",
+  "fast": "FIRE_SPIN_FAST",
+  "defScore": 0.77,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.78,
+  "chargeIsLegacy": false,
+  "charge": "BONE_CLUB",
+  "fast": "FIRE_SPIN_FAST",
+  "defScore": 0.69,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.75,
+  "chargeIsLegacy": false,
+  "charge": "FIRE_BLAST",
+  "fast": "ROCK_SMASH_FAST",
+  "defScore": 0.73,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.71,
+  "chargeIsLegacy": false,
+  "charge": "FLAME_WHEEL",
+  "fast": "HEX_FAST",
+  "defScore": 0.69,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.68,
+  "chargeIsLegacy": false,
+  "charge": "FLAME_WHEEL",
+  "fast": "ROCK_SMASH_FAST",
+  "defScore": 0.7,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.66,
+  "chargeIsLegacy": false,
+  "charge": "BONE_CLUB",
+  "fast": "HEX_FAST",
+  "defScore": 0.61,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -1379,7 +1649,7 @@
   "chargeIsLegacy": false,
   "charge": "CLOSE_COMBAT",
   "fast": "COUNTER_FAST",
-  "defScore": 0.89,
+  "defScore": 0.94,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -1389,7 +1659,7 @@
   "chargeIsLegacy": false,
   "charge": "POWER_UP_PUNCH",
   "fast": "COUNTER_FAST",
-  "defScore": 0.95,
+  "defScore": 1.0,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -1409,7 +1679,7 @@
   "chargeIsLegacy": false,
   "charge": "ICE_PUNCH",
   "fast": "COUNTER_FAST",
-  "defScore": 0.87,
+  "defScore": 0.92,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -1419,7 +1689,7 @@
   "chargeIsLegacy": false,
   "charge": "FIRE_PUNCH",
   "fast": "COUNTER_FAST",
-  "defScore": 0.9,
+  "defScore": 0.95,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -1449,7 +1719,7 @@
   "chargeIsLegacy": false,
   "charge": "THUNDER_PUNCH",
   "fast": "COUNTER_FAST",
-  "defScore": 0.84,
+  "defScore": 0.88,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -1459,7 +1729,7 @@
   "chargeIsLegacy": false,
   "charge": "POWER_UP_PUNCH",
   "fast": "BULLET_PUNCH_FAST",
-  "defScore": 0.82,
+  "defScore": 0.86,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -1479,7 +1749,7 @@
   "chargeIsLegacy": false,
   "charge": "CLOSE_COMBAT",
   "fast": "BULLET_PUNCH_FAST",
-  "defScore": 0.81,
+  "defScore": 0.85,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -1529,7 +1799,7 @@
   "chargeIsLegacy": false,
   "charge": "FIRE_PUNCH",
   "fast": "BULLET_PUNCH_FAST",
-  "defScore": 0.78,
+  "defScore": 0.82,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -1539,7 +1809,7 @@
   "chargeIsLegacy": false,
   "charge": "ICE_PUNCH",
   "fast": "BULLET_PUNCH_FAST",
-  "defScore": 0.74,
+  "defScore": 0.78,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -1549,7 +1819,47 @@
   "chargeIsLegacy": false,
   "charge": "THUNDER_PUNCH",
   "fast": "BULLET_PUNCH_FAST",
-  "defScore": 0.7,
+  "defScore": 0.74,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.97,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "COUNTER_FAST",
+  "defScore": 0.88,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.79,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "BULLET_PUNCH_FAST",
+  "defScore": 0.71,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.73,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "COUNTER_FAST",
+  "defScore": 0.6,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.46,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "BULLET_PUNCH_FAST",
+  "defScore": 0.4,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -3395,21 +3705,21 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.99,
+  "atkScore": 1.0,
   "chargeIsLegacy": false,
   "charge": "X_SCISSOR",
   "fast": "AIR_SLASH_FAST",
-  "defScore": 0.91,
+  "defScore": 0.98,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.99,
+  "atkScore": 1.0,
   "chargeIsLegacy": false,
   "charge": "X_SCISSOR",
   "fast": "FURY_CUTTER_FAST",
-  "defScore": 0.52,
+  "defScore": 0.55,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -3435,21 +3745,21 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.96,
+  "atkScore": 0.97,
   "chargeIsLegacy": false,
   "charge": "AERIAL_ACE",
   "fast": "AIR_SLASH_FAST",
-  "defScore": 0.93,
+  "defScore": 1.0,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.95,
+  "atkScore": 0.96,
   "chargeIsLegacy": false,
   "charge": "AERIAL_ACE",
   "fast": "FURY_CUTTER_FAST",
-  "defScore": 0.58,
+  "defScore": 0.62,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -3465,11 +3775,11 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.87,
+  "atkScore": 0.88,
   "chargeIsLegacy": false,
   "charge": "NIGHT_SLASH",
   "fast": "AIR_SLASH_FAST",
-  "defScore": 0.85,
+  "defScore": 0.91,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -3485,11 +3795,51 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.8,
+  "atkScore": 0.81,
   "chargeIsLegacy": false,
   "charge": "NIGHT_SLASH",
   "fast": "FURY_CUTTER_FAST",
-  "defScore": 0.48,
+  "defScore": 0.51,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.99,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "AIR_SLASH_FAST",
+  "defScore": 0.86,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.97,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "FURY_CUTTER_FAST",
+  "defScore": 0.42,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.72,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "AIR_SLASH_FAST",
+  "defScore": 0.58,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.46,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "FURY_CUTTER_FAST",
+  "defScore": 0.22,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -4129,6 +4479,26 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.63,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "SPLASH_FAST",
+  "defScore": 0.49,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.15,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "SPLASH_FAST",
+  "defScore": 0.14,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "MAGIKARP_PURIFIED_FORM": [
@@ -4397,6 +4767,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.95,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "WATERFALL_FAST",
+  "defScore": 0.8,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.82,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "BITE_FAST",
+  "defScore": 0.39,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.75,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "WATERFALL_FAST",
+  "defScore": 0.59,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.57,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "BITE_FAST",
+  "defScore": 0.27,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "GYARADOS_PURIFIED_FORM": [
@@ -4569,7 +4979,7 @@
   "chargeIsLegacy": false,
   "charge": "SURF",
   "fast": "WATER_GUN_FAST",
-  "defScore": 0.51,
+  "defScore": 0.65,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -4579,7 +4989,7 @@
   "chargeIsLegacy": false,
   "charge": "SURF",
   "fast": "FROST_BREATH_FAST",
-  "defScore": 0.76,
+  "defScore": 0.97,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -4599,7 +5009,7 @@
   "chargeIsLegacy": false,
   "charge": "BLIZZARD",
   "fast": "WATER_GUN_FAST",
-  "defScore": 0.44,
+  "defScore": 0.56,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -4639,7 +5049,7 @@
   "chargeIsLegacy": false,
   "charge": "BLIZZARD",
   "fast": "FROST_BREATH_FAST",
-  "defScore": 0.79,
+  "defScore": 1.0,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -4649,7 +5059,7 @@
   "chargeIsLegacy": false,
   "charge": "HYDRO_PUMP",
   "fast": "WATER_GUN_FAST",
-  "defScore": 0.44,
+  "defScore": 0.56,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -4669,7 +5079,7 @@
   "chargeIsLegacy": false,
   "charge": "HYDRO_PUMP",
   "fast": "FROST_BREATH_FAST",
-  "defScore": 0.78,
+  "defScore": 1.0,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -4689,7 +5099,7 @@
   "chargeIsLegacy": false,
   "charge": "SKULL_BASH",
   "fast": "FROST_BREATH_FAST",
-  "defScore": 0.73,
+  "defScore": 0.93,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -4699,7 +5109,7 @@
   "chargeIsLegacy": false,
   "charge": "SKULL_BASH",
   "fast": "WATER_GUN_FAST",
-  "defScore": 0.41,
+  "defScore": 0.52,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -4740,6 +5150,46 @@
   "charge": "DRAGON_PULSE",
   "fast": "ICE_SHARD_FAST",
   "defScore": 0.88,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.92,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "FROST_BREATH_FAST",
+  "defScore": 0.85,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.89,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.56,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.65,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "FROST_BREATH_FAST",
+  "defScore": 0.56,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.58,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.36,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -6333,6 +6783,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.93,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "LICK_FAST",
+  "defScore": 0.52,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.87,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "ZEN_HEADBUTT_FAST",
+  "defScore": 0.76,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.51,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "ZEN_HEADBUTT_FAST",
+  "defScore": 0.46,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.47,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "LICK_FAST",
+  "defScore": 0.28,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "SNORLAX_PURIFIED_FORM": [
@@ -6945,6 +7435,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "DRAGON_BREATH_FAST",
+  "defScore": 0.6,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "IRON_TAIL_FAST",
+  "defScore": 0.9,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.8,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "DRAGON_BREATH_FAST",
+  "defScore": 0.43,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.76,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "IRON_TAIL_FAST",
+  "defScore": 0.67,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "DRATINI_PURIFIED_FORM": [
@@ -7171,6 +7701,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.97,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "DRAGON_BREATH_FAST",
+  "defScore": 0.54,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.88,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "IRON_TAIL_FAST",
+  "defScore": 0.82,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.72,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "DRAGON_BREATH_FAST",
+  "defScore": 0.39,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.68,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "IRON_TAIL_FAST",
+  "defScore": 0.61,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "DRAGONAIR_PURIFIED_FORM": [
@@ -7349,7 +7919,7 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.98,
+  "atkScore": 1.0,
   "chargeIsLegacy": false,
   "charge": "OUTRAGE",
   "fast": "DRAGON_TAIL_FAST",
@@ -7389,7 +7959,7 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.92,
+  "atkScore": 0.94,
   "chargeIsLegacy": false,
   "charge": "HURRICANE",
   "fast": "DRAGON_TAIL_FAST",
@@ -7399,7 +7969,7 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.91,
+  "atkScore": 0.93,
   "chargeIsLegacy": false,
   "charge": "HYPER_BEAM",
   "fast": "DRAGON_TAIL_FAST",
@@ -7419,7 +7989,7 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.89,
+  "atkScore": 0.9,
   "chargeIsLegacy": false,
   "charge": "OUTRAGE",
   "fast": "STEEL_WING_FAST",
@@ -7489,7 +8059,7 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.83,
+  "atkScore": 0.84,
   "chargeIsLegacy": false,
   "charge": "HURRICANE",
   "fast": "STEEL_WING_FAST",
@@ -7509,11 +8079,51 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.79,
+  "atkScore": 0.81,
   "chargeIsLegacy": false,
   "charge": "HYPER_BEAM",
   "fast": "STEEL_WING_FAST",
   "defScore": 0.66,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.92,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "DRAGON_TAIL_FAST",
+  "defScore": 0.75,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.8,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "STEEL_WING_FAST",
+  "defScore": 0.53,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.71,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "DRAGON_TAIL_FAST",
+  "defScore": 0.53,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.59,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "STEEL_WING_FAST",
+  "defScore": 0.38,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -7932,6 +8542,86 @@
   "charge": "FLAMETHROWER",
   "fast": "PSYCHO_CUT_FAST",
   "defScore": 0.46,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "FUTURESIGHT",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.99,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "DYNAMIC_PUNCH",
+  "fast": "CONFUSION_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.89,
+  "chargeIsLegacy": false,
+  "charge": "ROCK_SLIDE",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.94,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.86,
+  "chargeIsLegacy": false,
+  "charge": "FUTURESIGHT",
+  "fast": "IRON_TAIL_FAST",
+  "defScore": 0.71,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.85,
+  "chargeIsLegacy": false,
+  "charge": "EARTHQUAKE",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.9,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.83,
+  "chargeIsLegacy": false,
+  "charge": "DYNAMIC_PUNCH",
+  "fast": "IRON_TAIL_FAST",
+  "defScore": 0.67,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.79,
+  "chargeIsLegacy": false,
+  "charge": "ROCK_SLIDE",
+  "fast": "IRON_TAIL_FAST",
+  "defScore": 0.64,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.77,
+  "chargeIsLegacy": false,
+  "charge": "EARTHQUAKE",
+  "fast": "IRON_TAIL_FAST",
+  "defScore": 0.65,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -12797,6 +13487,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.89,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "AIR_SLASH_FAST",
+  "defScore": 0.76,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.8,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "BITE_FAST",
+  "defScore": 0.4,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.65,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "AIR_SLASH_FAST",
+  "defScore": 0.52,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.55,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "BITE_FAST",
+  "defScore": 0.27,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "CROBAT_PURIFIED_FORM": [
@@ -14141,6 +14871,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.9,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "RAZOR_LEAF_FAST",
+  "defScore": 0.79,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.8,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "ACID_FAST",
+  "defScore": 0.61,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.7,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "RAZOR_LEAF_FAST",
+  "defScore": 0.57,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.51,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "ACID_FAST",
+  "defScore": 0.37,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "BELLOSSOM_PURIFIED_FORM": [
@@ -14573,6 +15343,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "BUBBLE_FAST",
+  "defScore": 0.8,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.78,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "MUD_SHOT_FAST",
+  "defScore": 0.44,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.56,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "BUBBLE_FAST",
+  "defScore": 0.46,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.39,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "MUD_SHOT_FAST",
+  "defScore": 0.24,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "POLITOED_PURIFIED_FORM": [
@@ -14982,6 +15792,86 @@
   "charge": "DIG",
   "fast": "TACKLE_FAST",
   "defScore": 0.66,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.99,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "QUICK_ATTACK_FAST",
+  "defScore": 0.82,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.56,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.55,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "QUICK_ATTACK_FAST",
+  "defScore": 0.45,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.55,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.34,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.95,
+  "chargeIsLegacy": false,
+  "charge": "SHADOW_BALL",
+  "fast": "QUICK_ATTACK_FAST",
+  "defScore": 0.94,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.9,
+  "chargeIsLegacy": false,
+  "charge": "SHADOW_BALL",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.63,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.9,
+  "chargeIsLegacy": false,
+  "charge": "CRUNCH",
+  "fast": "QUICK_ATTACK_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.86,
+  "chargeIsLegacy": false,
+  "charge": "CRUNCH",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.65,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -15933,6 +16823,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.86,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "VINE_WHIP_FAST",
+  "defScore": 0.55,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.85,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "RAZOR_LEAF_FAST",
+  "defScore": 0.74,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.67,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "RAZOR_LEAF_FAST",
+  "defScore": 0.54,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.6,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "VINE_WHIP_FAST",
+  "defScore": 0.35,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "IVYSAUR_PURIFIED_FORM": [
@@ -16121,21 +17051,21 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.88,
+  "atkScore": 0.96,
   "chargeIsLegacy": false,
   "charge": "HYPER_BEAM",
   "fast": "BITE_FAST",
-  "defScore": 0.5,
+  "defScore": 0.55,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.85,
+  "atkScore": 0.92,
   "chargeIsLegacy": false,
   "charge": "HYPER_FANG",
   "fast": "BITE_FAST",
-  "defScore": 0.51,
+  "defScore": 0.56,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -16156,6 +17086,66 @@
   "charge": "DIG",
   "fast": "BITE_FAST",
   "defScore": 0.5,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.95,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "QUICK_ATTACK_FAST",
+  "defScore": 0.74,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.82,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "BITE_FAST",
+  "defScore": 0.47,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.53,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "BITE_FAST",
+  "defScore": 0.31,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.53,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "QUICK_ATTACK_FAST",
+  "defScore": 0.41,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.86,
+  "chargeIsLegacy": false,
+  "charge": "CRUNCH",
+  "fast": "QUICK_ATTACK_FAST",
+  "defScore": 0.98,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.85,
+  "chargeIsLegacy": false,
+  "charge": "CRUNCH",
+  "fast": "BITE_FAST",
+  "defScore": 0.69,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -17270,6 +18260,46 @@
   "charge": "NIGHT_SLASH",
   "fast": "FURY_CUTTER_FAST",
   "defScore": 0.61,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.97,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "BULLET_PUNCH_FAST",
+  "defScore": 0.87,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.97,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "FURY_CUTTER_FAST",
+  "defScore": 0.51,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.62,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "BULLET_PUNCH_FAST",
+  "defScore": 0.52,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.46,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "FURY_CUTTER_FAST",
+  "defScore": 0.26,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -18651,6 +19681,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.93,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "FEINT_ATTACK_FAST",
+  "defScore": 0.74,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.88,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "EMBER_FAST",
+  "defScore": 0.76,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.64,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "FEINT_ATTACK_FAST",
+  "defScore": 0.48,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.57,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "EMBER_FAST",
+  "defScore": 0.46,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "HOUNDOUR_PURIFIED_FORM": [
@@ -18894,6 +19964,46 @@
   "charge": "CRUNCH",
   "fast": "SNARL_FAST",
   "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.93,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "FIRE_FANG_FAST",
+  "defScore": 0.69,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.92,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "SNARL_FAST",
+  "defScore": 0.73,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.7,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "FIRE_FANG_FAST",
+  "defScore": 0.47,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.57,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "SNARL_FAST",
+  "defScore": 0.42,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -20649,6 +21759,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.99,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "BITE_FAST",
+  "defScore": 0.43,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.95,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "ROCK_SMASH_FAST",
+  "defScore": 0.76,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.69,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "BITE_FAST",
+  "defScore": 0.3,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.66,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "ROCK_SMASH_FAST",
+  "defScore": 0.51,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "LARVITAR_PURIFIED_FORM": [
@@ -20875,6 +22025,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.98,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "BITE_FAST",
+  "defScore": 0.43,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "ROCK_SMASH_FAST",
+  "defScore": 0.75,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.68,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "BITE_FAST",
+  "defScore": 0.3,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.65,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "ROCK_SMASH_FAST",
+  "defScore": 0.51,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "PUPITAR_PURIFIED_FORM": [
@@ -21073,41 +22263,71 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.97,
+  "atkScore": 1.0,
   "chargeIsLegacy": false,
   "charge": "STONE_EDGE",
   "fast": "BITE_FAST",
-  "defScore": 0.46,
+  "defScore": 0.51,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.96,
+  "atkScore": 0.99,
   "chargeIsLegacy": false,
   "charge": "CRUNCH",
   "fast": "BITE_FAST",
-  "defScore": 0.64,
+  "defScore": 0.72,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.95,
+  "atkScore": 0.98,
   "chargeIsLegacy": false,
   "charge": "FIRE_BLAST",
   "fast": "BITE_FAST",
-  "defScore": 0.47,
+  "defScore": 0.53,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.91,
+  "atkScore": 0.94,
   "chargeIsLegacy": false,
   "charge": "CRUNCH",
   "fast": "IRON_TAIL_FAST",
-  "defScore": 0.9,
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.92,
+  "chargeIsLegacy": false,
+  "charge": "STONE_EDGE",
+  "fast": "IRON_TAIL_FAST",
+  "defScore": 0.88,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.86,
+  "chargeIsLegacy": false,
+  "charge": "FIRE_BLAST",
+  "fast": "IRON_TAIL_FAST",
+  "defScore": 0.91,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.99,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "BITE_FAST",
+  "defScore": 0.51,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -21115,19 +22335,29 @@
 {
   "atkScore": 0.9,
   "chargeIsLegacy": false,
-  "charge": "STONE_EDGE",
+  "charge": "RETURN",
   "fast": "IRON_TAIL_FAST",
-  "defScore": 0.79,
+  "defScore": 0.77,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.84,
+  "atkScore": 0.73,
   "chargeIsLegacy": false,
-  "charge": "FIRE_BLAST",
+  "charge": "FRUSTRATION",
+  "fast": "BITE_FAST",
+  "defScore": 0.36,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.69,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
   "fast": "IRON_TAIL_FAST",
-  "defScore": 0.82,
+  "defScore": 0.57,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -22127,6 +23357,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.78,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.7,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.7,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.5,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.58,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.43,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "MUDKIP_PURIFIED_FORM": [
@@ -22350,6 +23620,46 @@
   "charge": "SLUDGE",
   "fast": "MUD_SHOT_FAST",
   "defScore": 0.84,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.89,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.68,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.87,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "MUD_SHOT_FAST",
+  "defScore": 0.72,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.58,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.44,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.49,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "MUD_SHOT_FAST",
+  "defScore": 0.42,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -22719,6 +24029,66 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.98,
+  "chargeIsLegacy": false,
+  "charge": "PSYCHIC",
+  "fast": "THUNDER_SHOCK_FAST",
+  "defScore": 0.51,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.98,
+  "chargeIsLegacy": false,
+  "charge": "PSYCHIC",
+  "fast": "SPARK_FAST",
+  "defScore": 0.61,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "PSYCHIC",
+  "fast": "VOLT_SWITCH_FAST",
+  "defScore": 0.98,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.88,
+  "chargeIsLegacy": false,
+  "charge": "GRASS_KNOT",
+  "fast": "SPARK_FAST",
+  "defScore": 0.53,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.87,
+  "chargeIsLegacy": false,
+  "charge": "GRASS_KNOT",
+  "fast": "THUNDER_SHOCK_FAST",
+  "defScore": 0.45,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.85,
+  "chargeIsLegacy": false,
+  "charge": "GRASS_KNOT",
+  "fast": "VOLT_SWITCH_FAST",
+  "defScore": 0.88,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "RAICHU_ALOLA_FORM": [
@@ -22865,21 +24235,71 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.85,
+  "atkScore": 1.0,
   "chargeIsLegacy": false,
   "charge": "SURF",
   "fast": "WATER_GUN_FAST",
-  "defScore": 0.72,
+  "defScore": 0.84,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.82,
+  "atkScore": 0.96,
   "chargeIsLegacy": false,
   "charge": "SURF",
   "fast": "MUD_SHOT_FAST",
-  "defScore": 0.82,
+  "defScore": 0.96,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.93,
+  "chargeIsLegacy": false,
+  "charge": "EARTHQUAKE",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.7,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.9,
+  "chargeIsLegacy": false,
+  "charge": "EARTHQUAKE",
+  "fast": "MUD_SHOT_FAST",
+  "defScore": 0.93,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.88,
+  "chargeIsLegacy": false,
+  "charge": "MUDDY_WATER",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.92,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.85,
+  "chargeIsLegacy": false,
+  "charge": "MUDDY_WATER",
+  "fast": "MUD_SHOT_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.83,
+  "chargeIsLegacy": false,
+  "charge": "SLUDGE_WAVE",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.64,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -22887,17 +24307,7 @@
 {
   "atkScore": 0.79,
   "chargeIsLegacy": false,
-  "charge": "EARTHQUAKE",
-  "fast": "WATER_GUN_FAST",
-  "defScore": 0.6,
-  "fastMoveType": "UNKNOWN",
-  "chargeMoveType": "UNKNOWN",
-  "fastIsLegacy": false
-},
-{
-  "atkScore": 0.76,
-  "chargeIsLegacy": false,
-  "charge": "EARTHQUAKE",
+  "charge": "SLUDGE_WAVE",
   "fast": "MUD_SHOT_FAST",
   "defScore": 0.8,
   "fastMoveType": "UNKNOWN",
@@ -22905,41 +24315,41 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.74,
+  "atkScore": 0.89,
   "chargeIsLegacy": false,
-  "charge": "MUDDY_WATER",
+  "charge": "RETURN",
   "fast": "WATER_GUN_FAST",
-  "defScore": 0.79,
+  "defScore": 0.72,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.72,
+  "atkScore": 0.87,
   "chargeIsLegacy": false,
-  "charge": "MUDDY_WATER",
+  "charge": "RETURN",
   "fast": "MUD_SHOT_FAST",
-  "defScore": 0.86,
+  "defScore": 0.76,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.7,
+  "atkScore": 0.58,
   "chargeIsLegacy": false,
-  "charge": "SLUDGE_WAVE",
+  "charge": "FRUSTRATION",
   "fast": "WATER_GUN_FAST",
-  "defScore": 0.55,
+  "defScore": 0.46,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.67,
+  "atkScore": 0.49,
   "chargeIsLegacy": false,
-  "charge": "SLUDGE_WAVE",
+  "charge": "FRUSTRATION",
   "fast": "MUD_SHOT_FAST",
-  "defScore": 0.69,
+  "defScore": 0.45,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -23727,6 +25137,66 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "BLIZZARD",
+  "fast": "METAL_CLAW_FAST",
+  "defScore": 0.79,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "BLIZZARD",
+  "fast": "POWDER_SNOW_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "GYRO_BALL",
+  "fast": "METAL_CLAW_FAST",
+  "defScore": 0.83,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.83,
+  "chargeIsLegacy": false,
+  "charge": "GYRO_BALL",
+  "fast": "POWDER_SNOW_FAST",
+  "defScore": 0.91,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.8,
+  "chargeIsLegacy": false,
+  "charge": "NIGHT_SLASH",
+  "fast": "METAL_CLAW_FAST",
+  "defScore": 0.71,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.68,
+  "chargeIsLegacy": false,
+  "charge": "NIGHT_SLASH",
+  "fast": "POWDER_SNOW_FAST",
+  "defScore": 0.74,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "SANDSHREW_ALOLA_FORM": [
@@ -24451,6 +25921,76 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "BLIZZARD",
+  "fast": "METAL_CLAW_FAST",
+  "defScore": 0.79,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "BLIZZARD",
+  "fast": "POWDER_SNOW_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.93,
+  "chargeIsLegacy": false,
+  "charge": "ICE_PUNCH",
+  "fast": "METAL_CLAW_FAST",
+  "defScore": 0.79,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "GYRO_BALL",
+  "fast": "METAL_CLAW_FAST",
+  "defScore": 0.83,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.85,
+  "chargeIsLegacy": false,
+  "charge": "ICE_PUNCH",
+  "fast": "POWDER_SNOW_FAST",
+  "defScore": 0.91,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.83,
+  "chargeIsLegacy": false,
+  "charge": "GYRO_BALL",
+  "fast": "POWDER_SNOW_FAST",
+  "defScore": 0.91,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.69,
+  "chargeIsLegacy": false,
+  "charge": "BULLDOZE",
+  "fast": "POWDER_SNOW_FAST",
+  "defScore": 0.8,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "SANDSLASH_ALOLA_FORM": [
@@ -24592,6 +26132,46 @@
   "charge": "SHADOW_SNEAK",
   "fast": "CHARGE_BEAM_FAST",
   "defScore": 0.56,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.99,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.8,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.79,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "CHARGE_BEAM_FAST",
+  "defScore": 0.51,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.72,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.53,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.35,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "CHARGE_BEAM_FAST",
+  "defScore": 0.25,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -24818,6 +26398,46 @@
   "charge": "SHADOW_SNEAK",
   "fast": "CHARGE_BEAM_FAST",
   "defScore": 0.52,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.9,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.74,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.72,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "CHARGE_BEAM_FAST",
+  "defScore": 0.47,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.65,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.49,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.32,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "CHARGE_BEAM_FAST",
+  "defScore": 0.23,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -25104,6 +26724,66 @@
   "charge": "SHADOW_BALL",
   "fast": "CHARGE_BEAM_FAST",
   "defScore": 0.66,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.9,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.71,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.89,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "CHARM_FAST",
+  "defScore": 0.7,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.72,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "CHARGE_BEAM_FAST",
+  "defScore": 0.46,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.7,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "CHARM_FAST",
+  "defScore": 0.5,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.65,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.47,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.32,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "CHARGE_BEAM_FAST",
+  "defScore": 0.22,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -26541,21 +28221,41 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.92,
+  "atkScore": 1.0,
   "chargeIsLegacy": false,
   "charge": "SOLAR_BEAM",
   "fast": "VINE_WHIP_FAST",
-  "defScore": 0.79,
+  "defScore": 0.81,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.91,
+  "atkScore": 0.99,
   "chargeIsLegacy": false,
   "charge": "SOLAR_BEAM",
   "fast": "RAZOR_LEAF_FAST",
-  "defScore": 0.98,
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.97,
+  "chargeIsLegacy": false,
+  "charge": "SLUDGE_BOMB",
+  "fast": "VINE_WHIP_FAST",
+  "defScore": 0.73,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.95,
+  "chargeIsLegacy": false,
+  "charge": "SLUDGE_BOMB",
+  "fast": "RAZOR_LEAF_FAST",
+  "defScore": 0.92,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -26563,9 +28263,29 @@
 {
   "atkScore": 0.9,
   "chargeIsLegacy": false,
-  "charge": "SLUDGE_BOMB",
+  "charge": "PETAL_BLIZZARD",
   "fast": "VINE_WHIP_FAST",
-  "defScore": 0.71,
+  "defScore": 0.63,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.88,
+  "chargeIsLegacy": false,
+  "charge": "PETAL_BLIZZARD",
+  "fast": "RAZOR_LEAF_FAST",
+  "defScore": 0.84,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.88,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "VINE_WHIP_FAST",
+  "defScore": 0.55,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -26573,29 +28293,29 @@
 {
   "atkScore": 0.87,
   "chargeIsLegacy": false,
-  "charge": "SLUDGE_BOMB",
+  "charge": "RETURN",
   "fast": "RAZOR_LEAF_FAST",
-  "defScore": 0.91,
+  "defScore": 0.74,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.83,
+  "atkScore": 0.68,
   "chargeIsLegacy": false,
-  "charge": "PETAL_BLIZZARD",
+  "charge": "FRUSTRATION",
+  "fast": "RAZOR_LEAF_FAST",
+  "defScore": 0.54,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.61,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
   "fast": "VINE_WHIP_FAST",
-  "defScore": 0.62,
-  "fastMoveType": "UNKNOWN",
-  "chargeMoveType": "UNKNOWN",
-  "fastIsLegacy": false
-},
-{
-  "atkScore": 0.81,
-  "chargeIsLegacy": false,
-  "charge": "PETAL_BLIZZARD",
-  "fast": "RAZOR_LEAF_FAST",
-  "defScore": 0.83,
+  "defScore": 0.35,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -30701,6 +32421,36 @@
   "fastIsLegacy": false
 },
 {
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "WEATHER_BALL_ROCK",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.65,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "WEATHER_BALL_ROCK",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.94,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "WEATHER_BALL_ROCK",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.59,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
   "atkScore": 0.97,
   "chargeIsLegacy": false,
   "charge": "WEATHER_BALL_ROCK",
@@ -30926,6 +32676,276 @@
   "charge": "ANCIENT_POWER",
   "fast": "HEX_FAST",
   "defScore": 0.85,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "WEATHER_BALL_ROCK",
+  "fast": "EMBER_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "WEATHER_BALL_ROCK",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.64,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "WEATHER_BALL_ROCK",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.65,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "WEATHER_BALL_ROCK",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.94,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "WEATHER_BALL_ROCK",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.59,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.89,
+  "chargeIsLegacy": false,
+  "charge": "FIRE_BLAST",
+  "fast": "EMBER_FAST",
+  "defScore": 0.86,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.85,
+  "chargeIsLegacy": false,
+  "charge": "SOLAR_BEAM",
+  "fast": "EMBER_FAST",
+  "defScore": 0.88,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.83,
+  "chargeIsLegacy": false,
+  "charge": "FIRE_BLAST",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.44,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.79,
+  "chargeIsLegacy": false,
+  "charge": "SOLAR_BEAM",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.46,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "WEATHER_BALL_ROCK",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "WEATHER_BALL_ROCK",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.64,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "WEATHER_BALL_ROCK",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.65,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "WEATHER_BALL_ROCK",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.94,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "WEATHER_BALL_ROCK",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.59,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.89,
+  "chargeIsLegacy": false,
+  "charge": "HYDRO_PUMP",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.69,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.82,
+  "chargeIsLegacy": false,
+  "charge": "HYDRO_PUMP",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.62,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.78,
+  "chargeIsLegacy": false,
+  "charge": "THUNDER",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.6,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.71,
+  "chargeIsLegacy": false,
+  "charge": "THUNDER",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.53,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "WEATHER_BALL_ROCK",
+  "fast": "POWDER_SNOW_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.93,
+  "chargeIsLegacy": false,
+  "charge": "WEATHER_BALL_ROCK",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.64,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.93,
+  "chargeIsLegacy": false,
+  "charge": "WEATHER_BALL_ROCK",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.65,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.93,
+  "chargeIsLegacy": false,
+  "charge": "WEATHER_BALL_ROCK",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.94,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.93,
+  "chargeIsLegacy": false,
+  "charge": "WEATHER_BALL_ROCK",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.59,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.89,
+  "chargeIsLegacy": false,
+  "charge": "BLIZZARD",
+  "fast": "POWDER_SNOW_FAST",
+  "defScore": 0.92,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.87,
+  "chargeIsLegacy": false,
+  "charge": "ICE_BEAM",
+  "fast": "POWDER_SNOW_FAST",
+  "defScore": 0.92,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.83,
+  "chargeIsLegacy": false,
+  "charge": "ICE_BEAM",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.56,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.82,
+  "chargeIsLegacy": false,
+  "charge": "BLIZZARD",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.4,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -32445,6 +34465,66 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "BLIZZARD",
+  "fast": "POWDER_SNOW_FAST",
+  "defScore": 0.98,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.97,
+  "chargeIsLegacy": false,
+  "charge": "ICE_BEAM",
+  "fast": "POWDER_SNOW_FAST",
+  "defScore": 0.98,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.95,
+  "chargeIsLegacy": false,
+  "charge": "BLIZZARD",
+  "fast": "ZEN_HEADBUTT_FAST",
+  "defScore": 0.81,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.93,
+  "chargeIsLegacy": false,
+  "charge": "ICE_BEAM",
+  "fast": "ZEN_HEADBUTT_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.79,
+  "chargeIsLegacy": false,
+  "charge": "DARK_PULSE",
+  "fast": "ZEN_HEADBUTT_FAST",
+  "defScore": 0.85,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.79,
+  "chargeIsLegacy": false,
+  "charge": "DARK_PULSE",
+  "fast": "POWDER_SNOW_FAST",
+  "defScore": 0.79,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "VULPIX_ALOLA_FORM": [
@@ -33331,11 +35411,121 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.72,
+  "atkScore": 0.77,
   "chargeIsLegacy": false,
   "charge": "PSYSHOCK",
   "fast": "FEINT_ATTACK_FAST",
   "defScore": 0.74,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "DAZZLING_GLEAM",
+  "fast": "CHARM_FAST",
+  "defScore": 0.99,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.98,
+  "chargeIsLegacy": false,
+  "charge": "ICE_BEAM",
+  "fast": "CHARM_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.98,
+  "chargeIsLegacy": false,
+  "charge": "BLIZZARD",
+  "fast": "CHARM_FAST",
+  "defScore": 0.9,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.95,
+  "chargeIsLegacy": false,
+  "charge": "DAZZLING_GLEAM",
+  "fast": "FEINT_ATTACK_FAST",
+  "defScore": 0.72,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "DAZZLING_GLEAM",
+  "fast": "POWDER_SNOW_FAST",
+  "defScore": 0.85,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "BLIZZARD",
+  "fast": "POWDER_SNOW_FAST",
+  "defScore": 0.77,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "ICE_BEAM",
+  "fast": "POWDER_SNOW_FAST",
+  "defScore": 0.77,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.9,
+  "chargeIsLegacy": false,
+  "charge": "BLIZZARD",
+  "fast": "FEINT_ATTACK_FAST",
+  "defScore": 0.6,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.9,
+  "chargeIsLegacy": false,
+  "charge": "ICE_BEAM",
+  "fast": "FEINT_ATTACK_FAST",
+  "defScore": 0.68,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.87,
+  "chargeIsLegacy": false,
+  "charge": "PSYSHOCK",
+  "fast": "CHARM_FAST",
+  "defScore": 0.88,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.75,
+  "chargeIsLegacy": false,
+  "charge": "PSYSHOCK",
+  "fast": "POWDER_SNOW_FAST",
+  "defScore": 0.7,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -33907,21 +36097,21 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.98,
+  "atkScore": 1.0,
   "chargeIsLegacy": false,
   "charge": "THUNDERBOLT",
   "fast": "ZEN_HEADBUTT_FAST",
-  "defScore": 0.98,
+  "defScore": 1.0,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.9,
+  "atkScore": 0.92,
   "chargeIsLegacy": false,
   "charge": "THUNDERBOLT",
   "fast": "CHARGE_BEAM_FAST",
-  "defScore": 0.93,
+  "defScore": 0.95,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -33937,21 +36127,151 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.85,
+  "atkScore": 0.87,
   "chargeIsLegacy": false,
   "charge": "PSYCHO_BOOST",
   "fast": "ZEN_HEADBUTT_FAST",
-  "defScore": 0.95,
+  "defScore": 0.98,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.75,
+  "atkScore": 0.76,
   "chargeIsLegacy": false,
   "charge": "PSYCHO_BOOST",
   "fast": "CHARGE_BEAM_FAST",
+  "defScore": 0.87,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "ZAP_CANNON",
+  "fast": "ZEN_HEADBUTT_FAST",
+  "defScore": 0.92,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.98,
+  "chargeIsLegacy": false,
+  "charge": "ZAP_CANNON",
+  "fast": "POISON_JAB_FAST",
+  "defScore": 0.79,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.95,
+  "chargeIsLegacy": false,
+  "charge": "DARK_PULSE",
+  "fast": "ZEN_HEADBUTT_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.92,
+  "chargeIsLegacy": false,
+  "charge": "DARK_PULSE",
+  "fast": "POISON_JAB_FAST",
+  "defScore": 0.8,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.86,
+  "chargeIsLegacy": false,
+  "charge": "PSYCHO_BOOST",
+  "fast": "POISON_JAB_FAST",
+  "defScore": 0.8,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "THUNDERBOLT",
+  "fast": "COUNTER_FAST",
+  "defScore": 0.87,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.99,
+  "chargeIsLegacy": false,
+  "charge": "ZAP_CANNON",
+  "fast": "COUNTER_FAST",
+  "defScore": 0.85,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.98,
+  "chargeIsLegacy": false,
+  "charge": "ROCK_SLIDE",
+  "fast": "COUNTER_FAST",
   "defScore": 0.86,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.97,
+  "chargeIsLegacy": false,
+  "charge": "ROCK_SLIDE",
+  "fast": "ZEN_HEADBUTT_FAST",
+  "defScore": 0.99,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.87,
+  "chargeIsLegacy": false,
+  "charge": "PSYCHO_BOOST",
+  "fast": "COUNTER_FAST",
+  "defScore": 0.86,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "ZAP_CANNON",
+  "fast": "CHARGE_BEAM_FAST",
+  "defScore": 0.97,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.85,
+  "chargeIsLegacy": false,
+  "charge": "SWIFT",
+  "fast": "ZEN_HEADBUTT_FAST",
+  "defScore": 0.86,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.71,
+  "chargeIsLegacy": false,
+  "charge": "SWIFT",
+  "fast": "CHARGE_BEAM_FAST",
+  "defScore": 0.71,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -34243,6 +36563,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.98,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "RAZOR_LEAF_FAST",
+  "defScore": 0.87,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.83,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.46,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.77,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "RAZOR_LEAF_FAST",
+  "defScore": 0.63,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.49,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.28,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "TURTWIG_PURIFIED_FORM": [
@@ -34469,6 +36829,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.88,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "RAZOR_LEAF_FAST",
+  "defScore": 0.74,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.77,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "BITE_FAST",
+  "defScore": 0.4,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.69,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "RAZOR_LEAF_FAST",
+  "defScore": 0.54,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.53,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "BITE_FAST",
+  "defScore": 0.28,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "GROTLE_PURIFIED_FORM": [
@@ -34647,11 +37047,11 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.96,
+  "atkScore": 1.0,
   "chargeIsLegacy": false,
   "charge": "SOLAR_BEAM",
   "fast": "RAZOR_LEAF_FAST",
-  "defScore": 0.98,
+  "defScore": 1.0,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -34667,21 +37067,31 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.85,
+  "atkScore": 0.89,
   "chargeIsLegacy": false,
   "charge": "EARTHQUAKE",
   "fast": "RAZOR_LEAF_FAST",
-  "defScore": 0.84,
+  "defScore": 0.85,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.84,
+  "atkScore": 0.88,
   "chargeIsLegacy": false,
   "charge": "SOLAR_BEAM",
   "fast": "BITE_FAST",
-  "defScore": 0.49,
+  "defScore": 0.5,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.83,
+  "chargeIsLegacy": false,
+  "charge": "STONE_EDGE",
+  "fast": "RAZOR_LEAF_FAST",
+  "defScore": 0.77,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -34689,9 +37099,29 @@
 {
   "atkScore": 0.8,
   "chargeIsLegacy": false,
+  "charge": "EARTHQUAKE",
+  "fast": "BITE_FAST",
+  "defScore": 0.42,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.72,
+  "chargeIsLegacy": false,
   "charge": "STONE_EDGE",
+  "fast": "BITE_FAST",
+  "defScore": 0.38,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.88,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
   "fast": "RAZOR_LEAF_FAST",
-  "defScore": 0.76,
+  "defScore": 0.74,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -34699,9 +37129,9 @@
 {
   "atkScore": 0.77,
   "chargeIsLegacy": false,
-  "charge": "EARTHQUAKE",
+  "charge": "RETURN",
   "fast": "BITE_FAST",
-  "defScore": 0.41,
+  "defScore": 0.4,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -34709,9 +37139,19 @@
 {
   "atkScore": 0.69,
   "chargeIsLegacy": false,
-  "charge": "STONE_EDGE",
+  "charge": "FRUSTRATION",
+  "fast": "RAZOR_LEAF_FAST",
+  "defScore": 0.54,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.53,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
   "fast": "BITE_FAST",
-  "defScore": 0.37,
+  "defScore": 0.28,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -35643,6 +38083,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.92,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "EMBER_FAST",
+  "defScore": 0.78,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.87,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "SCRATCH_FAST",
+  "defScore": 0.46,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.6,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "EMBER_FAST",
+  "defScore": 0.48,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.6,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "SCRATCH_FAST",
+  "defScore": 0.32,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "CHARMANDER_PURIFIED_FORM": [
@@ -36563,61 +39043,101 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.77,
+  "atkScore": 1.0,
   "chargeIsLegacy": false,
   "charge": "AIR_CUTTER",
   "fast": "QUICK_ATTACK_FAST",
-  "defScore": 0.83,
+  "defScore": 1.0,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.76,
+  "atkScore": 0.98,
   "chargeIsLegacy": false,
   "charge": "AIR_CUTTER",
   "fast": "BITE_FAST",
-  "defScore": 0.52,
+  "defScore": 0.62,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.73,
+  "atkScore": 0.94,
   "chargeIsLegacy": false,
   "charge": "POISON_FANG",
   "fast": "QUICK_ATTACK_FAST",
-  "defScore": 0.76,
+  "defScore": 0.92,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.73,
+  "atkScore": 0.94,
   "chargeIsLegacy": false,
   "charge": "POISON_FANG",
   "fast": "BITE_FAST",
-  "defScore": 0.53,
+  "defScore": 0.64,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.69,
+  "atkScore": 0.89,
   "chargeIsLegacy": false,
   "charge": "SWIFT",
   "fast": "BITE_FAST",
+  "defScore": 0.58,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.87,
+  "chargeIsLegacy": false,
+  "charge": "SWIFT",
+  "fast": "QUICK_ATTACK_FAST",
+  "defScore": 0.89,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "QUICK_ATTACK_FAST",
+  "defScore": 0.87,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.96,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "BITE_FAST",
+  "defScore": 0.61,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.72,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "BITE_FAST",
+  "defScore": 0.42,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.6,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "QUICK_ATTACK_FAST",
   "defScore": 0.48,
-  "fastMoveType": "UNKNOWN",
-  "chargeMoveType": "UNKNOWN",
-  "fastIsLegacy": false
-},
-{
-  "atkScore": 0.67,
-  "chargeIsLegacy": false,
-  "charge": "SWIFT",
-  "fast": "QUICK_ATTACK_FAST",
-  "defScore": 0.74,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -37245,6 +39765,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.95,
+  "chargeIsLegacy": false,
+  "charge": "BULLDOZE",
+  "fast": "BUG_BITE_FAST",
+  "defScore": 0.49,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "BULLDOZE",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.94,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.99,
+  "chargeIsLegacy": false,
+  "charge": "IRON_HEAD",
+  "fast": "BUG_BITE_FAST",
+  "defScore": 0.48,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "IRON_HEAD",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.86,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "MOTHIM": [
@@ -37646,6 +40206,46 @@
   "charge": "OMINOUS_WIND",
   "fast": "BITE_FAST",
   "defScore": 0.53,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "WING_ATTACK_FAST",
+  "defScore": 0.7,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.85,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "BITE_FAST",
+  "defScore": 0.47,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.59,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "BITE_FAST",
+  "defScore": 0.32,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.59,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "WING_ATTACK_FAST",
+  "defScore": 0.43,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -38431,6 +41031,88 @@
   "fastIsLegacy": false
 }
 ],
+  "GASTRODON": [
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "EARTH_POWER",
+  "fast": "MUD_SLAP_FAST",
+  "defScore": 0.98,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.95,
+  "chargeIsLegacy": false,
+  "charge": "EARTH_POWER",
+  "fast": "HIDDEN_POWER_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.92,
+  "chargeIsLegacy": false,
+  "charge": "EARTHQUAKE",
+  "fast": "MUD_SLAP_FAST",
+  "defScore": 0.87,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.87,
+  "chargeIsLegacy": false,
+  "charge": "WATER_PULSE",
+  "fast": "MUD_SLAP_FAST",
+  "defScore": 0.81,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.86,
+  "chargeIsLegacy": false,
+  "charge": "EARTHQUAKE",
+  "fast": "HIDDEN_POWER_FAST",
+  "defScore": 0.79,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.85,
+  "chargeIsLegacy": false,
+  "charge": "BODY_SLAM",
+  "fast": "MUD_SLAP_FAST",
+  "defScore": 0.76,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.8,
+  "chargeIsLegacy": false,
+  "charge": "WATER_PULSE",
+  "fast": "HIDDEN_POWER_FAST",
+  "defScore": 0.79,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.79,
+  "chargeIsLegacy": false,
+  "charge": "BODY_SLAM",
+  "fast": "HIDDEN_POWER_FAST",
+  "defScore": 0.72,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+}
+],
   "AMBIPOM": [
 {
   "atkScore": 1.0,
@@ -38840,6 +41522,46 @@
   "charge": "MOONBLAST",
   "fast": "ACID_FAST",
   "defScore": 0.74,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "RAZOR_LEAF_FAST",
+  "defScore": 0.8,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.89,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "ACID_FAST",
+  "defScore": 0.69,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.71,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "RAZOR_LEAF_FAST",
+  "defScore": 0.58,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.61,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "ACID_FAST",
+  "defScore": 0.44,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -39769,6 +42491,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "RAZOR_LEAF_FAST",
+  "defScore": 0.8,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.89,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "ACID_FAST",
+  "defScore": 0.69,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.71,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "RAZOR_LEAF_FAST",
+  "defScore": 0.58,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.61,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "ACID_FAST",
+  "defScore": 0.44,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "GLOOM_PURIFIED_FORM": [
@@ -40632,6 +43394,46 @@
   "charge": "MOONBLAST",
   "fast": "ACID_FAST",
   "defScore": 0.68,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.88,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "RAZOR_LEAF_FAST",
+  "defScore": 0.74,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.87,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "ACID_FAST",
+  "defScore": 0.64,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.69,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "RAZOR_LEAF_FAST",
+  "defScore": 0.54,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.6,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "ACID_FAST",
+  "defScore": 0.41,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -43015,6 +45817,66 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.9,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.74,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.8,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "LOW_KICK_FAST",
+  "defScore": 0.39,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.79,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "CHARM_FAST",
+  "defScore": 0.64,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.65,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.49,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.58,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "CHARM_FAST",
+  "defScore": 0.44,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.52,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "LOW_KICK_FAST",
+  "defScore": 0.24,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "GALLADE_PURIFIED_FORM": [
@@ -43453,7 +46315,7 @@
   "chargeIsLegacy": false,
   "charge": "THUNDERBOLT",
   "fast": "THUNDER_SHOCK_FAST",
-  "defScore": 0.81,
+  "defScore": 0.85,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -43469,11 +46331,11 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.9,
+  "atkScore": 0.93,
   "chargeIsLegacy": false,
   "charge": "THUNDERBOLT",
   "fast": "TACKLE_FAST",
-  "defScore": 0.58,
+  "defScore": 0.61,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -43483,17 +46345,17 @@
   "chargeIsLegacy": false,
   "charge": "THUNDER",
   "fast": "THUNDER_SHOCK_FAST",
-  "defScore": 0.57,
+  "defScore": 0.6,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.83,
+  "atkScore": 0.86,
   "chargeIsLegacy": false,
   "charge": "THUNDER",
   "fast": "TACKLE_FAST",
-  "defScore": 0.39,
+  "defScore": 0.41,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -43534,6 +46396,126 @@
   "charge": "OMINOUS_WIND",
   "fast": "TACKLE_FAST",
   "defScore": 0.57,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "OVERHEAT",
+  "fast": "THUNDER_SHOCK_FAST",
+  "defScore": 0.75,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.93,
+  "chargeIsLegacy": false,
+  "charge": "OVERHEAT",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.49,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.9,
+  "chargeIsLegacy": false,
+  "charge": "OVERHEAT",
+  "fast": "ASTONISH_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.99,
+  "chargeIsLegacy": false,
+  "charge": "HYDRO_PUMP",
+  "fast": "THUNDER_SHOCK_FAST",
+  "defScore": 0.69,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.88,
+  "chargeIsLegacy": false,
+  "charge": "HYDRO_PUMP",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.46,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.84,
+  "chargeIsLegacy": false,
+  "charge": "HYDRO_PUMP",
+  "fast": "ASTONISH_FAST",
+  "defScore": 0.91,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "BLIZZARD",
+  "fast": "THUNDER_SHOCK_FAST",
+  "defScore": 0.68,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.88,
+  "chargeIsLegacy": false,
+  "charge": "BLIZZARD",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.46,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.84,
+  "chargeIsLegacy": false,
+  "charge": "BLIZZARD",
+  "fast": "ASTONISH_FAST",
+  "defScore": 0.91,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "THUNDERBOLT",
+  "fast": "AIR_SLASH_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.96,
+  "chargeIsLegacy": false,
+  "charge": "THUNDER",
+  "fast": "AIR_SLASH_FAST",
+  "defScore": 0.81,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.81,
+  "chargeIsLegacy": false,
+  "charge": "OMINOUS_WIND",
+  "fast": "AIR_SLASH_FAST",
+  "defScore": 0.78,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -44056,6 +47038,46 @@
   "charge": "PSYBEAM",
   "fast": "CONFUSION_FAST",
   "defScore": 0.87,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.99,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "BUG_BITE_FAST",
+  "defScore": 0.44,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.8,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.63,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.5,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.61,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "BUG_BITE_FAST",
+  "defScore": 0.26,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -44843,6 +47865,66 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "SHADOW_BALL",
+  "fast": "DRAGON_TAIL_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.98,
+  "chargeIsLegacy": false,
+  "charge": "SHADOW_BALL",
+  "fast": "SHADOW_CLAW_FAST",
+  "defScore": 0.74,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.88,
+  "chargeIsLegacy": false,
+  "charge": "DRAGON_PULSE",
+  "fast": "DRAGON_TAIL_FAST",
+  "defScore": 0.94,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.86,
+  "chargeIsLegacy": false,
+  "charge": "DRAGON_PULSE",
+  "fast": "SHADOW_CLAW_FAST",
+  "defScore": 0.69,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.82,
+  "chargeIsLegacy": false,
+  "charge": "OMINOUS_WIND",
+  "fast": "DRAGON_TAIL_FAST",
+  "defScore": 0.84,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.81,
+  "chargeIsLegacy": false,
+  "charge": "OMINOUS_WIND",
+  "fast": "SHADOW_CLAW_FAST",
+  "defScore": 0.65,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "CRESSELIA": [
@@ -44991,7 +48073,7 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.98,
+  "atkScore": 1.0,
   "chargeIsLegacy": false,
   "charge": "BUG_BUZZ",
   "fast": "INFESTATION_FAST",
@@ -45001,7 +48083,7 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.98,
+  "atkScore": 1.0,
   "chargeIsLegacy": false,
   "charge": "PSYCHIC",
   "fast": "INFESTATION_FAST",
@@ -45011,7 +48093,7 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.96,
+  "atkScore": 0.98,
   "chargeIsLegacy": false,
   "charge": "BUG_BUZZ",
   "fast": "CONFUSION_FAST",
@@ -45021,7 +48103,7 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.95,
+  "atkScore": 0.97,
   "chargeIsLegacy": false,
   "charge": "PSYCHIC",
   "fast": "CONFUSION_FAST",
@@ -45041,7 +48123,7 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.89,
+  "atkScore": 0.9,
   "chargeIsLegacy": false,
   "charge": "SILVER_WIND",
   "fast": "INFESTATION_FAST",
@@ -45051,7 +48133,7 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.88,
+  "atkScore": 0.9,
   "chargeIsLegacy": false,
   "charge": "SILVER_WIND",
   "fast": "CONFUSION_FAST",
@@ -45086,6 +48168,46 @@
   "charge": "POISON_FANG",
   "fast": "INFESTATION_FAST",
   "defScore": 0.63,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.97,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "INFESTATION_FAST",
+  "defScore": 0.63,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.74,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.63,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.47,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.55,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "INFESTATION_FAST",
+  "defScore": 0.34,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -45571,13 +48693,13 @@
   "chargeIsLegacy": false,
   "charge": "HYPER_BEAM",
   "fast": "SHADOW_CLAW_FAST",
-  "defScore": 0.83,
+  "defScore": 0.9,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.96,
+  "atkScore": 1.0,
   "chargeIsLegacy": false,
   "charge": "HYPER_BEAM",
   "fast": "IRON_TAIL_FAST",
@@ -45587,41 +48709,41 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.91,
+  "atkScore": 1.0,
   "chargeIsLegacy": false,
   "charge": "OUTRAGE",
   "fast": "SHADOW_CLAW_FAST",
-  "defScore": 0.76,
+  "defScore": 0.9,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.88,
+  "atkScore": 0.97,
   "chargeIsLegacy": false,
   "charge": "OUTRAGE",
   "fast": "IRON_TAIL_FAST",
-  "defScore": 0.93,
+  "defScore": 1.0,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.87,
+  "atkScore": 1.0,
   "chargeIsLegacy": false,
   "charge": "FUTURESIGHT",
   "fast": "SHADOW_CLAW_FAST",
-  "defScore": 0.69,
+  "defScore": 0.83,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.86,
+  "atkScore": 0.98,
   "chargeIsLegacy": false,
   "charge": "FUTURESIGHT",
   "fast": "IRON_TAIL_FAST",
-  "defScore": 0.87,
+  "defScore": 1.0,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -47143,6 +50265,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.97,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "FIRE_FANG_FAST",
+  "defScore": 0.85,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.84,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "EMBER_FAST",
+  "defScore": 0.78,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.73,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "FIRE_FANG_FAST",
+  "defScore": 0.58,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.55,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "EMBER_FAST",
+  "defScore": 0.47,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "CHARMELEON_PURIFIED_FORM": [
@@ -47396,6 +50558,36 @@
   "charge": "ROCK_TOMB",
   "fast": "MUD_SHOT_FAST",
   "defScore": 0.48,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "MUD_BOMB",
+  "fast": "METAL_CLAW_FAST",
+  "defScore": 0.69,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.97,
+  "chargeIsLegacy": false,
+  "charge": "DIG",
+  "fast": "METAL_CLAW_FAST",
+  "defScore": 0.77,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.85,
+  "chargeIsLegacy": false,
+  "charge": "ROCK_TOMB",
+  "fast": "METAL_CLAW_FAST",
+  "defScore": 0.59,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -48173,6 +51365,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "EARTHQUAKE",
+  "fast": "METAL_CLAW_FAST",
+  "defScore": 0.69,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.99,
+  "chargeIsLegacy": false,
+  "charge": "IRON_HEAD",
+  "fast": "METAL_CLAW_FAST",
+  "defScore": 0.68,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.97,
+  "chargeIsLegacy": false,
+  "charge": "MUD_BOMB",
+  "fast": "METAL_CLAW_FAST",
+  "defScore": 0.75,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "IRON_HEAD",
+  "fast": "MUD_SLAP_FAST",
+  "defScore": 0.91,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "DUGTRIO_ALOLA_FORM": [
@@ -48899,11 +52131,11 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.89,
+  "atkScore": 1.0,
   "chargeIsLegacy": false,
   "charge": "FOUL_PLAY",
   "fast": "BITE_FAST",
-  "defScore": 0.75,
+  "defScore": 0.9,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -48919,21 +52151,21 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.84,
+  "atkScore": 0.94,
   "chargeIsLegacy": false,
   "charge": "DARK_PULSE",
   "fast": "BITE_FAST",
-  "defScore": 0.78,
+  "defScore": 0.94,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.79,
+  "atkScore": 0.89,
   "chargeIsLegacy": false,
   "charge": "NIGHT_SLASH",
   "fast": "BITE_FAST",
-  "defScore": 0.83,
+  "defScore": 1.0,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -49683,11 +52915,11 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.91,
+  "atkScore": 1.0,
   "chargeIsLegacy": false,
   "charge": "FOUL_PLAY",
   "fast": "FEINT_ATTACK_FAST",
-  "defScore": 0.89,
+  "defScore": 0.96,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -49718,6 +52950,26 @@
   "charge": "NIGHT_SLASH",
   "fast": "FEINT_ATTACK_FAST",
   "defScore": 0.84,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "DARK_PULSE",
+  "fast": "FEINT_ATTACK_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.84,
+  "chargeIsLegacy": false,
+  "charge": "DARK_PULSE",
+  "fast": "SCRATCH_FAST",
+  "defScore": 0.52,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -50482,6 +53734,46 @@
   "charge": "PSYBEAM",
   "fast": "ZEN_HEADBUTT_FAST",
   "defScore": 0.91,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.96,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.55,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.89,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "ZEN_HEADBUTT_FAST",
+  "defScore": 0.81,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.63,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.35,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.57,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "ZEN_HEADBUTT_FAST",
+  "defScore": 0.51,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -51371,6 +54663,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.79,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.9,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.41,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.61,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.5,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.59,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.26,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "GOLDUCK_PURIFIED_FORM": [
@@ -51720,6 +55052,68 @@
 }
 ],
   "BASCULIN_BLUE_STRIPED_FORM": [
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "AQUA_TAIL",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.95,
+  "chargeIsLegacy": false,
+  "charge": "MUDDY_WATER",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.98,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.93,
+  "chargeIsLegacy": false,
+  "charge": "AQUA_TAIL",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.93,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.88,
+  "chargeIsLegacy": false,
+  "charge": "MUDDY_WATER",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.92,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.83,
+  "chargeIsLegacy": false,
+  "charge": "AQUA_JET",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.91,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.77,
+  "chargeIsLegacy": false,
+  "charge": "AQUA_JET",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.84,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+}
+],
+  "BASCULIN": [
 {
   "atkScore": 1.0,
   "chargeIsLegacy": false,
@@ -52205,11 +55599,11 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.9,
+  "atkScore": 0.99,
   "chargeIsLegacy": false,
   "charge": "PSYCHIC",
   "fast": "FIRE_FANG_FAST",
-  "defScore": 0.92,
+  "defScore": 1.0,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -52245,11 +55639,11 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.76,
+  "atkScore": 0.85,
   "chargeIsLegacy": false,
   "charge": "PSYCHIC",
   "fast": "TACKLE_FAST",
-  "defScore": 0.53,
+  "defScore": 0.59,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -54027,6 +57421,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.92,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "EMBER_FAST",
+  "defScore": 0.81,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.87,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "BITE_FAST",
+  "defScore": 0.48,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.6,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "BITE_FAST",
+  "defScore": 0.33,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.6,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "EMBER_FAST",
+  "defScore": 0.49,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "GROWLITHE_PURIFIED_FORM": [
@@ -55649,6 +59083,66 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.96,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "FIRE_FANG_FAST",
+  "defScore": 0.69,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.87,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "SNARL_FAST",
+  "defScore": 0.67,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.85,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "THUNDER_FANG_FAST",
+  "defScore": 0.69,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.72,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "FIRE_FANG_FAST",
+  "defScore": 0.47,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.49,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "SNARL_FAST",
+  "defScore": 0.37,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.45,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "THUNDER_FANG_FAST",
+  "defScore": 0.36,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "ARCANINE_PURIFIED_FORM": [
@@ -56577,11 +60071,11 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.95,
+  "atkScore": 1.0,
   "chargeIsLegacy": false,
   "charge": "OVERHEAT",
   "fast": "FIRE_SPIN_FAST",
-  "defScore": 0.81,
+  "defScore": 1.0,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -56607,11 +60101,11 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.91,
+  "atkScore": 0.96,
   "chargeIsLegacy": false,
   "charge": "OVERHEAT",
   "fast": "AIR_SLASH_FAST",
-  "defScore": 0.8,
+  "defScore": 0.98,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -56647,11 +60141,11 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.88,
+  "atkScore": 0.93,
   "chargeIsLegacy": false,
   "charge": "FIRE_BLAST",
   "fast": "FIRE_SPIN_FAST",
-  "defScore": 0.78,
+  "defScore": 0.95,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -56667,11 +60161,11 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.85,
+  "atkScore": 0.89,
   "chargeIsLegacy": false,
   "charge": "FIRE_BLAST",
   "fast": "AIR_SLASH_FAST",
-  "defScore": 0.75,
+  "defScore": 0.93,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -56717,21 +60211,21 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.81,
+  "atkScore": 0.85,
   "chargeIsLegacy": false,
   "charge": "DRAGON_CLAW",
   "fast": "FIRE_SPIN_FAST",
-  "defScore": 0.72,
+  "defScore": 0.88,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.76,
+  "atkScore": 0.8,
   "chargeIsLegacy": false,
   "charge": "DRAGON_CLAW",
   "fast": "AIR_SLASH_FAST",
-  "defScore": 0.71,
+  "defScore": 0.87,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -56752,6 +60246,46 @@
   "charge": "DRAGON_CLAW",
   "fast": "EMBER_FAST",
   "defScore": 0.61,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.89,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "FIRE_SPIN_FAST",
+  "defScore": 0.81,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.83,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "AIR_SLASH_FAST",
+  "defScore": 0.79,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.66,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "FIRE_SPIN_FAST",
+  "defScore": 0.55,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.61,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "AIR_SLASH_FAST",
+  "defScore": 0.54,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -56978,6 +60512,46 @@
   "charge": "MUD_BOMB",
   "fast": "MUD_SHOT_FAST",
   "defScore": 0.6,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "BUBBLE_FAST",
+  "defScore": 0.88,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.85,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "MUD_SHOT_FAST",
+  "defScore": 0.48,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.65,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "BUBBLE_FAST",
+  "defScore": 0.51,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.45,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "MUD_SHOT_FAST",
+  "defScore": 0.27,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -57753,7 +61327,7 @@
   "chargeIsLegacy": false,
   "charge": "BUBBLE_BEAM",
   "fast": "BUBBLE_FAST",
-  "defScore": 0.89,
+  "defScore": 0.95,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -57773,7 +61347,7 @@
   "chargeIsLegacy": false,
   "charge": "WATER_PULSE",
   "fast": "BUBBLE_FAST",
-  "defScore": 0.93,
+  "defScore": 1.0,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -57783,7 +61357,7 @@
   "chargeIsLegacy": false,
   "charge": "MUD_BOMB",
   "fast": "BUBBLE_FAST",
-  "defScore": 0.85,
+  "defScore": 0.91,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -57793,7 +61367,7 @@
   "chargeIsLegacy": false,
   "charge": "BUBBLE_BEAM",
   "fast": "MUD_SHOT_FAST",
-  "defScore": 0.54,
+  "defScore": 0.57,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -57813,7 +61387,7 @@
   "chargeIsLegacy": false,
   "charge": "WATER_PULSE",
   "fast": "MUD_SHOT_FAST",
-  "defScore": 0.56,
+  "defScore": 0.59,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -57823,7 +61397,47 @@
   "chargeIsLegacy": false,
   "charge": "MUD_BOMB",
   "fast": "MUD_SHOT_FAST",
-  "defScore": 0.54,
+  "defScore": 0.58,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "BUBBLE_FAST",
+  "defScore": 0.84,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.85,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "MUD_SHOT_FAST",
+  "defScore": 0.46,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.65,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "BUBBLE_FAST",
+  "defScore": 0.49,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.45,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "MUD_SHOT_FAST",
+  "defScore": 0.26,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -58823,6 +62437,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.86,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "BUBBLE_FAST",
+  "defScore": 0.71,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.82,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "ROCK_SMASH_FAST",
+  "defScore": 0.72,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.61,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "ROCK_SMASH_FAST",
+  "defScore": 0.5,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.53,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "BUBBLE_FAST",
+  "defScore": 0.41,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "POLIWRATH_PURIFIED_FORM": [
@@ -59749,6 +63403,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.95,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "ZEN_HEADBUTT_FAST",
+  "defScore": 0.74,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.83,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "CHARGE_BEAM_FAST",
+  "defScore": 0.63,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.66,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "ZEN_HEADBUTT_FAST",
+  "defScore": 0.48,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.37,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "CHARGE_BEAM_FAST",
+  "defScore": 0.3,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "ABRA_PURIFIED_FORM": [
@@ -60632,6 +64326,46 @@
   "charge": "PSYBEAM",
   "fast": "PSYCHO_CUT_FAST",
   "defScore": 0.48,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.96,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.78,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.87,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "PSYCHO_CUT_FAST",
+  "defScore": 0.41,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.69,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.52,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.46,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "PSYCHO_CUT_FAST",
+  "defScore": 0.22,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -61777,21 +65511,21 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.95,
+  "atkScore": 1.0,
   "chargeIsLegacy": false,
   "charge": "BLIZZARD",
   "fast": "DRAGON_BREATH_FAST",
-  "defScore": 0.62,
+  "defScore": 0.65,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.93,
+  "atkScore": 0.97,
   "chargeIsLegacy": false,
   "charge": "BLIZZARD",
   "fast": "STEEL_WING_FAST",
-  "defScore": 0.94,
+  "defScore": 1.0,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -61842,6 +65576,146 @@
   "charge": "ICY_WIND",
   "fast": "STEEL_WING_FAST",
   "defScore": 0.92,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "OUTRAGE",
+  "fast": "DRAGON_TAIL_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.98,
+  "chargeIsLegacy": false,
+  "charge": "BLIZZARD",
+  "fast": "DRAGON_TAIL_FAST",
+  "defScore": 0.86,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "OUTRAGE",
+  "fast": "SHADOW_CLAW_FAST",
+  "defScore": 0.69,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.87,
+  "chargeIsLegacy": false,
+  "charge": "STONE_EDGE",
+  "fast": "DRAGON_TAIL_FAST",
+  "defScore": 0.76,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.86,
+  "chargeIsLegacy": false,
+  "charge": "BLIZZARD",
+  "fast": "SHADOW_CLAW_FAST",
+  "defScore": 0.63,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.86,
+  "chargeIsLegacy": false,
+  "charge": "IRON_HEAD",
+  "fast": "DRAGON_TAIL_FAST",
+  "defScore": 0.76,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.77,
+  "chargeIsLegacy": false,
+  "charge": "STONE_EDGE",
+  "fast": "SHADOW_CLAW_FAST",
+  "defScore": 0.52,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.74,
+  "chargeIsLegacy": false,
+  "charge": "IRON_HEAD",
+  "fast": "SHADOW_CLAW_FAST",
+  "defScore": 0.49,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.95,
+  "chargeIsLegacy": false,
+  "charge": "DRAGON_PULSE",
+  "fast": "DRAGON_BREATH_FAST",
+  "defScore": 0.71,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "FOCUS_BLAST",
+  "fast": "DRAGON_BREATH_FAST",
+  "defScore": 0.63,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.9,
+  "chargeIsLegacy": false,
+  "charge": "DRAGON_PULSE",
+  "fast": "STEEL_WING_FAST",
+  "defScore": 0.99,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.87,
+  "chargeIsLegacy": false,
+  "charge": "FOCUS_BLAST",
+  "fast": "STEEL_WING_FAST",
+  "defScore": 0.94,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.8,
+  "chargeIsLegacy": false,
+  "charge": "ANCIENT_POWER",
+  "fast": "DRAGON_BREATH_FAST",
+  "defScore": 0.76,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.78,
+  "chargeIsLegacy": false,
+  "charge": "ANCIENT_POWER",
+  "fast": "STEEL_WING_FAST",
+  "defScore": 0.95,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -62427,7 +66301,7 @@
   "chargeIsLegacy": false,
   "charge": "HYPER_BEAM",
   "fast": "QUICK_ATTACK_FAST",
-  "defScore": 0.74,
+  "defScore": 1.0,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -62501,6 +66375,76 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "HYPER_BEAM",
+  "fast": "LOW_KICK_FAST",
+  "defScore": 0.74,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.89,
+  "chargeIsLegacy": false,
+  "charge": "CLOSE_COMBAT",
+  "fast": "QUICK_ATTACK_FAST",
+  "defScore": 0.81,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.85,
+  "chargeIsLegacy": false,
+  "charge": "CLOSE_COMBAT",
+  "fast": "LOW_KICK_FAST",
+  "defScore": 0.61,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.79,
+  "chargeIsLegacy": false,
+  "charge": "ICE_PUNCH",
+  "fast": "QUICK_ATTACK_FAST",
+  "defScore": 0.74,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.78,
+  "chargeIsLegacy": false,
+  "charge": "FIRE_PUNCH",
+  "fast": "QUICK_ATTACK_FAST",
+  "defScore": 0.77,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.75,
+  "chargeIsLegacy": false,
+  "charge": "ICE_PUNCH",
+  "fast": "LOW_KICK_FAST",
+  "defScore": 0.58,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.75,
+  "chargeIsLegacy": false,
+  "charge": "FIRE_PUNCH",
+  "fast": "LOW_KICK_FAST",
+  "defScore": 0.61,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "GENESECT": [
@@ -62560,6 +66504,86 @@
   "charge": "X_SCISSOR",
   "fast": "FURY_CUTTER_FAST",
   "defScore": 0.63,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.95,
+  "chargeIsLegacy": false,
+  "charge": "ZAP_CANNON",
+  "fast": "METAL_CLAW_FAST",
+  "defScore": 0.86,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.89,
+  "chargeIsLegacy": false,
+  "charge": "ZAP_CANNON",
+  "fast": "FURY_CUTTER_FAST",
+  "defScore": 0.59,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "FLAMETHROWER",
+  "fast": "METAL_CLAW_FAST",
+  "defScore": 0.83,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.86,
+  "chargeIsLegacy": false,
+  "charge": "FLAMETHROWER",
+  "fast": "FURY_CUTTER_FAST",
+  "defScore": 0.58,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "ICE_BEAM",
+  "fast": "METAL_CLAW_FAST",
+  "defScore": 0.93,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.86,
+  "chargeIsLegacy": false,
+  "charge": "ICE_BEAM",
+  "fast": "FURY_CUTTER_FAST",
+  "defScore": 0.68,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "GUNK_SHOT",
+  "fast": "METAL_CLAW_FAST",
+  "defScore": 0.84,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.92,
+  "chargeIsLegacy": false,
+  "charge": "GUNK_SHOT",
+  "fast": "FURY_CUTTER_FAST",
+  "defScore": 0.57,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -62825,11 +66849,11 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.97,
+  "atkScore": 1.0,
   "chargeIsLegacy": false,
   "charge": "FUTURESIGHT",
   "fast": "CONFUSION_FAST",
-  "defScore": 0.9,
+  "defScore": 0.95,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -62845,41 +66869,41 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.94,
+  "atkScore": 0.97,
   "chargeIsLegacy": false,
   "charge": "SHADOW_BALL",
   "fast": "CONFUSION_FAST",
-  "defScore": 0.95,
+  "defScore": 1.0,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.9,
+  "atkScore": 0.93,
   "chargeIsLegacy": false,
   "charge": "FUTURESIGHT",
   "fast": "PSYCHO_CUT_FAST",
-  "defScore": 0.44,
+  "defScore": 0.46,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.89,
+  "atkScore": 0.92,
   "chargeIsLegacy": false,
   "charge": "SHADOW_BALL",
   "fast": "PSYCHO_CUT_FAST",
-  "defScore": 0.51,
+  "defScore": 0.54,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.88,
+  "atkScore": 0.91,
   "chargeIsLegacy": false,
   "charge": "FOCUS_BLAST",
   "fast": "CONFUSION_FAST",
-  "defScore": 0.88,
+  "defScore": 0.93,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -62895,11 +66919,11 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.84,
+  "atkScore": 0.87,
   "chargeIsLegacy": false,
   "charge": "FOCUS_BLAST",
   "fast": "PSYCHO_CUT_FAST",
-  "defScore": 0.43,
+  "defScore": 0.46,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -62915,21 +66939,61 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.82,
+  "atkScore": 0.84,
   "chargeIsLegacy": false,
   "charge": "FIRE_PUNCH",
   "fast": "CONFUSION_FAST",
-  "defScore": 0.79,
+  "defScore": 0.83,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.74,
+  "atkScore": 0.77,
   "chargeIsLegacy": false,
   "charge": "FIRE_PUNCH",
   "fast": "PSYCHO_CUT_FAST",
-  "defScore": 0.48,
+  "defScore": 0.51,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.93,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.78,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.84,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "PSYCHO_CUT_FAST",
+  "defScore": 0.41,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.68,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.52,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.45,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "PSYCHO_CUT_FAST",
+  "defScore": 0.22,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -63647,6 +67711,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.98,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "BUBBLE_FAST",
+  "defScore": 0.82,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.85,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.42,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.61,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "BUBBLE_FAST",
+  "defScore": 0.48,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.5,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "TACKLE_FAST",
+  "defScore": 0.26,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "SQUIRTLE_PURIFIED_FORM": [
@@ -64211,6 +68315,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "THUNDERBOLT",
+  "fast": "ROCK_THROW_FAST",
+  "defScore": 0.71,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "THUNDERBOLT",
+  "fast": "VOLT_SWITCH_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.87,
+  "chargeIsLegacy": false,
+  "charge": "ROCK_SLIDE",
+  "fast": "VOLT_SWITCH_FAST",
+  "defScore": 0.98,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.76,
+  "chargeIsLegacy": false,
+  "charge": "ROCK_TOMB",
+  "fast": "VOLT_SWITCH_FAST",
+  "defScore": 0.84,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "GEODUDE_ALOLA_FORM": [
@@ -64395,6 +68539,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "THUNDERBOLT",
+  "fast": "ROCK_THROW_FAST",
+  "defScore": 0.71,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "THUNDERBOLT",
+  "fast": "VOLT_SWITCH_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.81,
+  "chargeIsLegacy": false,
+  "charge": "STONE_EDGE",
+  "fast": "VOLT_SWITCH_FAST",
+  "defScore": 0.91,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.8,
+  "chargeIsLegacy": false,
+  "charge": "ROCK_BLAST",
+  "fast": "VOLT_SWITCH_FAST",
+  "defScore": 0.83,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "GRAVELER_ALOLA_FORM": [
@@ -64576,6 +68760,46 @@
   "charge": "ANCIENT_POWER",
   "fast": "MUD_SHOT_FAST",
   "defScore": 0.64,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "WILD_CHARGE",
+  "fast": "ROCK_THROW_FAST",
+  "defScore": 0.69,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.93,
+  "chargeIsLegacy": false,
+  "charge": "WILD_CHARGE",
+  "fast": "VOLT_SWITCH_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.77,
+  "chargeIsLegacy": false,
+  "charge": "STONE_EDGE",
+  "fast": "VOLT_SWITCH_FAST",
+  "defScore": 0.85,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.76,
+  "chargeIsLegacy": false,
+  "charge": "ROCK_BLAST",
+  "fast": "VOLT_SWITCH_FAST",
+  "defScore": 0.77,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -64936,6 +69160,46 @@
   "charge": "AQUA_JET",
   "fast": "BITE_FAST",
   "defScore": 0.87,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.81,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.86,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "BITE_FAST",
+  "defScore": 0.75,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.59,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "BITE_FAST",
+  "defScore": 0.52,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.59,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.52,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -65951,7 +70215,7 @@
   "chargeIsLegacy": false,
   "charge": "SLUDGE_BOMB",
   "fast": "POISON_JAB_FAST",
-  "defScore": 0.89,
+  "defScore": 1.0,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -66032,6 +70296,96 @@
   "charge": "MUD_BOMB",
   "fast": "MUD_SLAP_FAST",
   "defScore": 0.84,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "POISON_JAB_FAST",
+  "defScore": 0.69,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.74,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "MUD_SLAP_FAST",
+  "defScore": 0.76,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.67,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "POISON_JAB_FAST",
+  "defScore": 0.47,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.48,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "MUD_SLAP_FAST",
+  "defScore": 0.48,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.96,
+  "chargeIsLegacy": false,
+  "charge": "GUNK_SHOT",
+  "fast": "POISON_JAB_FAST",
+  "defScore": 0.95,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.95,
+  "chargeIsLegacy": false,
+  "charge": "SLUDGE_BOMB",
+  "fast": "BITE_FAST",
+  "defScore": 0.62,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "GUNK_SHOT",
+  "fast": "BITE_FAST",
+  "defScore": 0.58,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.9,
+  "chargeIsLegacy": false,
+  "charge": "CRUNCH",
+  "fast": "POISON_JAB_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.86,
+  "chargeIsLegacy": false,
+  "charge": "CRUNCH",
+  "fast": "BITE_FAST",
+  "defScore": 0.76,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -66325,7 +70679,7 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.87,
+  "atkScore": 0.92,
   "chargeIsLegacy": false,
   "charge": "DARK_PULSE",
   "fast": "POISON_JAB_FAST",
@@ -66460,6 +70814,126 @@
   "charge": "ACID_SPRAY",
   "fast": "INFESTATION_FAST",
   "defScore": 0.5,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "POISON_JAB_FAST",
+  "defScore": 0.77,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.82,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "INFESTATION_FAST",
+  "defScore": 0.78,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.69,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "POISON_JAB_FAST",
+  "defScore": 0.53,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.42,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "INFESTATION_FAST",
+  "defScore": 0.41,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "GUNK_SHOT",
+  "fast": "SNARL_FAST",
+  "defScore": 0.97,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.95,
+  "chargeIsLegacy": false,
+  "charge": "GUNK_SHOT",
+  "fast": "BITE_FAST",
+  "defScore": 0.48,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.94,
+  "chargeIsLegacy": false,
+  "charge": "DARK_PULSE",
+  "fast": "SNARL_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "SLUDGE_WAVE",
+  "fast": "SNARL_FAST",
+  "defScore": 0.88,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.88,
+  "chargeIsLegacy": false,
+  "charge": "DARK_PULSE",
+  "fast": "BITE_FAST",
+  "defScore": 0.5,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.88,
+  "chargeIsLegacy": false,
+  "charge": "SLUDGE_WAVE",
+  "fast": "BITE_FAST",
+  "defScore": 0.45,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.64,
+  "chargeIsLegacy": false,
+  "charge": "ACID_SPRAY",
+  "fast": "BITE_FAST",
+  "defScore": 0.35,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.59,
+  "chargeIsLegacy": false,
+  "charge": "ACID_SPRAY",
+  "fast": "SNARL_FAST",
+  "defScore": 0.53,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -66853,81 +71327,121 @@
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.84,
+  "atkScore": 1.0,
   "chargeIsLegacy": false,
   "charge": "HYDRO_PUMP",
   "fast": "WATER_GUN_FAST",
-  "defScore": 0.72,
+  "defScore": 0.82,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.79,
+  "atkScore": 0.94,
   "chargeIsLegacy": false,
   "charge": "HYDRO_PUMP",
   "fast": "BITE_FAST",
-  "defScore": 0.72,
+  "defScore": 0.82,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.77,
+  "atkScore": 0.92,
   "chargeIsLegacy": false,
   "charge": "SKULL_BASH",
   "fast": "WATER_GUN_FAST",
-  "defScore": 0.67,
+  "defScore": 0.76,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.75,
+  "atkScore": 0.89,
   "chargeIsLegacy": false,
   "charge": "ICE_BEAM",
   "fast": "WATER_GUN_FAST",
-  "defScore": 0.88,
+  "defScore": 1.0,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.73,
+  "atkScore": 0.87,
   "chargeIsLegacy": false,
   "charge": "SKULL_BASH",
   "fast": "BITE_FAST",
-  "defScore": 0.67,
+  "defScore": 0.76,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.72,
+  "atkScore": 0.86,
   "chargeIsLegacy": false,
   "charge": "FLASH_CANNON",
   "fast": "WATER_GUN_FAST",
-  "defScore": 0.62,
+  "defScore": 0.7,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.71,
+  "atkScore": 0.85,
   "chargeIsLegacy": false,
   "charge": "ICE_BEAM",
   "fast": "BITE_FAST",
-  "defScore": 0.74,
+  "defScore": 0.84,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
 },
 {
-  "atkScore": 0.67,
+  "atkScore": 0.8,
   "chargeIsLegacy": false,
   "charge": "FLASH_CANNON",
   "fast": "BITE_FAST",
-  "defScore": 0.62,
+  "defScore": 0.7,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.91,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.81,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.86,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "BITE_FAST",
+  "defScore": 0.75,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.59,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "BITE_FAST",
+  "defScore": 0.52,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.59,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "WATER_GUN_FAST",
+  "defScore": 0.52,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
@@ -67949,6 +72463,46 @@
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false
+},
+{
+  "atkScore": 0.9,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.74,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.79,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "POUND_FAST",
+  "defScore": 0.39,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.65,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.49,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.51,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "POUND_FAST",
+  "defScore": 0.24,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
 }
 ],
   "DROWZEE_PURIFIED_FORM": [
@@ -68272,6 +72826,46 @@
   "charge": "THUNDER_PUNCH",
   "fast": "ZEN_HEADBUTT_FAST",
   "defScore": 0.58,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.9,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.74,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.82,
+  "chargeIsLegacy": false,
+  "charge": "RETURN",
+  "fast": "ZEN_HEADBUTT_FAST",
+  "defScore": 0.56,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.65,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "CONFUSION_FAST",
+  "defScore": 0.49,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.57,
+  "chargeIsLegacy": false,
+  "charge": "FRUSTRATION",
+  "fast": "ZEN_HEADBUTT_FAST",
+  "defScore": 0.37,
   "fastMoveType": "UNKNOWN",
   "chargeMoveType": "UNKNOWN",
   "fastIsLegacy": false

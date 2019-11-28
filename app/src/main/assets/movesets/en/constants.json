@@ -459,7 +459,7 @@
         "GENESECT_BURN_FORM": "Burn Genesect",
         "GENESECT_CHILL_FORM": "Chill Genesect",
         "GENESECT_DOUSE_FORM": "Douse Genesect",
-      
+
         "RATTATA_NORMAL_FORM": "Rattata - Normal",
         "RATTATA_ALOLA_FORM": "Rattata - Alola",
         "RATICATE_NORMAL_FORM": "Raticate - Normal",
@@ -519,7 +519,7 @@
         "RAMPARDOS": "Rampardos",
         "SHIELDON": "Shieldon",
         "BASTIODON": "Bastiodon",
-		"Burmy": "Burmy",
+        "BURMY": "Burmy",
         "WORMADAM": "Wormadam",
         "MOTHIM": "Mothim",
         "COMBEE": "Combbee",
@@ -817,7 +817,7 @@
         "MELOETTA_ARIA_FORM": "Aria Meloetta",
         "MELOETTA_PIROUETTE_FORM": "Pirouette Meloetta",
 
-      
+
         "MELTAN": "Meltan",
         "MELMETAL": "Melmetal",
         "BURMY_PLANT_FORM": "Burmy - Plant",
@@ -1305,9 +1305,9 @@
         "SQUIRTLE_FALL_2019_FORM": "$t(constants:pokemon.FALL_FORM) $t(constants:pokemon.SQUIRTLE)",
         "CHARMANDER_FALL_2019_FORM": "$t(constants:pokemon.FALL_FORM) $t(constants:pokemon.CHARMANDER)",
         "BULBASAUR_FALL_2019_FORM": "$t(constants:pokemon.FALL_FORM) $t(constants:pokemon.BULBASAUR)",
-      "PINSIR_NORMAL_FORM": "$t(constants:pokemon.NORMAL_FORM) $t(constants:pokemon.PINSIR)",
-      "PINSIR_SHADOW_FORM": "$t(constants:pokemon.SHADOW_FORM) $t(constants:pokemon.PINSIR)",
-      "PINSIR_PURIFIED_FORM": "$t(constants:pokemon.PURIFIED_FORM) $t(constants:pokemon.PINSIR)",
+        "PINSIR_NORMAL_FORM": "$t(constants:pokemon.NORMAL_FORM) $t(constants:pokemon.PINSIR)",
+        "PINSIR_SHADOW_FORM": "$t(constants:pokemon.SHADOW_FORM) $t(constants:pokemon.PINSIR)",
+        "PINSIR_PURIFIED_FORM": "$t(constants:pokemon.PURIFIED_FORM) $t(constants:pokemon.PINSIR)",
         "PIKACHU_VS_FORM": "Pikachu Vs",
         "ONIX_NORMAL_FORM": "$t(constants:pokemon.NORMAL_FORM) $t(constants:pokemon.ONIX)",
         "ONIX_SHADOW_FORM": "$t(constants:pokemon.SHADOW_FORM) $t(constants:pokemon.ONIX)",
@@ -1819,7 +1819,7 @@
         "POWER": {
             "label": "$t(common:properties.power)",
             "description": "The percent of opponents health removed within the time limit"
-        }, 
+        },
         "WIN":{
             "label": "$t(common:properties.win)",
             "description": "Chance of victory"
