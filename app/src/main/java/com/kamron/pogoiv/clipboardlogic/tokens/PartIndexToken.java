@@ -90,12 +90,12 @@ public class PartIndexToken extends ClipboardToken {
             double ml_cost = max(((double) cost.candy + candy_dust_rate * (double) cost.dust / 1000.0)/10.0 - cl_cost, 0.0);
 
             double perfc = iv.percentPerfect;
-            /*if(pokemon.getEvolutions().isEmpty() && scanResult.selectedMoveset!=null){
+            if(maxEv && pokemon.getEvolutions().isEmpty() && scanResult.selectedMoveset!=null){
                 Double atk = scanResult.selectedMoveset.getAtkScore();
                 Double def = scanResult.selectedMoveset.getDefScore();
                 if(atk!=null && def!=null)
-                   perfc = Math.round((iv.att*atk + iv.def*def + iv.sta)/45f * 100);
-            }*/
+                   perfc = Math.round(((double) iv.att*atk + (double)iv.def*def + (double)iv.sta)/45.0 * 100.0);
+            }
 
             int cp = scanResult.cp;
             int hp = maxEv ? scanResult.hp : 0;
