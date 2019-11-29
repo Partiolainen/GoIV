@@ -3621,7 +3621,7 @@
   "fastIsLegacy": false
 }
 ],
-  "MR._MIME": [
+  "MR_MIME": [
 {
   "atkScore": 1.0,
   "chargeIsLegacy": false,
@@ -40867,6 +40867,68 @@
   "fastIsLegacy": false
 }
 ],
+  "SHELLOS": [
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "WATER_PULSE",
+  "fast": "HIDDEN_POWER_FAST",
+  "defScore": 1.0,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 1.0,
+  "chargeIsLegacy": false,
+  "charge": "WATER_PULSE",
+  "fast": "MUD_SLAP_FAST",
+  "defScore": 0.94,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.98,
+  "chargeIsLegacy": false,
+  "charge": "BODY_SLAM",
+  "fast": "HIDDEN_POWER_FAST",
+  "defScore": 0.91,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.97,
+  "chargeIsLegacy": false,
+  "charge": "BODY_SLAM",
+  "fast": "MUD_SLAP_FAST",
+  "defScore": 0.88,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.96,
+  "chargeIsLegacy": false,
+  "charge": "MUD_BOMB",
+  "fast": "MUD_SLAP_FAST",
+  "defScore": 0.87,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+},
+{
+  "atkScore": 0.95,
+  "chargeIsLegacy": false,
+  "charge": "MUD_BOMB",
+  "fast": "HIDDEN_POWER_FAST",
+  "defScore": 0.91,
+  "fastMoveType": "UNKNOWN",
+  "chargeMoveType": "UNKNOWN",
+  "fastIsLegacy": false
+}
+],
   "GASTRODON_WEST_SEA_FORM": [
 {
   "atkScore": 1.0,
@@ -42369,7 +42431,7 @@
   "fastIsLegacy": false
 }
 ],
-  "MIME_JR.": [
+  "MIME_JR": [
 {
   "atkScore": 1.0,
   "chargeIsLegacy": false,
