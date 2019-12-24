@@ -24,15 +24,15 @@ import static java.lang.Math.round;
  * This token shows the index based on max possible cp and cost to reach this cp
  */
 
-public class PartIndexToken extends ClipboardToken {
+public class UniIndexToken extends ClipboardToken {
 
     //protected String string = "";
     private String[] whiteDigits = {"⓪", "①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩", "⑪",
             "⑫", "⑬", "⑭", "⑮", "⑯", "⑰", "⑱", "⑲", "⑳", "㉑", "㉒", "㉓", "㉔", "㉕", "㉖", "㉗", "㉘", "㉙",
             "㉚", "㉛", "㉜", "㉝", "㉞", "㉟", "㊱", "㊲", "㊳", "㊴", "㊵", "㊶", "㊷", "㊸", "㊹", "㊺", "㊻", "㊼",
             "㊽", "㊾", "㊿"};
-    /*private String[] blackDigits = {"⓿", "❶", "❷", "❸", "❹", "❺", "❻", "❼", "❽", "❾", "❿",
-                                    "⓫", "⓬", "⓭", "⓮", "⓯", "⓰", "⓱", "⓲", "⓳", "⓴"};*/
+    private String[] blackDigits = {"⓿", "❶", "❷", "❸", "❹", "❺", "❻", "❼", "❽", "❾", "❿",
+                                    "⓫", "⓬", "⓭", "⓮", "⓯", "⓰", "⓱", "⓲", "⓳", "⓴"};
     private String[] whiteLetters = {"Ⓐ", "Ⓑ", "Ⓒ", "Ⓓ", "Ⓔ", "Ⓕ", "Ⓖ", "Ⓗ", "Ⓘ", "Ⓙ", "Ⓚ", "Ⓛ",
             "Ⓜ", "Ⓝ", "Ⓞ", "Ⓟ", "Ⓠ", "Ⓡ", "Ⓢ", "Ⓣ", "Ⓤ", "Ⓥ", "Ⓦ", "Ⓧ", "Ⓨ", "Ⓩ"};
 
@@ -43,7 +43,7 @@ public class PartIndexToken extends ClipboardToken {
      * Create a clipboard token.
      * The boolean in the constructor can be set to false if pokemon evolution is not applicable.
      **/
-    public PartIndexToken(boolean maxEv, String sep) {
+    public UniIndexToken(boolean maxEv, String sep) {
         super(maxEv);
         _sep = sep;
     }
