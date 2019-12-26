@@ -59,69 +59,66 @@ public class UniIndexToken extends ClipboardToken {
     public String getValue(ScanResult scanResult, PokeInfoCalculator pokeInfoCalculator) {
         try {
 
+            double candy_dust_rate = 10 / 3;
+            double iv_decrease = 2.0;
+
             Pokemon pokemon = scanResult.pokemon;
             List<Pokemon> evolutionLine = pokemon.getEvolutions(); //pokeInfoCalculator.getEvolutionLine(pokemon);
-            Pokemon evolvedPokemon = evolutionLine.size()==0 ? pokemon : evolutionLine.get(evolutionLine.size() - 1);
+            Pokemon evolvedPokemon = evolutionLine.size() == 0 ? pokemon : evolutionLine.get(evolutionLine.size() - 1);
             evolutionLine = evolvedPokemon.getEvolutions();
-            evolvedPokemon = evolutionLine.size()==0 ? evolvedPokemon : evolutionLine.get(evolutionLine.size() - 1);
+            evolvedPokemon = evolutionLine.size() == 0 ? evolvedPokemon : evolutionLine.get(evolutionLine.size() - 1);
 
             IVCombination lowiv = scanResult.getLowestIVCombination();
             IVCombination iv = scanResult.getHighestIVCombination();
+            IVCombination maxiv = new IVCombination(15, 15, 15);
 
-            int aecp = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, lowiv, iv, scanResult.levelRange.min).high;
-            int clcp = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, lowiv, iv, Data.maximumPokemonCurrentLevel).high;
-            int mlcp = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, lowiv, iv, 40).high;
+            double aecp = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, lowiv, iv, scanResult.levelRange.min).high;
+            double mlcp = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, lowiv, iv, 40).high;
+            double maxiv_cp = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, maxiv, maxiv, 40).high;
 
             int aehp = maxEv ? pokeInfoCalculator.getHPAtLevel(scanResult, scanResult.levelRange.min, evolvedPokemon) : 0;
-            int clhp = maxEv ? pokeInfoCalculator.getHPAtLevel(scanResult, Data.maximumPokemonCurrentLevel, evolvedPokemon) : 0;
             int mlhp = maxEv ? pokeInfoCalculator.getHPAtLevel(scanResult, 40, evolvedPokemon) : 0;
 
-            int aecp_mark = round(aecp / 100);
-            int clcp_mark = round(clcp / 100);
-            int mlcp_mark = round(mlcp / 100);
+            double maxcost = (704 + 270 * candy_dust_rate) / 10;
+            int evo_cost_candy = pokeInfoCalculator.getCandyCostForEvolution(pokemon, evolvedPokemon);
 
-            double candy_dust_rate = 10/3;
-            double evo_cost = ((double) pokeInfoCalculator.getCandyCostForEvolution(pokemon, evolvedPokemon)) / 10.0;
-            UpgradeCost cost = new UpgradeCost(0, 0);
-            if(Data.maximumPokemonCurrentLevel >= scanResult.levelRange.max)
-               cost=pokeInfoCalculator.getUpgradeCost(Data.maximumPokemonCurrentLevel, scanResult.levelRange.max, scanResult.isLucky);
-            double cl_cost = max(((double) cost.candy + candy_dust_rate * (double) cost.dust / 1000.0)/10.0 - evo_cost, 0.0);
+            UpgradeCost cost = pokeInfoCalculator.getUpgradeCost(40, scanResult.levelRange.max, scanResult.isLucky);
+            double ml_cost = (cost.candy - evo_cost_candy + candy_dust_rate * cost.dust / 1000.0) / 10.0;
 
-            cost = pokeInfoCalculator.getUpgradeCost(40, scanResult.levelRange.max, scanResult.isLucky);
-            double ml_cost = max(((double) cost.candy + candy_dust_rate * (double) cost.dust / 1000.0)/10.0 - cl_cost, 0.0);
+            double cp_rate = aecp / mlcp;
+            double ml_cost_rate = (maxcost - ml_cost / 2) / maxcost;
+            double iv_rate = (1.0 - (1.0 - mlcp / maxiv_cp) * iv_decrease);
 
-            double perfc = iv.percentPerfect;
-            if(maxEv && pokemon.getEvolutions().isEmpty() && scanResult.selectedMoveset!=null){
-                Double atk = scanResult.selectedMoveset.getAtkScore();
-                Double def = scanResult.selectedMoveset.getDefScore();
-                if(atk!=null && def!=null)
-                   perfc = Math.round(((double) iv.att*atk + (double)iv.def*def + (double)iv.sta)/45.0 * 100.0);
-            }
+            double cp_att = ((evolvedPokemon.baseAttack + iv.att) * Math.pow(0.7903001, 2.0)) * scanResult.selectedMoveset.getAtkScore();
+            double cp_def = (Math.sqrt(evolvedPokemon.baseDefense + iv.def) * Math.sqrt(evolvedPokemon.baseStamina + iv.sta) * Math.pow(0.7903001, 2.0)) * scanResult.selectedMoveset.getDefScore();
 
-            int cp = scanResult.cp;
-            int hp = maxEv ? scanResult.hp : 0;
-            double cp_rate = perfc*((double)cp /*+ 2*hp*/)/10000.0;
-            double ae_rate = ((double)aecp/*+2*aehp*/)*(perfc-evo_cost)/10000.0;
-            double cl_rate = ((double)clcp+2*(double)clhp)*(perfc-cl_cost)/10000.0;
-            double ml_rate = ((double)mlcp+2*(double)mlhp)*(perfc-ml_cost)/10000.0;
+            double cp_att_max = ((evolvedPokemon.baseAttack + 15.0) * Math.pow(0.7903001, 2.0)) * scanResult.selectedMoveset.getAtkScore();
+            double cp_def_max = (Math.sqrt(evolvedPokemon.baseDefense + 15.0) * Math.sqrt(evolvedPokemon.baseStamina + 15.0) * Math.pow(0.7903001, 2.0)) * scanResult.selectedMoveset.getDefScore();
 
-            int rate = max(0, min(25, (int)round((cp_rate * 1.0 + ae_rate * 3.0 + cl_rate * 6.0 + ml_rate * 2.0)
-                                                *(40.0/(double) Data.trainerLevel) / 12.0)));
+            double profile_incr = 1.5;
+            double cp_att_rate = (1.0 - (1.0 - cp_att / cp_att_max) * profile_incr);
+            double cp_def_rate = (1.0 - (1.0 - cp_def / cp_def_max) * profile_incr);
+
+            double rate_att = cp_rate * ml_cost_rate * iv_rate * cp_att_rate;
+            double rate_def = cp_rate * ml_cost_rate * iv_rate * cp_def_rate;
+
+            boolean isAtt = iv.att > Math.sqrt(iv.def) * Math.sqrt(iv.sta);
+
+            int rate = max(0, min(isAtt ? 25 : 20, (int) round(isAtt ? rate_att : rate_def)));
+
             int mark = 0;
-            if (scanResult.cp < aecp) mark = aecp_mark;
-            else if (scanResult.cp >= aecp && scanResult.cp < clcp) mark = clcp_mark;
-            else if (scanResult.cp >= clcp) mark = mlcp_mark;
+            if (scanResult.cp < aecp) mark = (int) round(aecp / 100.0);
+            else mark = (int) round(mlcp / 100.0);
             int perf = iv.percentPerfect;
-            String returner = "" + whiteLetters[rate] + whiteDigits[mark] + _sep
+
+            String returner = "" + (isAtt ? whiteLetters[rate] : blackDigits[rate]) + whiteDigits[mark] + _sep
                     + (!scanResult.getHasBeenAppraised() ? "◦" :
-                      (perf<=49 ? "·" : "")
-                    + (perf>49 && perf < 64.4 ? "*" : "")
-                    + (perf>=64.4 && perf <= 80 && !scanResult.isLucky ? "⁑" : "")
-                    + (perf>80 && perf < 90 && !scanResult.isLucky ? "⁂" : "")
-                    //+ (perf>80 && perf < 85 && !scanResult.isLucky || perf <= 80 && scanResult.isLucky ? "∴" : "")
-                    //+ (perf>=86 && perf < 90 && !scanResult.isLucky || perf>80 && perf < 85 && scanResult.isLucky ? "∵" : "")
-                    + (perf>=90 && perf < 100 && !scanResult.isLucky || /*perf>80 &&*/ perf < 90 && scanResult.isLucky ? "☆" : "")
-                    + (perf==100 && !scanResult.isLucky || perf >= 90 && scanResult.isLucky ? "★" : "") );
+                    (perf <= 49 ? "·" : "")
+                            + (perf > 49 && perf < 64.4 ? "*" : "")
+                            + (perf >= 64.4 && perf <= 80 && !scanResult.isLucky ? "⁑" : "")
+                            + (perf > 80 && perf < 90 && !scanResult.isLucky ? "⁂" : "")
+                            + (perf >= 90 && perf < 100 && !scanResult.isLucky || perf < 90 && scanResult.isLucky ? "☆" : "")
+                            + (perf == 100 && !scanResult.isLucky || perf >= 90 && scanResult.isLucky ? "★" : ""));
 
             return returner;
         } catch (Throwable t) {
@@ -136,7 +133,7 @@ public class UniIndexToken extends ClipboardToken {
 
     @Override
     public String getTokenName(Context context) {
-        return "PartIndex";
+        return "UniIndex";
     }
 
     @Override
