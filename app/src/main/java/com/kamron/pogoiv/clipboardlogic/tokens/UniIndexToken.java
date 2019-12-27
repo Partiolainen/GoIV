@@ -60,7 +60,7 @@ public class UniIndexToken extends ClipboardToken {
         try {
 
             double candy_dust_rate = 10 / 3;
-            double iv_decrease = 2.0;
+            double iv_decrease = 7.5;
 
             Pokemon pokemon = scanResult.pokemon;
             List<Pokemon> evolutionLine = pokemon.getEvolutions(); //pokeInfoCalculator.getEvolutionLine(pokemon);
@@ -89,20 +89,26 @@ public class UniIndexToken extends ClipboardToken {
             double ml_cost_rate = (maxcost - ml_cost / 2) / maxcost;
             double iv_rate = (1.0 - (1.0 - mlcp / maxiv_cp) * iv_decrease);
 
-            double cp_att = ((evolvedPokemon.baseAttack + iv.att) * Math.pow(0.7903001, 2.0)) * scanResult.selectedMoveset.getAtkScore();
-            double cp_def = (Math.sqrt(evolvedPokemon.baseDefense + iv.def) * Math.sqrt(evolvedPokemon.baseStamina + iv.sta) * Math.pow(0.7903001, 2.0)) * scanResult.selectedMoveset.getDefScore();
+            boolean isFinalForm = maxEv && pokemon.getEvolutions().isEmpty() && scanResult.selectedMoveset!=null;
 
-            double cp_att_max = ((evolvedPokemon.baseAttack + 15.0) * Math.pow(0.7903001, 2.0)) * scanResult.selectedMoveset.getAtkScore();
-            double cp_def_max = (Math.sqrt(evolvedPokemon.baseDefense + 15.0) * Math.sqrt(evolvedPokemon.baseStamina + 15.0) * Math.pow(0.7903001, 2.0)) * scanResult.selectedMoveset.getDefScore();
+            Double atkScore = isFinalForm ? scanResult.selectedMoveset.getAtkScore() : 1.0;
+            Double defScore = isFinalForm ? scanResult.selectedMoveset.getDefScore() : 1.0;
+
+            double cp_att = ((evolvedPokemon.baseAttack + iv.att) * Math.pow(0.7903001, 2.0)) * atkScore;
+            double cp_def = (Math.sqrt(evolvedPokemon.baseDefense + iv.def) * Math.sqrt(evolvedPokemon.baseStamina + iv.sta)
+                    * Math.pow(0.7903001, 2.0)) * defScore;
+
+            double cp_att_max = ((evolvedPokemon.baseAttack + 15.0) * Math.pow(0.7903001, 2.0));
+            double cp_def_max = (Math.sqrt(evolvedPokemon.baseDefense + 15.0) * Math.sqrt(evolvedPokemon.baseStamina + 15.0) * Math.pow(0.7903001, 2.0));
 
             double profile_incr = 1.5;
-            double cp_att_rate = (1.0 - (1.0 - cp_att / cp_att_max) * profile_incr);
-            double cp_def_rate = (1.0 - (1.0 - cp_def / cp_def_max) * profile_incr);
+            boolean isAtt = evolvedPokemon.baseAttack > Math.sqrt(evolvedPokemon.baseDefense) * Math.sqrt(evolvedPokemon.baseStamina) + 2.0;
 
-            double rate_att = cp_rate * ml_cost_rate * iv_rate * cp_att_rate;
-            double rate_def = cp_rate * ml_cost_rate * iv_rate * cp_def_rate;
+            double cp_att_rate = (1.0 - (1.0 - cp_att / cp_att_max) * (isAtt ? profile_incr : 1.0));
+            double cp_def_rate = (1.0 - (1.0 - cp_def / cp_def_max) * (!isAtt ? profile_incr : 1.0));
 
-            boolean isAtt = iv.att > Math.sqrt(iv.def) * Math.sqrt(iv.sta);
+            double rate_att = cp_rate * ml_cost_rate * iv_rate * cp_att_rate * 25.0;
+            double rate_def = cp_rate * ml_cost_rate * iv_rate * cp_def_rate * 20.0;
 
             int rate = max(0, min(isAtt ? 25 : 20, (int) round(isAtt ? rate_att : rate_def)));
 

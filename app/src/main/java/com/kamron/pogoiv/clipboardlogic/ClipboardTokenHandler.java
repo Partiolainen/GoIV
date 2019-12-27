@@ -146,7 +146,7 @@ public class ClipboardTokenHandler {
             if (representation.contains(uniClassName)) {
                 int classLength = uniClassName.length();
                 boolean maxEv = representation.contains("max");
-                saveTo.add(new PartIndexToken(maxEv,
+                saveTo.add(new UniIndexToken(maxEv,
                         representation.substring((maxEv ? 3 : 0) + classLength)));
                 continue;
             }
