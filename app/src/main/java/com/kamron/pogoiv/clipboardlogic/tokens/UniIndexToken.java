@@ -92,8 +92,10 @@ public class UniIndexToken extends ClipboardToken {
             boolean isFinalForm = maxEv && pokemon.getEvolutions().isEmpty() && scanResult.selectedMoveset!=null;
 
             double moveDecrease = 1.0;
-            Double atkScore = isFinalForm ? 1.0-(1.0-scanResult.selectedMoveset.getAtkScore())/moveDecrease : 1.0;
-            Double defScore = isFinalForm ? 1.0-(1.0-scanResult.selectedMoveset.getDefScore())/moveDecrease : 1.0;
+            double nonFinalAtkScore = 0.93705;
+            double nonFinalDefScore = 0.8864;
+            Double atkScore = isFinalForm ? 1.0-(1.0-scanResult.selectedMoveset.getAtkScore())/moveDecrease : nonFinalAtkScore;
+            Double defScore = isFinalForm ? 1.0-(1.0-scanResult.selectedMoveset.getDefScore())/moveDecrease : nonFinalDefScore;
 
             double cp_att = ((evolvedPokemon.baseAttack + iv.att) * Math.pow(0.7903001, 2.0)) * atkScore;
             double cp_def = (Math.sqrt(evolvedPokemon.baseDefense + iv.def) * Math.sqrt(evolvedPokemon.baseStamina + iv.sta)
@@ -113,7 +115,7 @@ public class UniIndexToken extends ClipboardToken {
 
             //int rate = max(0, min(isAtt ? 25 : 20, (int) round(isAtt ? rate_att : rate_def)));
 
-            int mark = 0;
+            int mark;
             if (scanResult.cp < aecp) mark = (int) round(aecp / 100.0);
             else mark = (int) round(mlcp / 100.0);
             int perf = iv.percentPerfect;
