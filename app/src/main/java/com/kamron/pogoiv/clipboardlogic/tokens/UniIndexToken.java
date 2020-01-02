@@ -76,8 +76,8 @@ public class UniIndexToken extends ClipboardToken {
             double mlcp = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, lowiv, iv, 40).high;
             double maxiv_cp = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, maxiv, maxiv, 40).high;
 
-            int aehp = maxEv ? pokeInfoCalculator.getHPAtLevel(scanResult, scanResult.levelRange.min, evolvedPokemon) : 0;
-            int mlhp = maxEv ? pokeInfoCalculator.getHPAtLevel(scanResult, 40, evolvedPokemon) : 0;
+            //int aehp = maxEv ? pokeInfoCalculator.getHPAtLevel(scanResult, scanResult.levelRange.min, evolvedPokemon) : 0;
+            //int mlhp = maxEv ? pokeInfoCalculator.getHPAtLevel(scanResult, 40, evolvedPokemon) : 0;
 
             double maxcost = (704 + 270 * candy_dust_rate) / 10;
             int evo_cost_candy = pokeInfoCalculator.getCandyCostForEvolution(pokemon, evolvedPokemon);
@@ -91,8 +91,9 @@ public class UniIndexToken extends ClipboardToken {
 
             boolean isFinalForm = maxEv && pokemon.getEvolutions().isEmpty() && scanResult.selectedMoveset!=null;
 
-            Double atkScore = isFinalForm ? scanResult.selectedMoveset.getAtkScore() : 1.0;
-            Double defScore = isFinalForm ? scanResult.selectedMoveset.getDefScore() : 1.0;
+            double moveDecrease = 1.0;
+            Double atkScore = isFinalForm ? 1.0-(1.0-scanResult.selectedMoveset.getAtkScore())/moveDecrease : 1.0;
+            Double defScore = isFinalForm ? 1.0-(1.0-scanResult.selectedMoveset.getDefScore())/moveDecrease : 1.0;
 
             double cp_att = ((evolvedPokemon.baseAttack + iv.att) * Math.pow(0.7903001, 2.0)) * atkScore;
             double cp_def = (Math.sqrt(evolvedPokemon.baseDefense + iv.def) * Math.sqrt(evolvedPokemon.baseStamina + iv.sta)
@@ -107,17 +108,31 @@ public class UniIndexToken extends ClipboardToken {
             double cp_att_rate = (1.0 - (1.0 - cp_att / cp_att_max) * (isAtt ? profile_incr : 1.0));
             double cp_def_rate = (1.0 - (1.0 - cp_def / cp_def_max) * (!isAtt ? profile_incr : 1.0));
 
-            double rate_att = cp_rate * ml_cost_rate * iv_rate * cp_att_rate * 25.0;
-            double rate_def = cp_rate * ml_cost_rate * iv_rate * cp_def_rate * 20.0;
+            int rate_att = (int) round(max(0.0, min(25.0, cp_rate * ml_cost_rate * iv_rate * cp_att_rate * 25.0)));
+            int rate_def = (int) round(max(0.0, min(20.0, cp_rate * ml_cost_rate * iv_rate * cp_def_rate * 20.0)));
 
-            int rate = max(0, min(isAtt ? 25 : 20, (int) round(isAtt ? rate_att : rate_def)));
+            //int rate = max(0, min(isAtt ? 25 : 20, (int) round(isAtt ? rate_att : rate_def)));
 
             int mark = 0;
             if (scanResult.cp < aecp) mark = (int) round(aecp / 100.0);
             else mark = (int) round(mlcp / 100.0);
             int perf = iv.percentPerfect;
+            String moveSymb = "";
+            if(isFinalForm){
+                double score = isAtt ? scanResult.selectedMoveset.getAtkScore() : scanResult.selectedMoveset.getDefScore();
+                if(score==1.0){
+                    moveSymb = "◉";
+                }else if(score > .95){
+                    moveSymb = "◎";
+                }
+            }
 
-            String returner = "" + (isAtt ? whiteLetters[rate] : blackDigits[rate]) + whiteDigits[mark] + _sep
+            String returner = ""
+                    + (isAtt ? whiteLetters[rate_att] :
+                               blackDigits[rate_def])
+                    + whiteDigits[mark]
+                    + moveSymb
+                    + _sep
                     + (!scanResult.getHasBeenAppraised() ? "◦" :
                     (perf <= 49 ? "·" : "")
                             + (perf > 49 && perf < 64.4 ? "*" : "")
