@@ -102,7 +102,8 @@ public class UniIndexToken extends ClipboardToken {
                     * Math.pow(0.7903001, 2.0)) * defScore;
 
             double cp_att_max = ((evolvedPokemon.baseAttack + 15.0) * Math.pow(0.7903001, 2.0));
-            double cp_def_max = (Math.sqrt(evolvedPokemon.baseDefense + 15.0) * Math.sqrt(evolvedPokemon.baseStamina + 15.0) * Math.pow(0.7903001, 2.0));
+            double cp_def_max = (Math.sqrt(evolvedPokemon.baseDefense + 15.0) * Math.sqrt(evolvedPokemon.baseStamina + 15.0)
+                    * Math.pow(0.7903001, 2.0));
 
             double profile_incr = 1.5;
             boolean isAtt = evolvedPokemon.baseAttack > Math.sqrt(evolvedPokemon.baseDefense) * Math.sqrt(evolvedPokemon.baseStamina) + 2.0;
@@ -119,7 +120,7 @@ public class UniIndexToken extends ClipboardToken {
             if (scanResult.cp < aecp) mark = (int) round(aecp / 100.0);
             else mark = (int) round(mlcp / 100.0);
             int perf = iv.percentPerfect;
-            String moveSymb = "";
+            /*String moveSymb = "";
             if(isFinalForm){
                 double score = isAtt ? scanResult.selectedMoveset.getAtkScore() : scanResult.selectedMoveset.getDefScore();
                 if(score==1.0){
@@ -127,13 +128,14 @@ public class UniIndexToken extends ClipboardToken {
                 }else if(score > .95){
                     moveSymb = "◎";
                 }
-            }
+            }*/
 
             String returner = ""
                     + (isAtt ? whiteLetters[rate_att] :
                                blackDigits[rate_def])
+                    //+ whiteLetters[rate_att] + blackDigits[rate_def] + whiteLetters[rate_att]
                     + whiteDigits[mark]
-                    + moveSymb
+                    //+ moveSymb
                     + _sep
                     + (!scanResult.getHasBeenAppraised() ? "◦" :
                     (perf <= 49 ? "·" : "")
