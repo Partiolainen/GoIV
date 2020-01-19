@@ -69,56 +69,58 @@ public class UniIndexToken extends ClipboardToken {
 
             IVCombination iv = scanResult.getHighestIVCombination();
 
-            double aecp = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, iv, iv, scanResult.levelRange.min).high;
-            String aecp_mark = whiteDigits[(int) Math.floor(aecp / 100)];
-
             boolean isFinalForm = maxEv && pokemon.getEvolutions().isEmpty() && scanResult.selectedMoveset != null;
+            double aecp = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, iv, iv, scanResult.levelRange.min).high;
+            double mlcp = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, iv, iv, 40).high;
+            String aecp_mark = whiteDigits[(int) Math.floor((isFinalForm ? mlcp : aecp) / 100)];
 
             int evoUsedCandies = pokeInfoCalculator.getCandyCostForEvolution(initialPokemon, evolvedPokemon);
             UpgradeCost costUsed = pokeInfoCalculator.getUpgradeCost(scanResult.levelRange.max, 1, scanResult.isLucky);
             costUsed = new UpgradeCost(costUsed.dust, costUsed.candy + evoUsedCandies);
 
-            UpgradeCost costTo40 = pokeInfoCalculator.getUpgradeCost(40, scanResult.levelRange.max, scanResult.isLucky);
-            int evoTo40Candies = pokeInfoCalculator.getCandyCostForEvolution(pokemon, evolvedPokemon);
+            //UpgradeCost costTo40 = pokeInfoCalculator.getUpgradeCost(40, scanResult.levelRange.max, scanResult.isLucky);
+            //int evoTo40Candies = pokeInfoCalculator.getCandyCostForEvolution(pokemon, evolvedPokemon);
+            UpgradeCost costFull = pokeInfoCalculator.getUpgradeCost(40, 1, scanResult.isLucky);
+            int evoCandiesFull = pokeInfoCalculator.getCandyCostForEvolution(initialPokemon, evolvedPokemon);
 
-            double сostInvestedCandiesPercentage = (double) costUsed.candy / (costTo40.candy + evoTo40Candies);
-            double сostInvestedStardustPercentage = (double) costUsed.dust / costUsed.dust;
+            double сostInvestedCandiesPercentage = (double) costUsed.candy / (costFull.candy + evoCandiesFull);
+            double сostInvestedStardustPercentage = scanResult.isLucky ? 1.0 : (double) costUsed.dust / costFull.dust;
 
             GymType gymType = GymType.UNIVERSAL;
             int baseDefSta = (int) Math.floor(Math.sqrt(evolvedPokemon.baseDefense) * Math.sqrt(evolvedPokemon.baseStamina));
-            if (evolvedPokemon.baseAttack >= 199 && baseDefSta < 180) gymType = GymType.OFFENSIVE;
-            if (evolvedPokemon.baseAttack < 199 && baseDefSta >= 180) gymType = GymType.DEFENSIVE;
+            if (evolvedPokemon.baseAttack >= 198 && baseDefSta < 180) gymType = GymType.OFFENSIVE;
+            if (evolvedPokemon.baseAttack < 198 && baseDefSta >= 180) gymType = GymType.DEFENSIVE;
 
             double rate = isFinalForm
-                    ? 0.3 * iv.percentPerfect
+                    ? 0.3 * (iv.att+iv.def+iv.sta)/45.0
                     + 0.35 / 2 * сostInvestedCandiesPercentage
                     + 0.35 / 2 * сostInvestedStardustPercentage
                     + (gymType == GymType.OFFENSIVE ? 0.35 : 0) * (scanResult.selectedMoveset.getAtkScore())
                     + (gymType == GymType.DEFENSIVE ? 0.35 : 0) * (scanResult.selectedMoveset.getDefScore())
                     + (gymType == GymType.UNIVERSAL ? 0.35 / 2 : 0) * (scanResult.selectedMoveset.getAtkScore())
                     + (gymType == GymType.UNIVERSAL ? 0.35 / 2 : 0) * (scanResult.selectedMoveset.getDefScore())
-                    : (0.3 + (0.35 * 6.0 / 13.0)) * iv.percentPerfect
+                    : (0.3 + (0.35 * 6.0 / 13.0)) * (iv.att+iv.def+iv.sta)/45.0
                     + (0.35 / 2 + ((0.35 / 2) * 7.0 / 13.0)) * сostInvestedCandiesPercentage
                     + (0.35 / 2 + ((0.35 / 2) * 7.0 / 13.0)) * сostInvestedStardustPercentage;
 
             String rate_mark = whiteLetters[(int) (25 * rate)];
 
             boolean isBestMoveset =
-                    (gymType == GymType.OFFENSIVE && scanResult.selectedMoveset.getAtkScore() == 1.0) ||
-                            (gymType == GymType.DEFENSIVE && scanResult.selectedMoveset.getDefScore() == 1.0) ||
-                            (gymType == GymType.UNIVERSAL && (scanResult.selectedMoveset.getAtkScore() == 1.0
-                                    || scanResult.selectedMoveset.getDefScore() == 1.0));
-            //࿅ ࿇ ࿈ ࿉ ࿊ ࿋ ࿌
+                    (gymType == GymType.OFFENSIVE && scanResult.selectedMoveset.getAtkScore() > 0.95) ||
+                            (gymType == GymType.DEFENSIVE && scanResult.selectedMoveset.getDefScore() > 0.95) ||
+                            (gymType == GymType.UNIVERSAL && (scanResult.selectedMoveset.getAtkScore() > 0.95
+                                    || scanResult.selectedMoveset.getDefScore() > 0.95));
+            //࿅ ࿇ ࿈ ࿉ ࿊ ࿋ ࿌   ࿂ ࿃
             double perf = iv.percentPerfect;
             String returner = rate_mark + aecp_mark
-                    + (gymType == GymType.OFFENSIVE ? (isBestMoveset ? "࿇" : "࿅") : "")
-                    + (gymType == GymType.DEFENSIVE ? (isBestMoveset ? "࿌" : "࿊") : "")
-                    + (gymType == GymType.UNIVERSAL ? (isBestMoveset && scanResult.selectedMoveset.getAtkScore() == 1.0 && scanResult.selectedMoveset.getDefScore() < 1.0 ? "࿈" : "") : "")
-                    + (gymType == GymType.UNIVERSAL ? (isBestMoveset && scanResult.selectedMoveset.getDefScore() == 1.0 ? "࿉" : "") : "")
-                    + (gymType == GymType.UNIVERSAL ? (isBestMoveset && scanResult.selectedMoveset.getDefScore() < 1.0 && scanResult.selectedMoveset.getDefScore() < 1.0 ? "࿃" : "") : "")
+                    + (gymType == GymType.OFFENSIVE ? (isFinalForm && isBestMoveset ? "࿇" : "࿅") : "")
+                    + (gymType == GymType.DEFENSIVE ? (isFinalForm && isBestMoveset ? "࿌" : "࿊") : "")
+                    + (gymType == GymType.UNIVERSAL ? (isFinalForm && scanResult.selectedMoveset.getAtkScore() > 0.95 && scanResult.selectedMoveset.getDefScore() <= 0.95 ? "࿈" : "") : "")
+                    + (gymType == GymType.UNIVERSAL ? (isFinalForm && scanResult.selectedMoveset.getDefScore() > 0.95 ? "࿋" : "") : "")
+                    + (gymType == GymType.UNIVERSAL ? (!isFinalForm || isFinalForm && scanResult.selectedMoveset.getAtkScore() <= 0.95 && scanResult.selectedMoveset.getDefScore() <= 0.95 ? "࿃" : "") : "")
                     + _sep
                     + (!scanResult.getHasBeenAppraised() ? "◦" :
-                    (perf <= 49 ? "·" : "")
+                    (perf <= 49 ? "·" : "") // ༚ ༛ ༜       * ⁑ ⁂
                             + (perf > 49 && perf < 64.4 ? "*" : "")
                             + (perf >= 64.4 && perf <= 80 && !scanResult.isLucky ? "⁑" : "")
                             + (perf > 80 && perf < 90 && !scanResult.isLucky ? "⁂" : "")
