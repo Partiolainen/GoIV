@@ -3136,16 +3136,16 @@
  <item>-1</item> <!--Unfezant-->
  <item>50</item> <!--Blitzle-->
  <item>-1</item> <!--Zebstrika-->
- <item>25</item> <!--Roggenrola-->
- <item>100</item> <!--Boldore-->
+ <item>50</item> <!--Roggenrola-->
+ <item>200</item> <!--Boldore-->
  <item>-1</item> <!--Gigalith-->
  <item>50</item> <!--Woobat-->
  <item>-1</item> <!--Swoobat-->
  <item>50</item> <!--Drilbur-->
  <item>-1</item> <!--Excadrill-->
  <item>-1</item> <!--Audino-->
- <item>25</item> <!--Timburr-->
- <item>100</item> <!--Gurdurr-->
+ <item>50</item> <!--Timburr-->
+ <item>200</item> <!--Gurdurr-->
  <item>-1</item> <!--Conkeldurr-->
  <item>25</item> <!--Tympole-->
  <item>100</item> <!--Palpitoad-->
@@ -3200,7 +3200,7 @@
  <item>50</item> <!--Deerling-->
  <item>-1</item> <!--Sawsbuck-->
  <item>-1</item> <!--Emolga-->
- <item>50</item> <!--Karrablast-->
+ <item>200</item> <!--Karrablast-->
  <item>-1</item> <!--Escavalier-->
  <item>50</item> <!--Foongus-->
  <item>-1</item> <!--Amoonguss-->
@@ -3228,7 +3228,7 @@
  <item>50</item> <!--Cubchoo-->
  <item>-1</item> <!--Beartic-->
  <item>-1</item> <!--Cryogonal-->
- <item>50</item> <!--Shelmet-->
+ <item>200</item> <!--Shelmet-->
  <item>-1</item> <!--Accelgor-->
  <item>-1</item> <!--Stunfisk-->
  <item>50</item> <!--Mienfoo-->

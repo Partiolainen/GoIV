@@ -91,14 +91,17 @@ public class UniIndexToken extends ClipboardToken {
             if (evolvedPokemon.baseAttack >= 198 && baseDefSta < 180) gymType = GymType.OFFENSIVE;
             if (evolvedPokemon.baseAttack < 198 && baseDefSta >= 180) gymType = GymType.DEFENSIVE;
 
+            Double atkScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getAtkScore() == null) ? 0 : scanResult.selectedMoveset.getAtkScore();
+            Double defScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getDefScore() == null) ? 0 : scanResult.selectedMoveset.getDefScore();
+
             double rate = isFinalForm
                     ? 0.3 * (iv.att+iv.def+iv.sta)/45.0
                     + 0.35 / 2 * сostInvestedCandiesPercentage
                     + 0.35 / 2 * сostInvestedStardustPercentage
-                    + (gymType == GymType.OFFENSIVE ? 0.35 : 0) * (scanResult.selectedMoveset.getAtkScore())
-                    + (gymType == GymType.DEFENSIVE ? 0.35 : 0) * (scanResult.selectedMoveset.getDefScore())
-                    + (gymType == GymType.UNIVERSAL ? 0.35 / 2 : 0) * (scanResult.selectedMoveset.getAtkScore())
-                    + (gymType == GymType.UNIVERSAL ? 0.35 / 2 : 0) * (scanResult.selectedMoveset.getDefScore())
+                    + (gymType == GymType.OFFENSIVE ? 0.35 : 0) * (atkScore)
+                    + (gymType == GymType.DEFENSIVE ? 0.35 : 0) * (defScore)
+                    + (gymType == GymType.UNIVERSAL ? 0.35 / 2 : 0) * (atkScore)
+                    + (gymType == GymType.UNIVERSAL ? 0.35 / 2 : 0) * (defScore)
                     : (0.3 + (0.35 * 6.0 / 13.0)) * (iv.att+iv.def+iv.sta)/45.0
                     + (0.35 / 2 + ((0.35 / 2) * 7.0 / 13.0)) * сostInvestedCandiesPercentage
                     + (0.35 / 2 + ((0.35 / 2) * 7.0 / 13.0)) * сostInvestedStardustPercentage;
@@ -106,18 +109,18 @@ public class UniIndexToken extends ClipboardToken {
             String rate_mark = whiteLetters[(int) (25 * rate)];
 
             boolean isBestMoveset =
-                    (gymType == GymType.OFFENSIVE && scanResult.selectedMoveset.getAtkScore() > 0.95) ||
-                            (gymType == GymType.DEFENSIVE && scanResult.selectedMoveset.getDefScore() > 0.95) ||
-                            (gymType == GymType.UNIVERSAL && (scanResult.selectedMoveset.getAtkScore() > 0.95
-                                    || scanResult.selectedMoveset.getDefScore() > 0.95));
+                    (gymType == GymType.OFFENSIVE && atkScore > 0.95) ||
+                            (gymType == GymType.DEFENSIVE && defScore > 0.95) ||
+                            (gymType == GymType.UNIVERSAL && (atkScore > 0.95
+                                    || defScore > 0.95));
             //࿅ ࿇ ࿈ ࿉ ࿊ ࿋ ࿌   ࿂ ࿃
             double perf = iv.percentPerfect;
             String returner = rate_mark + aecp_mark
                     + (gymType == GymType.OFFENSIVE ? (isFinalForm && isBestMoveset ? "࿇" : "࿅") : "")
                     + (gymType == GymType.DEFENSIVE ? (isFinalForm && isBestMoveset ? "࿌" : "࿊") : "")
-                    + (gymType == GymType.UNIVERSAL ? (isFinalForm && scanResult.selectedMoveset.getAtkScore() > 0.95 && scanResult.selectedMoveset.getDefScore() <= 0.95 ? "࿈" : "") : "")
-                    + (gymType == GymType.UNIVERSAL ? (isFinalForm && scanResult.selectedMoveset.getDefScore() > 0.95 ? "࿋" : "") : "")
-                    + (gymType == GymType.UNIVERSAL ? (!isFinalForm || isFinalForm && scanResult.selectedMoveset.getAtkScore() <= 0.95 && scanResult.selectedMoveset.getDefScore() <= 0.95 ? "࿃" : "") : "")
+                    + (gymType == GymType.UNIVERSAL ? (isFinalForm && atkScore > 0.95 && defScore <= 0.95 ? "࿈" : "") : "")
+                    + (gymType == GymType.UNIVERSAL ? (isFinalForm && defScore > 0.95 ? "࿋" : "") : "")
+                    + (gymType == GymType.UNIVERSAL ? (!isFinalForm || isFinalForm && atkScore <= 0.95 && defScore <= 0.95 ? "࿂" : "") : "")
                     + _sep
                     + (!scanResult.getHasBeenAppraised() ? "◦" :
                     (perf <= 49 ? "·" : "") // ༚ ༛ ༜       * ⁑ ⁂
