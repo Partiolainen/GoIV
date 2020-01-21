@@ -87,9 +87,12 @@ public class UniIndexToken extends ClipboardToken {
             double сostInvestedStardustPercentage = scanResult.isLucky ? 1.0 : (double) costUsed.dust / costFull.dust;
 
             GymType gymType = GymType.UNIVERSAL;
+            int baseAtt = evolvedPokemon.baseAttack;
             int baseDefSta = (int) Math.floor(Math.sqrt(evolvedPokemon.baseDefense) * Math.sqrt(evolvedPokemon.baseStamina));
-            if (evolvedPokemon.baseAttack >= 198 && baseDefSta < 180) gymType = GymType.OFFENSIVE;
-            if (evolvedPokemon.baseAttack < 198 && baseDefSta >= 180) gymType = GymType.DEFENSIVE;
+            int baseSta = evolvedPokemon.baseStamina;
+            if (baseAtt >= 198 && baseDefSta < 180) gymType = GymType.OFFENSIVE;
+            if (baseAtt < 198 && baseDefSta >= 180) gymType = GymType.DEFENSIVE;
+            if (gymType == GymType.UNIVERSAL && baseSta >= 284)  gymType = GymType.DEFENSIVE;
 
             Double atkScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getAtkScore() == null) ? 0 : scanResult.selectedMoveset.getAtkScore();
             Double defScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getDefScore() == null) ? 0 : scanResult.selectedMoveset.getDefScore();
