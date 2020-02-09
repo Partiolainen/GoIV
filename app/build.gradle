@@ -121,7 +121,7 @@ android {
             ext.enableCrashlytics = false
             dimension "default"
             versionCode 65
-            versionName '5.4.4.p.9.4.2'
+            versionName '5.4.4.p.9.5.0'
         }
 
         online {
@@ -220,6 +220,7 @@ dependencies {
     implementation 'io.apptik.widget:multislider:1.2'
     implementation 'com.pavelsikun:material-seekbar-preference:2.3.0'
     implementation 'com.android.support:palette-v7:27.1.1'
+    implementation 'org.apache.commons:commons-text:1.6'
     implementation project(':openCVLibrary330')
 
     /**

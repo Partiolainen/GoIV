@@ -10,15 +10,10 @@ import com.kamron.pogoiv.scanlogic.IVCombination;
 import com.kamron.pogoiv.scanlogic.PokeInfoCalculator;
 import com.kamron.pogoiv.scanlogic.Pokemon;
 import com.kamron.pogoiv.scanlogic.ScanResult;
-import com.kamron.pogoiv.scanlogic.UpgradeCost;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import static java.lang.Math.max;
-import static java.lang.Math.min;
-import static java.lang.Math.round;
-
+import org.apache.commons.lang3.StringUtils;
 /**
  * Created by Partiolainen on 2019-11-14.
  * <p>
@@ -70,41 +65,49 @@ public class UniIndexToken extends ClipboardToken {
             IVCombination iv = scanResult.getHighestIVCombination();
 
             boolean isFinalForm = maxEv && pokemon.getEvolutions().isEmpty() && scanResult.selectedMoveset != null;
-            double aecp = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, iv, iv, scanResult.levelRange.min).high;
-            double mlcp = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, iv, iv, 40).high;
-            String aecp_mark = whiteDigits[(int) Math.floor((isFinalForm ? mlcp : aecp) / 100)];
+            double aeCP = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, iv, iv, scanResult.levelRange.min).high;
+            double mlCP = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, iv, iv, 40).high;
+            String aecp_mark = whiteDigits[(int) Math.floor((isFinalForm ? mlCP : aeCP) / 100)];
 
-            int evoUsedCandies = pokeInfoCalculator.getCandyCostForEvolution(initialPokemon, evolvedPokemon);
-            UpgradeCost costUsed = pokeInfoCalculator.getUpgradeCost(scanResult.levelRange.max, 1, scanResult.isLucky);
-            costUsed = new UpgradeCost(costUsed.dust, costUsed.candy + evoUsedCandies);
+            int profiledCP = 0;
+            switch (GetGymType(pokemon)){
+                case UNIVERSAL:
+                    profiledCP = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, iv, iv, scanResult.levelRange.min).high;
+                case OFFENSIVE:
+                    profiledCP=(int) Math.floor((evolvedPokemon.baseAttack + iv.att)
+                            * Math.pow(Data.getLevelCpM(scanResult.levelRange.min), 2) * 10);
+                case DEFENSIVE:
+                    profiledCP=(int)Math.floor(Math.sqrt(evolvedPokemon.baseDefense + iv.def)
+                            * Math.sqrt(evolvedPokemon.baseStamina + iv.sta)
+                            * Math.pow(Data.getLevelCpM(scanResult.levelRange.min), 2) * 10);
+            }
 
-            //UpgradeCost costTo40 = pokeInfoCalculator.getUpgradeCost(40, scanResult.levelRange.max, scanResult.isLucky);
-            //int evoTo40Candies = pokeInfoCalculator.getCandyCostForEvolution(pokemon, evolvedPokemon);
-            UpgradeCost costFull = pokeInfoCalculator.getUpgradeCost(40, 1, scanResult.isLucky);
-            int evoCandiesFull = pokeInfoCalculator.getCandyCostForEvolution(initialPokemon, evolvedPokemon);
-
-            double сostInvestedCandiesPercentage = (double) costUsed.candy / (costFull.candy + evoCandiesFull);
-            double сostInvestedStardustPercentage = scanResult.isLucky ? 1.0 : (double) costUsed.dust / costFull.dust;
-
-            GymType gymType = GymType.UNIVERSAL;
-            int baseDefSta = (int) Math.floor(Math.sqrt(evolvedPokemon.baseDefense) * Math.sqrt(evolvedPokemon.baseStamina));
-            if (evolvedPokemon.baseAttack >= 198 && baseDefSta < 180) gymType = GymType.OFFENSIVE;
-            if (evolvedPokemon.baseAttack < 198 && baseDefSta >= 180) gymType = GymType.DEFENSIVE;
+            int profiledCP40 = 0;
+            switch (GetGymType(pokemon)){
+                case UNIVERSAL:
+                    profiledCP40 = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, iv, iv, 40).high;
+                case OFFENSIVE:
+                    profiledCP40=(int) Math.floor((evolvedPokemon.baseAttack + iv.att)
+                            * Math.pow(Data.getLevelCpM(40), 2) * 10);
+                case DEFENSIVE:
+                    profiledCP40=(int)Math.floor(Math.sqrt(evolvedPokemon.baseDefense + iv.def)
+                            * Math.sqrt(evolvedPokemon.baseStamina + iv.sta)
+                            * Math.pow(Data.getLevelCpM(40), 2) * 10);
+            }
 
             Double atkScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getAtkScore() == null) ? 0 : scanResult.selectedMoveset.getAtkScore();
             Double defScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getDefScore() == null) ? 0 : scanResult.selectedMoveset.getDefScore();
+            GymType gymType = GetGymType(evolvedPokemon);
 
             double rate = isFinalForm
-                    ? 0.3 * (iv.att+iv.def+iv.sta)/45.0
-                    + 0.35 / 2 * сostInvestedCandiesPercentage
-                    + 0.35 / 2 * сostInvestedStardustPercentage
-                    + (gymType == GymType.OFFENSIVE ? 0.35 : 0) * (atkScore)
-                    + (gymType == GymType.DEFENSIVE ? 0.35 : 0) * (defScore)
-                    + (gymType == GymType.UNIVERSAL ? 0.35 / 2 : 0) * (atkScore)
-                    + (gymType == GymType.UNIVERSAL ? 0.35 / 2 : 0) * (defScore)
-                    : (0.3 + (0.35 * 6.0 / 13.0)) * (iv.att+iv.def+iv.sta)/45.0
-                    + (0.35 / 2 + ((0.35 / 2) * 7.0 / 13.0)) * сostInvestedCandiesPercentage
-                    + (0.35 / 2 + ((0.35 / 2) * 7.0 / 13.0)) * сostInvestedStardustPercentage;
+                    ? 0.2 * (iv.att+iv.def+iv.sta)/45.0 +
+                      0.55 * ((double)profiledCP / profiledCP40) +
+                      0.25 * ((gymType == GymType.OFFENSIVE ? 1.0 : 0.0) * (atkScore/100.0)
+                              + (gymType == GymType.DEFENSIVE ? 1.0 : 0.0) * (defScore/100.0)
+                              + (gymType == GymType.UNIVERSAL ? 1.0 / 2.0 : 0.0) * (atkScore/100.0)
+                              + (gymType == GymType.UNIVERSAL ? 1.0 / 2.0 : 0.0) * (defScore/100.0))
+                    : (0.2 + 0.25 * 0.2 / 0.75) * (iv.att+iv.def+iv.sta)/45.0 +
+                      (0.55 + 0.25 * 0.55 / 0.75) * ((double)profiledCP / profiledCP40);
 
             String rate_mark = whiteLetters[(int) (25 * rate)];
 
@@ -113,26 +116,70 @@ public class UniIndexToken extends ClipboardToken {
                             (gymType == GymType.DEFENSIVE && defScore > 0.95) ||
                             (gymType == GymType.UNIVERSAL && (atkScore > 0.95
                                     || defScore > 0.95));
-            //࿅ ࿇ ࿈ ࿉ ࿊ ࿋ ࿌   ࿂ ࿃
-            double perf = iv.percentPerfect;
-            String returner = rate_mark + aecp_mark
-                    + (gymType == GymType.OFFENSIVE ? (isFinalForm && isBestMoveset ? "࿇" : "࿅") : "")
-                    + (gymType == GymType.DEFENSIVE ? (isFinalForm && isBestMoveset ? "࿌" : "࿊") : "")
-                    + (gymType == GymType.UNIVERSAL ? (isFinalForm && atkScore > 0.95 && defScore <= 0.95 ? "࿈" : "") : "")
-                    + (gymType == GymType.UNIVERSAL ? (isFinalForm && defScore > 0.95 ? "࿋" : "") : "")
-                    + (gymType == GymType.UNIVERSAL ? (!isFinalForm || isFinalForm && atkScore <= 0.95 && defScore <= 0.95 ? "࿂" : "") : "")
-                    + _sep
-                    + (!scanResult.getHasBeenAppraised() ? "◦" :
-                    (perf <= 49 ? "·" : "") // ༚ ༛ ༜       * ⁑ ⁂
-                            + (perf > 49 && perf < 64.4 ? "*" : "")
-                            + (perf >= 64.4 && perf <= 80 && !scanResult.isLucky ? "⁑" : "")
-                            + (perf > 80 && perf < 90 && !scanResult.isLucky ? "⁂" : "")
-                            + (perf >= 90 && perf < 100 && !scanResult.isLucky || perf < 90 && scanResult.isLucky ? "☆" : "")
-                            + (perf == 100 && !scanResult.isLucky || perf >= 90 && scanResult.isLucky ? "★" : ""));
+
+            //double perf = iv.percentPerfect;
+            //MovesetData moveset = scanResult.selectedMoveset;
+
+            String returner = Badge(evolvedPokemon, scanResult, isFinalForm, aeCP)
+                    + rate_mark + aecp_mark + GetIVBadge(iv, scanResult.isLucky) + GetShortName(pokemon.name);
             return returner;
         } catch (Throwable t) {
             throw new Error(t.getMessage());
         }
+    }
+
+    private String Badge(Pokemon evolvedPokemon, ScanResult scanResult, boolean isFinalForm, double aeCP) {
+        GymType gymType = GetGymType(evolvedPokemon);
+        String fastKey = scanResult.selectedMoveset.getFastKey();
+        String chargeKey = scanResult.selectedMoveset.getChargeKey();
+        int pokeId = evolvedPokemon.number;
+        if (pokeId == 226 && aeCP <= 1500 && fastKey.equals("STEEL_WING_FAST") && chargeKey.equals("SKY_ATTACK")) return "φ";
+        if(!isFinalForm) return "";
+        if (gymType == GymType.DEFENSIVE || gymType == GymType.UNIVERSAL && scanResult.selectedMoveset.getDefScore() > 0.95)
+            return "ø";
+        if (gymType == GymType.OFFENSIVE || gymType == GymType.UNIVERSAL && scanResult.selectedMoveset.getAtkScore() > 0.95)
+            return "ɣ"; //φ
+        return "";
+    }
+
+    private static GymType GetGymType(Pokemon pokemon){
+        GymType gymType = GymType.UNIVERSAL;
+        int baseDefSta = (int) Math.floor(Math.sqrt(pokemon.baseDefense) * Math.sqrt(pokemon.baseStamina));
+        if (pokemon.baseAttack >= 198 && baseDefSta < 180) gymType = GymType.OFFENSIVE;
+        if (pokemon.baseAttack < 198 && baseDefSta >= 180) gymType = GymType.DEFENSIVE;
+        return gymType;
+    }
+
+    private static String GetIVBadge(IVCombination IV, boolean IsLucky)
+    {
+        double ivValue = 100.0*(IV.att+IV.def+IV.sta)/45.0;
+        if (ivValue <= 49) return "·";
+        if (ivValue > 49 && ivValue < 64.4) return "*";
+        if (ivValue >= 64.4 && ivValue < 80 && !IsLucky) return "⁑";
+        if (ivValue >= 80 && ivValue < 90 && !IsLucky) return "⁂";
+        if (ivValue >= 90 && ivValue < 100 && !IsLucky || ivValue < 90 && IsLucky) return "☆";
+        if (ivValue==100.0 && !IsLucky || IsLucky && ivValue >= 90) return "★";
+        return "·";
+    }
+
+    public static String GetShortName(String name)
+    {
+	    int len = 7;
+
+        String other = name.substring(1);
+        String first = name.substring(0,1);
+        for (int i = 0; i < name.length()-len; i++)
+        {
+            int a = StringUtils.lastIndexOfAny(other, new String[] {"a", "e", "u", "i", "o"});
+            if (a > -1){
+                StringBuilder sb = new StringBuilder(other);
+                sb.deleteCharAt(a);
+                other = sb.toString();
+            }
+        }
+
+        String res = first+other;
+        return res.substring(0, Math.min(len, res.length()));
     }
 
     @Override
