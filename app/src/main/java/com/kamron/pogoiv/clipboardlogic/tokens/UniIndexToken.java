@@ -109,40 +109,51 @@ public class UniIndexToken extends ClipboardToken {
                     : (0.2 + 0.25 * 0.2 / 0.75) * (iv.att+iv.def+iv.sta)/45.0 +
                       (0.55 + 0.25 * 0.55 / 0.75) * ((double)profiledCP / profiledCP40);
 
-            String rate_mark = whiteLetters[(int) (25 * rate)];
+            Double pvpPotential = GetPVPPotential(scanResult);
+            String rate_mark = pvpPotential > 0.6 ? whiteLetters[(int) (25 * rate)] : blackDigits[(int) (21.0*GetPVPRate(scanResult, mlCP))];
+            String badge = Badge(evolvedPokemon, scanResult, isFinalForm, pvpPotential);
 
-            boolean isBestMoveset =
-                    (gymType == GymType.OFFENSIVE && atkScore > 0.95) ||
-                            (gymType == GymType.DEFENSIVE && defScore > 0.95) ||
-                            (gymType == GymType.UNIVERSAL && (atkScore > 0.95
-                                    || defScore > 0.95));
-
-            //double perf = iv.percentPerfect;
-            //MovesetData moveset = scanResult.selectedMoveset;
-
-            String returner = Badge(evolvedPokemon, scanResult, isFinalForm, aeCP)
-                    + rate_mark + aecp_mark + GetIVBadge(iv, scanResult.isLucky) + GetShortName(pokemon.name);
+            String returner = pvpPotential + " " + badge + rate_mark + aecp_mark + GetIVBadge(iv, scanResult.isLucky) + GetShortName(pokemon.name);
             return returner;
         } catch (Throwable t) {
             throw new Error(t.getMessage());
         }
     }
 
-    private String Badge(Pokemon evolvedPokemon, ScanResult scanResult, boolean isFinalForm, double aeCP) {
+    private double GetPVPRate(ScanResult scanResult, double mlCP){
+        Double pvpGreatScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpGreatScore() == null) ? 0 : scanResult.selectedMoveset.getPvpGreatScore();
+        Double pvpUltraScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpUltraScore() == null) ? 0 : scanResult.selectedMoveset.getPvpUltraScore();
+        Double pvpMasterScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpMasterScore() == null) ? 0 : scanResult.selectedMoveset.getPvpMasterScore();
+
+        int cp = scanResult.cp;
+        if(cp <= 1500) return pvpGreatScore * cp / 1500.0;
+        if(cp <= 2500) return pvpUltraScore * cp / 2500.0;
+        return pvpMasterScore * cp / mlCP;
+    }
+
+    private double GetPVPPotential(ScanResult scanResult){
+        Double pvpGreatScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpGreatScore() == null) ? 0 : scanResult.selectedMoveset.getPvpGreatScore();
+        Double pvpUltraScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpUltraScore() == null) ? 0 : scanResult.selectedMoveset.getPvpUltraScore();
+        Double pvpMasterScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpMasterScore() == null) ? 0 : scanResult.selectedMoveset.getPvpMasterScore();
+
+        int cp = scanResult.cp;
+        if(cp <= 1500) return pvpGreatScore;
+        if(cp <= 2500) return pvpUltraScore;
+        return pvpMasterScore;
+    }
+
+    private String Badge(Pokemon evolvedPokemon, ScanResult scanResult, boolean isFinalForm, double pvpPotential) {
         GymType gymType = GetGymType(evolvedPokemon);
-        String fastKey = scanResult.selectedMoveset.getFastKey();
-        String chargeKey = scanResult.selectedMoveset.getChargeKey();
-        int pokeId = evolvedPokemon.number;
-        if (pokeId == 226 && aeCP <= 1500 && fastKey.equals("STEEL_WING_FAST") && chargeKey.equals("SKY_ATTACK")) return "φ";
+        if(pvpPotential >= 0.6) return "φ";
         if(!isFinalForm) return "";
         if (gymType == GymType.DEFENSIVE || gymType == GymType.UNIVERSAL && scanResult.selectedMoveset.getDefScore() > 0.95)
             return "ø";
         if (gymType == GymType.OFFENSIVE || gymType == GymType.UNIVERSAL && scanResult.selectedMoveset.getAtkScore() > 0.95)
-            return "ɣ"; //φ
+            return "ɣ";
         return "";
     }
 
-    private static GymType GetGymType(Pokemon pokemon){
+    private GymType GetGymType(Pokemon pokemon){
         GymType gymType = GymType.UNIVERSAL;
         int baseDefSta = (int) Math.floor(Math.sqrt(pokemon.baseDefense) * Math.sqrt(pokemon.baseStamina));
         if (pokemon.baseAttack >= 198 && baseDefSta < 180) gymType = GymType.OFFENSIVE;
@@ -150,7 +161,7 @@ public class UniIndexToken extends ClipboardToken {
         return gymType;
     }
 
-    private static String GetIVBadge(IVCombination IV, boolean IsLucky)
+    private String GetIVBadge(IVCombination IV, boolean IsLucky)
     {
         double ivValue = 100.0*(IV.att+IV.def+IV.sta)/45.0;
         if (ivValue <= 49) return "·";
@@ -162,7 +173,7 @@ public class UniIndexToken extends ClipboardToken {
         return "·";
     }
 
-    public static String GetShortName(String name)
+    public String GetShortName(String name)
     {
 	    int len = 7;
 
