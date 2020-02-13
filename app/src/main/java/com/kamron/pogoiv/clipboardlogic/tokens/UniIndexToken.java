@@ -60,7 +60,7 @@ public class UniIndexToken extends ClipboardToken {
             Pokemon evolvedPokemon = evolutionLine.size() == 0 ? pokemon : evolutionLine.get(evolutionLine.size() - 1);
             evolutionLine = evolvedPokemon.getEvolutions();
             evolvedPokemon = evolutionLine.size() == 0 ? evolvedPokemon : evolutionLine.get(evolutionLine.size() - 1);
-            Pokemon initialPokemon =  pokeInfoCalculator.getEvolutionLine(pokemon).get(0); // evolutionLine.size() == 0 ? pokemon : evolutionLine.get(0);
+            //Pokemon initialPokemon =  pokeInfoCalculator.getEvolutionLine(pokemon).get(0); // evolutionLine.size() == 0 ? pokemon : evolutionLine.get(0);
 
             IVCombination iv = scanResult.getHighestIVCombination();
 
@@ -69,30 +69,36 @@ public class UniIndexToken extends ClipboardToken {
             double mlCP = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, iv, iv, 40).high;
             String aecp_mark = whiteDigits[(int) Math.floor((isFinalForm ? mlCP : aeCP) / 100)];
 
-            int profiledCP = 0;
+            double profiledCP = 0;
             switch (GetGymType(pokemon)){
                 case UNIVERSAL:
                     profiledCP = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, iv, iv, scanResult.levelRange.min).high;
+                    break;
                 case OFFENSIVE:
-                    profiledCP=(int) Math.floor((evolvedPokemon.baseAttack + iv.att)
+                    profiledCP = Math.floor((evolvedPokemon.baseAttack + iv.att)
                             * Math.pow(Data.getLevelCpM(scanResult.levelRange.min), 2) * 10);
+                    break;
                 case DEFENSIVE:
-                    profiledCP=(int)Math.floor(Math.sqrt(evolvedPokemon.baseDefense + iv.def)
+                    profiledCP = Math.floor(Math.sqrt(evolvedPokemon.baseDefense + iv.def)
                             * Math.sqrt(evolvedPokemon.baseStamina + iv.sta)
                             * Math.pow(Data.getLevelCpM(scanResult.levelRange.min), 2) * 10);
+                    break;
             }
 
-            int profiledCP40 = 0;
+            double profiledCP40 = 0;
             switch (GetGymType(pokemon)){
                 case UNIVERSAL:
                     profiledCP40 = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, iv, iv, 40).high;
+                    break;
                 case OFFENSIVE:
-                    profiledCP40=(int) Math.floor((evolvedPokemon.baseAttack + iv.att)
+                    profiledCP40 = Math.floor((evolvedPokemon.baseAttack + iv.att)
                             * Math.pow(Data.getLevelCpM(40), 2) * 10);
+                    break;
                 case DEFENSIVE:
-                    profiledCP40=(int)Math.floor(Math.sqrt(evolvedPokemon.baseDefense + iv.def)
+                    profiledCP40 = Math.floor(Math.sqrt(evolvedPokemon.baseDefense + iv.def)
                             * Math.sqrt(evolvedPokemon.baseStamina + iv.sta)
                             * Math.pow(Data.getLevelCpM(40), 2) * 10);
+                    break;
             }
 
             Double atkScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getAtkScore() == null) ? 0 : scanResult.selectedMoveset.getAtkScore();
@@ -101,34 +107,34 @@ public class UniIndexToken extends ClipboardToken {
 
             double rate = isFinalForm
                     ? 0.2 * (iv.att+iv.def+iv.sta)/45.0 +
-                      0.55 * ((double)profiledCP / profiledCP40) +
+                      0.55 * (profiledCP / profiledCP40) +
                       0.25 * ((gymType == GymType.OFFENSIVE ? 1.0 : 0.0) * (atkScore/100.0)
                               + (gymType == GymType.DEFENSIVE ? 1.0 : 0.0) * (defScore/100.0)
                               + (gymType == GymType.UNIVERSAL ? 1.0 / 2.0 : 0.0) * (atkScore/100.0)
                               + (gymType == GymType.UNIVERSAL ? 1.0 / 2.0 : 0.0) * (defScore/100.0))
                     : (0.2 + 0.25 * 0.2 / 0.75) * (iv.att+iv.def+iv.sta)/45.0 +
-                      (0.55 + 0.25 * 0.55 / 0.75) * ((double)profiledCP / profiledCP40);
+                      (0.55 + 0.25 * 0.55 / 0.75) * (profiledCP / profiledCP40);
 
             Double pvpPotential = GetPVPPotential(scanResult);
-            String rate_mark = pvpPotential > 0.6 ? whiteLetters[(int) (25 * rate)] : blackDigits[(int) (21.0*GetPVPRate(scanResult, mlCP))];
+            String rate_mark = (pvpPotential < 0.6) ? whiteLetters[(int) (25.0 * rate)] : blackDigits[(int) (21.0*GetPVPRate(scanResult, mlCP))];
             String badge = Badge(evolvedPokemon, scanResult, isFinalForm, pvpPotential);
 
-            String returner = pvpPotential + " " + badge + rate_mark + aecp_mark + GetIVBadge(iv, scanResult.isLucky) + GetShortName(pokemon.name);
+            String returner = badge + rate_mark + aecp_mark + GetIVBadge(iv, scanResult.isLucky) + GetShortName(pokemon.name);
             return returner;
         } catch (Throwable t) {
             throw new Error(t.getMessage());
         }
     }
 
-    private double GetPVPRate(ScanResult scanResult, double mlCP){
+    private double GetPVPRate(ScanResult scanResult, double mlCP) {
         Double pvpGreatScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpGreatScore() == null) ? 0 : scanResult.selectedMoveset.getPvpGreatScore();
         Double pvpUltraScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpUltraScore() == null) ? 0 : scanResult.selectedMoveset.getPvpUltraScore();
         Double pvpMasterScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpMasterScore() == null) ? 0 : scanResult.selectedMoveset.getPvpMasterScore();
 
         int cp = scanResult.cp;
-        if(cp <= 1500) return pvpGreatScore * cp / 1500.0;
-        if(cp <= 2500) return pvpUltraScore * cp / 2500.0;
-        return pvpMasterScore * cp / mlCP;
+        if (cp <= 1500) return pvpGreatScore * (double) cp / 1500.0;
+        if (cp <= 2500) return pvpUltraScore * (double) cp / 2500.0;
+        return pvpMasterScore * (double) cp / mlCP;
     }
 
     private double GetPVPPotential(ScanResult scanResult){
@@ -148,7 +154,7 @@ public class UniIndexToken extends ClipboardToken {
         if(!isFinalForm) return "";
         if (gymType == GymType.DEFENSIVE || gymType == GymType.UNIVERSAL && scanResult.selectedMoveset.getDefScore() > 0.95)
             return "ø";
-        if (gymType == GymType.OFFENSIVE || gymType == GymType.UNIVERSAL && scanResult.selectedMoveset.getAtkScore() > 0.95)
+        if ((gymType == GymType.OFFENSIVE || gymType == GymType.UNIVERSAL)&& scanResult.selectedMoveset.getAtkScore() > 0.95)
             return "ɣ";
         return "";
     }

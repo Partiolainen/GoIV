@@ -152,7 +152,7 @@ public class MovesetFetchUtil {
             Double defenseScore = defenseScores.get(key);
             //TODO merge with https://fight.pokebattler.com/pokemon and https://fight.pokebattler.com/moves
             retval.add(new MovesetData(key.getQuick(), key.getCharge(), false, false, attackScoreEntry.getValue(),
-                    defenseScore, "UNKNOWN", "UNKNOWN"));
+                    defenseScore,0.0,0.0,0.0, "UNKNOWN", "UNKNOWN"));
         }
         // then add moves that are only good on defense
         for (Map.Entry<MovesetData.Key, Double> defenseScoreEntry : defenseScores.entrySet()) {
@@ -161,7 +161,7 @@ public class MovesetFetchUtil {
                 continue;
             }
             retval.add(new MovesetData(key.getQuick(), key.getCharge(), false, false, null,
-                    defenseScoreEntry.getValue(), "UNKNOWN", "UNKNOWN"));
+                    defenseScoreEntry.getValue(), 0.0,0.0,0.0,"UNKNOWN", "UNKNOWN"));
         }
         return retval;
     }
