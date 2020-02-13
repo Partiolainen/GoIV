@@ -20,6 +20,9 @@ public class MovesetData {
     private boolean chargeIsLegacy;
     private Double atkScore;
     private Double defScore;
+    private Double pvpGreatScore;
+    private Double pvpUltraScore;
+    private Double pvpMasterScore;
     private String fastMoveType;
     private String chargeMoveType;
 
@@ -40,6 +43,9 @@ public class MovesetData {
                        boolean chargeIsLegacy,
                        Double atkScore,
                        Double defScore,
+                       Double pvpGreatScore,
+                       Double pvpUltraScore,
+                       Double pvpMasterScore,
                        String chargeMoveType,
                        String quickMoveType) {
 
@@ -51,6 +57,9 @@ public class MovesetData {
         this.chargeIsLegacy = chargeIsLegacy;
         this.atkScore = atkScore;
         this.defScore = defScore;
+        this.pvpGreatScore = pvpGreatScore;
+        this.pvpUltraScore = pvpUltraScore;
+        this.pvpMasterScore = pvpMasterScore;
     }
 
     /**
@@ -71,7 +80,8 @@ public class MovesetData {
                        String fast, String charge,
                        String fastMoveType, String chargeMoveType,
                        boolean fastIsLegacy, boolean chargeIsLegacy,
-                       Double atkScore, Double defScore) {
+                       Double atkScore, Double defScore,
+                       Double pvpGreatScore, Double pvpUltraScore, Double pvpMasterScore) {
         this.fastKey = fastKey;
         this.chargeKey = chargeKey;
         this.fast = fast;
@@ -82,6 +92,9 @@ public class MovesetData {
         this.chargeIsLegacy = chargeIsLegacy;
         this.atkScore = atkScore;
         this.defScore = defScore;
+        this.pvpGreatScore = pvpGreatScore;
+        this.pvpUltraScore = pvpUltraScore;
+        this.pvpMasterScore = pvpMasterScore;
     }
 
     public String getFastMoveType() {
@@ -123,6 +136,19 @@ public class MovesetData {
     public Double getDefScore() {
         return defScore;
     }
+
+    public Double getPvpGreatScore() {
+        return pvpGreatScore;
+    }
+
+    public Double getPvpUltraScore() {
+        return pvpUltraScore;
+    }
+
+    public Double getPvpMasterScore() {
+        return pvpMasterScore;
+    }
+
 
     public static class AtkComparator implements Comparator<MovesetData> {
         @Override

@@ -297,6 +297,9 @@
     <string name="table_header_move_charge">Charge</string>
     <string name="table_header_attack">Atk</string>
     <string name="table_header_defense">Def</string>
+    <string name="table_header_pvp_great">Grt</string>
+    <string name="table_header_pvp_ultra">Ult</string>
+    <string name="table_header_pvp_master">Mst</string>
     <string name="fraction_input_title">Input</string>
     <string name="fraction_powerup_title">Power up predictions</string>
     <string name="fraction_powerup_tab_label">Power up</string>

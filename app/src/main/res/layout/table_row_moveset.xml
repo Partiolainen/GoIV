@@ -11,7 +11,7 @@
         android:id="@+id/text_fast"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="3"
+        android:layout_weight="2"
         android:paddingLeft="4dp"
         android:paddingTop="2dp"
         android:paddingRight="4dp"
@@ -25,7 +25,7 @@
         android:id="@+id/text_charge"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="3"
+        android:layout_weight="2"
         android:paddingLeft="4dp"
         android:paddingTop="2dp"
         android:paddingRight="4dp"
@@ -39,7 +39,7 @@
         android:id="@+id/text_attack"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:paddingLeft="4dp"
         android:paddingTop="2dp"
         android:paddingRight="4dp"
@@ -53,7 +53,7 @@
         android:id="@+id/text_defense"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:paddingLeft="4dp"
         android:paddingTop="2dp"
         android:paddingRight="4dp"
@@ -62,5 +62,47 @@
         android:maxLines="1"
         android:ellipsize="end"
         tools:text="@string/table_header_defense" />
+
+    <TextView
+        android:id="@+id/text_pvp_great"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="4dp"
+        android:paddingTop="2dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="2dp"
+        android:textAlignment="textEnd"
+        android:maxLines="1"
+        android:ellipsize="end"
+        tools:text="@string/table_header_pvp_great" />
+
+    <TextView
+        android:id="@+id/text_pvp_ultra"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="4dp"
+        android:paddingTop="2dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="2dp"
+        android:textAlignment="textEnd"
+        android:maxLines="1"
+        android:ellipsize="end"
+        tools:text="@string/table_header_pvp_ultra" />
+
+    <TextView
+        android:id="@+id/text_pvp_master"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="4dp"
+        android:paddingTop="2dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="2dp"
+        android:textAlignment="textEnd"
+        android:maxLines="1"
+        android:ellipsize="end"
+        tools:text="@string/table_header_pvp_master" />
 
 </TableRow>

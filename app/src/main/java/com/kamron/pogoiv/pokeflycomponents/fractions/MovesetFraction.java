@@ -67,10 +67,10 @@ public class MovesetFraction extends MovableFraction implements ReactiveColorLis
 
     @BindView(R.id.table_layout)
     TableLayout tableLayout;
-    @BindView(R.id.header_icon_attack)
-    ImageView headerAttackSortIcon;
-    @BindView(R.id.header_icon_defense)
-    ImageView headerDefenseSortIcon;
+    //@BindView(R.id.header_icon_attack)
+    //ImageView headerAttackSortIcon;
+    //@BindView(R.id.header_icon_defense)
+    //ImageView headerDefenseSortIcon;
 
 
     @BindView(R.id.top_navigation)
@@ -145,7 +145,7 @@ public class MovesetFraction extends MovableFraction implements ReactiveColorLis
         buildTable();
 
         // Update header sort icons
-        Drawable none = ContextCompat.getDrawable(pokefly, R.drawable.ic_sort_none);
+        /*Drawable none = ContextCompat.getDrawable(pokefly, R.drawable.ic_sort_none);
         if (atkComparator.equals(currentComparator)) {
             Drawable desc = ContextCompat.getDrawable(pokefly, R.drawable.ic_sort_desc);
             headerAttackSortIcon.setImageDrawable(desc);
@@ -162,7 +162,7 @@ public class MovesetFraction extends MovableFraction implements ReactiveColorLis
             Drawable asc = ContextCompat.getDrawable(pokefly, R.drawable.ic_sort_asc);
             headerAttackSortIcon.setImageDrawable(none);
             headerDefenseSortIcon.setImageDrawable(asc);
-        }
+        }*/
     }
 
     private void buildTable() {
@@ -329,6 +329,12 @@ public class MovesetFraction extends MovableFraction implements ReactiveColorLis
         TextView attack;
         @BindView(R.id.text_defense)
         TextView defense;
+        @BindView(R.id.text_pvp_great)
+        TextView pvp_great;
+        @BindView(R.id.text_pvp_ultra)
+        TextView pvp_ultra;
+        @BindView(R.id.text_pvp_master)
+        TextView pvp_master;
 
         public void bind(@NonNull View v, MovesetData data) {
             ButterKnife.bind(this, v);
@@ -361,9 +367,7 @@ public class MovesetFraction extends MovableFraction implements ReactiveColorLis
                 attack.setText("<");
             }
 
-
             // Defense score
-
             if (data.getDefScore() != null) {
                 defense.setTextColor(getPowerColor(data.getDefScore()));
                 defense.setText(scoreFormat.format(data.getDefScore()));
@@ -371,9 +375,36 @@ public class MovesetFraction extends MovableFraction implements ReactiveColorLis
                 defense.setTextColor(Color.parseColor("#d84315"));
                 defense.setText("<");
             }
+
+            // PVP Great score
+            if (data.getPvpGreatScore() != null) {
+                pvp_great.setTextColor(getPowerColor(data.getPvpGreatScore()));
+                pvp_great.setText(scoreFormat.format(data.getPvpGreatScore()));
+            } else {
+                pvp_great.setTextColor(Color.parseColor("#d84315"));
+                pvp_great.setText("<");
+            }
+
+            // PVP Ultra score
+            if (data.getPvpUltraScore() != null) {
+                pvp_ultra.setTextColor(getPowerColor(data.getPvpUltraScore()));
+                pvp_ultra.setText(scoreFormat.format(data.getPvpUltraScore()));
+            } else {
+                pvp_ultra.setTextColor(Color.parseColor("#d84315"));
+                pvp_ultra.setText("<");
+            }
+
+            // PVP Master score
+            if (data.getPvpMasterScore() != null) {
+                pvp_master.setTextColor(getPowerColor(data.getPvpMasterScore()));
+                pvp_master.setText(scoreFormat.format(data.getPvpMasterScore()));
+            } else {
+                pvp_master.setTextColor(Color.parseColor("#d84315"));
+                pvp_master.setText("<");
+            }
         }
 
-        @OnClick({R.id.text_fast, R.id.text_charge, R.id.text_attack, R.id.text_defense})
+        @OnClick({R.id.text_fast, R.id.text_charge, R.id.text_attack, R.id.text_defense, R.id.text_pvp_great, R.id.text_pvp_ultra, R.id.text_pvp_master})
         void onRowClick() {
             Pokefly.scanResult.selectedMoveset = data;
             buildTable();

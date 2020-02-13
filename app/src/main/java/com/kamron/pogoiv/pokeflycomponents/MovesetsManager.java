@@ -187,7 +187,10 @@ public class MovesetsManager {
                         (Boolean) jsonMoveset.get("fastIsLegacy"),
                         (Boolean) jsonMoveset.get("chargeIsLegacy"),
                         (Double) jsonMoveset.get("atkScore"),
-                        (Double) jsonMoveset.get("defScore"));
+                        (Double) jsonMoveset.get("defScore"),
+                        (Double) jsonMoveset.get("pvpGreatScore"),
+                        (Double) jsonMoveset.get("pvpUltraScore"),
+                        (Double) jsonMoveset.get("pvpMasterScore"));
                 movesetList.add(movesetData);
             }
 
