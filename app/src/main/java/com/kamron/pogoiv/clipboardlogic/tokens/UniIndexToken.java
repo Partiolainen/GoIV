@@ -108,10 +108,10 @@ public class UniIndexToken extends ClipboardToken {
             double rate = isFinalForm
                     ? 0.2 * (iv.att+iv.def+iv.sta)/45.0 +
                       0.55 * (profiledCP / profiledCP40) +
-                      0.25 * ((gymType == GymType.OFFENSIVE ? 1.0 : 0.0) * (atkScore/100.0)
-                              + (gymType == GymType.DEFENSIVE ? 1.0 : 0.0) * (defScore/100.0)
-                              + (gymType == GymType.UNIVERSAL ? 1.0 / 2.0 : 0.0) * (atkScore/100.0)
-                              + (gymType == GymType.UNIVERSAL ? 1.0 / 2.0 : 0.0) * (defScore/100.0))
+                      0.25 * ((gymType == GymType.OFFENSIVE ? 1.0 : 0.0) * atkScore
+                              + (gymType == GymType.DEFENSIVE ? 1.0 : 0.0) * defScore
+                              + (gymType == GymType.UNIVERSAL ? 1.0 / 2.0 : 0.0) * atkScore
+                              + (gymType == GymType.UNIVERSAL ? 1.0 / 2.0 : 0.0) * defScore)
                     : (0.2 + 0.25 * 0.2 / 0.75) * (iv.att+iv.def+iv.sta)/45.0 +
                       (0.55 + 0.25 * 0.55 / 0.75) * (profiledCP / profiledCP40);
 
@@ -119,7 +119,8 @@ public class UniIndexToken extends ClipboardToken {
             String rate_mark = (pvpPotential < 0.6) ? whiteLetters[(int) (25.0 * rate)] : blackDigits[(int) (21.0*GetPVPRate(scanResult, mlCP))];
             String badge = Badge(evolvedPokemon, scanResult, isFinalForm, pvpPotential);
 
-            String returner = badge + rate_mark + aecp_mark + GetIVBadge(iv, scanResult.isLucky) + GetShortName(pokemon.name);
+            String badges = badge + rate_mark + aecp_mark + GetIVBadge(iv, scanResult.isLucky);
+            String returner = badges + GetShortName(pokemon.name, 11 - badges.length());
             return returner;
         } catch (Throwable t) {
             throw new Error(t.getMessage());
@@ -155,7 +156,7 @@ public class UniIndexToken extends ClipboardToken {
         if (gymType == GymType.DEFENSIVE || gymType == GymType.UNIVERSAL && scanResult.selectedMoveset.getDefScore() > 0.95)
             return "ø";
         if ((gymType == GymType.OFFENSIVE || gymType == GymType.UNIVERSAL)&& scanResult.selectedMoveset.getAtkScore() > 0.95)
-            return "ɣ";
+            return "ψ";
         return "";
     }
 
@@ -179,11 +180,10 @@ public class UniIndexToken extends ClipboardToken {
         return "·";
     }
 
-    public String GetShortName(String name)
+    public String GetShortName(String name, int len)
     {
-	    int len = 7;
-
-        String other = name.substring(1);
+        name = name.split(" - ")[0].trim();
+	    String other = name.substring(1);
         String first = name.substring(0,1);
         for (int i = 0; i < name.length()-len; i++)
         {
