@@ -11,6 +11,7 @@ import com.kamron.pogoiv.scanlogic.PokeInfoCalculator;
 import com.kamron.pogoiv.scanlogic.Pokemon;
 import com.kamron.pogoiv.scanlogic.ScanResult;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
@@ -70,7 +71,7 @@ public class UniIndexToken extends ClipboardToken {
             String aecp_mark = whiteDigits[(int) Math.floor((isFinalForm ? mlCP : aeCP) / 100)];
 
             double profiledCP = 0;
-            switch (GetGymType(pokemon)){
+            switch (GetGymType(pokemon)) {
                 case UNIVERSAL:
                     profiledCP = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, iv, iv, scanResult.levelRange.min).high;
                     break;
@@ -86,7 +87,7 @@ public class UniIndexToken extends ClipboardToken {
             }
 
             double profiledCP40 = 0;
-            switch (GetGymType(pokemon)){
+            switch (GetGymType(pokemon)) {
                 case UNIVERSAL:
                     profiledCP40 = pokeInfoCalculator.getCpRangeAtLevel(evolvedPokemon, iv, iv, 40).high;
                     break;
@@ -106,17 +107,19 @@ public class UniIndexToken extends ClipboardToken {
             GymType gymType = GetGymType(evolvedPokemon);
 
             double rate = isFinalForm
-                    ? 0.2 * (iv.att+iv.def+iv.sta)/45.0 +
-                      0.55 * (profiledCP / profiledCP40) +
-                      0.25 * ((gymType == GymType.OFFENSIVE ? 1.0 : 0.0) * atkScore
-                              + (gymType == GymType.DEFENSIVE ? 1.0 : 0.0) * defScore
-                              + (gymType == GymType.UNIVERSAL ? 1.0 / 2.0 : 0.0) * atkScore
-                              + (gymType == GymType.UNIVERSAL ? 1.0 / 2.0 : 0.0) * defScore)
-                    : (0.2 + 0.25 * 0.2 / 0.75) * (iv.att+iv.def+iv.sta)/45.0 +
-                      (0.55 + 0.25 * 0.55 / 0.75) * (profiledCP / profiledCP40);
+                    ? 0.2 * (iv.att + iv.def + iv.sta) / 45.0 +
+                    0.55 * (profiledCP / profiledCP40) +
+                    0.25 * ((gymType == GymType.OFFENSIVE ? 1.0 : 0.0) * atkScore
+                            + (gymType == GymType.DEFENSIVE ? 1.0 : 0.0) * defScore
+                            + (gymType == GymType.UNIVERSAL ? 1.0 / 2.0 : 0.0) * atkScore
+                            + (gymType == GymType.UNIVERSAL ? 1.0 / 2.0 : 0.0) * defScore)
+                    : (0.2 + 0.25 * 0.2 / 0.75) * (iv.att + iv.def + iv.sta) / 45.0 +
+                    (0.55 + 0.25 * 0.55 / 0.75) * (profiledCP / profiledCP40);
 
-            Double pvpPotential = GetPVPPotential(scanResult);
-            String rate_mark = (pvpPotential < 0.6) ? whiteLetters[(int) (25.0 * rate)] : blackDigits[(int) (21.0*GetPVPRate(scanResult, mlCP))];
+            Double pvpPotential = isFinalForm ? GetPVPPotential(scanResult) : GetPVPPotential(evolvedPokemon, aeCP);
+            String rate_mark = (pvpPotential >= 0.6 && isFinalForm || !isFinalForm && pvpPotential >= 0.5)
+                    ? blackDigits[(int) (21.0 * GetPVPRate(scanResult, mlCP, isFinalForm))]
+                    : whiteLetters[(int) (25.0 * rate)];
             String badge = Badge(evolvedPokemon, scanResult, isFinalForm, pvpPotential);
 
             String badges = badge + rate_mark + aecp_mark + GetIVBadge(iv, scanResult.isLucky);
@@ -127,12 +130,15 @@ public class UniIndexToken extends ClipboardToken {
         }
     }
 
-    private double GetPVPRate(ScanResult scanResult, double mlCP) {
+    private double GetPVPRate(ScanResult scanResult, double mlCP, boolean isFinalForm) {
+        int cp = scanResult.cp;
+        if(!isFinalForm){
+            return 0.5 * (double) cp / mlCP;
+        }
         Double pvpGreatScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpGreatScore() == null) ? 0 : scanResult.selectedMoveset.getPvpGreatScore();
         Double pvpUltraScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpUltraScore() == null) ? 0 : scanResult.selectedMoveset.getPvpUltraScore();
         Double pvpMasterScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpMasterScore() == null) ? 0 : scanResult.selectedMoveset.getPvpMasterScore();
 
-        int cp = scanResult.cp;
         if (cp <= 1500) return pvpGreatScore * (double) cp / 1500.0;
         if (cp <= 2500) return pvpUltraScore * (double) cp / 2500.0;
         return pvpMasterScore * (double) cp / mlCP;
@@ -149,13 +155,40 @@ public class UniIndexToken extends ClipboardToken {
         return pvpMasterScore;
     }
 
+    private double GetPVPPotential(Pokemon evolvedPokemon, double aeCP){
+        String name = evolvedPokemon.name.split(" - ")[0].trim().toUpperCase();
+        if(aeCP<=1500){
+            String[] topArray = new String[]{"DIALGA", "LATIAS", "GIRATINA", "KYUREM", "ZEKROM", "RESHIRAM", "REGISTEEL", "MEW", "ARCEUS", "URSARING", "AZUMARILL", "PALKIA", "MEGANIUM", "VENUSAUR", "LANTURN", "SKARMORY", "TRANQUILL", "UNFEZANT", "KYOGRE", "MANAPHY", "MEWTWO", "MILOTIC", "PHIONE", "ALTARIA", "DITTO", "FERROTHORN", "LUDICOLO", "POLITOED", "POLIWRATH", "PRINPLUP", "TOGEKISS", "DEOXYS", "JIRACHI", "JELLICENT", "TROPIUS", "CLEFABLE", "SCRAFTY", "CRESSELIA", "LEAVANNY", "TORTERRA", "WHIMSICOTT", "SABLEYE", "SHEDINJA", "KELDEO", "SALAMENCE", "BASTIODON", "GRANBULL", "BELLOSSOM", "LEAFEON", "NUZLEAF", "SHIFTRY", "VICTREEBEL", "DEINO", "DRAGONAIR", "GYARADOS", "HYDREIGON", "SEADRA", "SHELGON", "ZWEILOUS", "GLOOM", "IVYSAUR", "ODDISH", "ROSELIA", "ROSERADE", "SUNFLORA", "VILEPLUME", "WEEPINBELL", "BRONZONG", "STEELIX", "LUNATONE", "ESCAVALIER", "HERACROSS", "RAMPARDOS", "FORRETRESS", "HEATRAN", "MAGMORTAR", "MAROWAK", "MOLTRES", "NINETALES", "RAPIDASH", "SIMISEAR", "WIGGLYTUFF", "AZURILL", "FRILLISH", "LOMBRE", "MANTINE", "MANTYKE", "MELOETTA", "STARAPTOR", "VIRIZION", "BRONZOR", "DROWZEE", "GOTHITA", "HYPNO", "JYNX", "MEDITITE", "MIME_JR", "RALTS", "SLOWPOKE", "WOOBAT", "MANDIBUZZ", "TORNADUS", "VULLABY", "LUCARIO", "MEDICHAM", "REGIROCK", "GALLADE", "GARDEVOIR", "GOTHITELLE", "ELECTRODE", "GALVANTULA", "JOLTEON", "KLINK", "LAPRAS", "SERPERIOR", "SERVINE", "BAYLEEF", "BUDEW", "COTTONEE", "PARASECT", "RAYQUAZA", "SUNKERN", "MELMETAL", "GEODUDE", "GRAVELER", "PACHIRISU", "RAIKOU", "STUNFISK", "BRELOOM", "EMPOLEON", "FERALIGATR", "CHERRIM", "KLANG", "KLINKLANG", "MAGNETON", "NOCTOWL", "SWELLOW", "VIGOROTH", "GROUDON", "BLAZIKEN", "ALOMOMOLA", "KINGDRA", "LUMINEON", "SAMUROTT", "WALREIN", "CONKELDURR", "HARIYAMA", "TOXICROAK", "EMOLGA", "MAGNEMITE", "MAREEP", "MELTAN", "PICHU", "PIKACHU", "ROTOM", "SIMISAGE", "TANGROWTH", "ZAPDOS", "AMOONGUSS", "FOONGUS", "SIGILYPH", "TYPHLOSION", "REGICE", "AMPHAROS", "HITMONCHAN", "HITMONTOP", "MACHAMP", "PRIMEAPE", "UXIE", "VICTINI", "GROTLE", "TURTWIG", "MAWILE", "MIGHTYENA", "JUMPLUFF", "METAGROSS", "RIOLU", "FLOATZEL", "SHARPEDO", "ABOMASNOW", "PROBOPASS", "RAICHU", "LUGIA", "BLASTOISE", "SWAMPERT", "TERRAKION", "MAGNEZONE"};
+            List<String> topList = Arrays.asList(topArray);
+            if(topList.contains(name)) return 0.5;
+            return 0;
+        }
+
+        if(aeCP<=2500){
+            String[] topArray = new String[]{"CRESSELIA", "LUNATONE", "GIRATINA", "REGISTEEL", "JIRACHI", "KYUREM", "JELLICENT", "SABLEYE", "SHEDINJA", "EMPOLEON", "FERALIGATR", "SCRAFTY", "TOGEKISS", "CLEFABLE", "WHIMSICOTT", "KINGDRA", "GARDEVOIR", "NINETALES", "POLIWRATH", "WIGGLYTUFF", "LUCARIO", "SWAMPERT", "UXIE", "LUGIA", "MEGANIUM", "VENUSAUR", "DIALGA", "LATIAS", "ESCAVALIER", "HERACROSS", "TYPHLOSION", "GALLADE", "GOTHITELLE", "HYDREIGON", "ZWEILOUS", "REGICE", "NOCTOWL", "REGIROCK", "ARTICUNO", "CLOYSTER", "DELIBIRD", "DEWGONG", "GLACEON", "SEEL", "SHELLDER", "METAGROSS", "PALKIA", "RESHIRAM", "MELMETAL", "AMPHAROS", "BLASTOISE", "JOLTEON", "PACHIRISU", "TORTERRA", "GRANBULL", "BRELOOM", "CONKELDURR", "HARIYAMA", "MACHAMP", "MEDICHAM", "MEW", "TOXICROAK", "LEAVANNY", "AGGRON", "BASTIODON", "BOLDORE", "RHYPERIOR", "ROGGENROLA", "SEADRA", "TYRANITAR", "FERROTHORN", "GENGAR", "HAUNTER", "LICKILICKY", "FLYGON", "RAIKOU", "GLISCOR", "NIDOKING", "SCEPTILE", "BANETTE", "PRIMEAPE", "RIOLU", "POLITOED", "ZEKROM", "MEWTWO", "MUK", "TANGROWTH", "RAICHU", "DRAGONITE", "GYARADOS", "SHIFTRY", "LAPRAS", "HITMONCHAN", "HITMONTOP", "MAGNETON", "MAGNEZONE", "URSARING", "ARCEUS", "LATIOS", "CELEBI", "DEOXYS", "KADABRA", "KROOKODILE", "MILOTIC", "KLINKLANG", "MELTAN", "BRONZONG", "HONCHKROW", "FORRETRESS", "MANDIBUZZ", "VULLABY", "LANTURN", "EXEGGCUTE", "EXEGGUTOR", "SCIZOR", "STEELIX", "LEAFEON", "GOLEM", "SNORLAX", "VICTINI"};
+            List<String> topList = Arrays.asList(topArray);
+            if(topList.contains(name)) return 0.5;
+            return 0;
+        }
+
+        String[] topArray = new String[]{"DIALGA", "LATIAS", "KYUREM", "PALKIA", "RESHIRAM", "ARCEUS", "URSARING", "ZEKROM", "GARCHOMP", "LANDORUS", "METAGROSS", "HYDREIGON", "ZWEILOUS", "GIRATINA", "LUGIA", "MEW", "MELMETAL", "TYRANITAR", "TOGEKISS", "KYOGRE", "MANAPHY", "MILOTIC", "PHIONE", "JIRACHI", "DRAGONITE", "LATIOS", "SABLEYE", "SHEDINJA", "GYARADOS", "KINGDRA", "NOCTOWL", "SALAMENCE", "RAIKOU", "RAYQUAZA", "RHYPERIOR", "TERRAKION", "GARDEVOIR", "KROOKODILE", "DARKRAI", "MANDIBUZZ", "REGIGIGAS", "MEWTWO", "REGIROCK", "HOUNDOUR", "MURKROW", "PERSIAN", "UMBREON", "VULLABY", "ZORUA", "GROUDON", "WEAVILE", "AGGRON", "FLYGON", "BASTIODON", "BOLDORE", "ROGGENROLA", "FERROTHORN", "IGGLYBUFF", "SPIRITOMB", "HEATRAN", "EMPOLEON", "FERALIGATR", "ARTICUNO", "CLOYSTER", "DELIBIRD", "GLACEON", "SEEL", "SHELLDER", "SEADRA", "MELOETTA", "STARAPTOR", "VIRIZION", "SNORLAX", "DRUDDIGON", "FRAXURE", "HAXORUS", "HIPPOWDON", "MAGMORTAR", "MAROWAK", "MOLTRES", "RAPIDASH", "SIMISEAR"};
+        List<String> topList = Arrays.asList(topArray);
+        if(topList.contains(name)) return 0.5;
+        return 0;
+    }
+
     private String Badge(Pokemon evolvedPokemon, ScanResult scanResult, boolean isFinalForm, double pvpPotential) {
         GymType gymType = GetGymType(evolvedPokemon);
-        if(pvpPotential >= 0.6) return "φ";
-        if(!isFinalForm) return "";
+        if (pvpPotential >= 0.6 && isFinalForm) return "Ξ";
+        if (!isFinalForm && pvpPotential >= 0.5) return "ξ";
+        if (!isFinalForm) return "";
+        if (gymType == GymType.DEFENSIVE || gymType == GymType.UNIVERSAL && scanResult.selectedMoveset.getDefScore() == 1.0)
+            return "Θ";
         if (gymType == GymType.DEFENSIVE || gymType == GymType.UNIVERSAL && scanResult.selectedMoveset.getDefScore() > 0.95)
-            return "ø";
-        if ((gymType == GymType.OFFENSIVE || gymType == GymType.UNIVERSAL)&& scanResult.selectedMoveset.getAtkScore() > 0.95)
+            return "θ";
+        if (scanResult.selectedMoveset.getAtkScore() == 1.0)
+            return "Ψ";
+        if ((gymType == GymType.OFFENSIVE || gymType == GymType.UNIVERSAL) && scanResult.selectedMoveset.getAtkScore() > 0.95)
             return "ψ";
         return "";
     }
