@@ -150,9 +150,9 @@ public class UniIndexToken extends ClipboardToken {
 
         int cp = scanResult.cp;
         if (!isFinalForm) {
-            if (aeCP <= 1500) return 0.75 * cpAtLev / 1500.0;
-            if (aeCP <= 2500) return 0.75 * cpAtLev / 2500.0;
-            return 0.75 * cpAtLev / mlCP;
+            if (aeCP <= 1500) return 0.6 * cpAtLev / 1500.0;
+            if (aeCP <= 2500) return 0.6 * cpAtLev / 2500.0;
+            return 0.6 * cpAtLev / mlCP;
         }
         Double pvpGreatScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpGreatScore() == null) ? 0 : scanResult.selectedMoveset.getPvpGreatScore();
         Double pvpUltraScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpUltraScore() == null) ? 0 : scanResult.selectedMoveset.getPvpUltraScore();
