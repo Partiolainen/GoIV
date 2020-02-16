@@ -135,11 +135,11 @@ public class UniIndexToken extends ClipboardToken {
 
     private double GetPVPMaxRate(ScanResult scanResult, Pokemon evolvedPokemon, double aeCP, double mlCP, boolean isFinalForm, PokeInfoCalculator calc){
         double targetCP = mlCP;
-        if(aeCP<=1500) targetCP = 1500;
         if(aeCP<=2500) targetCP = 2500;
+        if(aeCP<=1500) targetCP = 1500;
         double level = scanResult.levelRange.max;
         IVCombination iv = scanResult.getHighestIVCombination();
-        double cpAtLev = 0;
+        double cpAtLev = aeCP;
         while (targetCP > cpAtLev) {
             if(level>=40) break;
             level = level + 0.5;
