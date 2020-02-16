@@ -221,6 +221,19 @@ public class MovesetFraction extends MovableFraction implements ReactiveColorLis
         return Color.parseColor("#d84315");
     }
 
+    private int getPVPPowerColor(double pvpScore) {
+        if (pvpScore > 0.7) {
+            return Color.parseColor("#4c8fdb");
+        }
+        if (pvpScore >= 0.65) {
+            return Color.parseColor("#8eed94");
+        }
+        if (pvpScore >= 0.6) {
+            return Color.parseColor("#f9a825");
+        }
+        return Color.parseColor("#d84315");
+    }
+
     @OnClick(R.id.powerUpButton)
     void onPowerUp() {
         pokefly.navigateToPowerUpFraction();
@@ -378,7 +391,7 @@ public class MovesetFraction extends MovableFraction implements ReactiveColorLis
 
             // PVP Great score
             if (data.getPvpGreatScore() != null) {
-                pvp_great.setTextColor(getPowerColor(data.getPvpGreatScore()));
+                pvp_great.setTextColor(getPVPPowerColor(data.getPvpGreatScore()));
                 pvp_great.setText(scoreFormat.format(data.getPvpGreatScore()));
             } else {
                 pvp_great.setTextColor(Color.parseColor("#d84315"));
@@ -387,7 +400,7 @@ public class MovesetFraction extends MovableFraction implements ReactiveColorLis
 
             // PVP Ultra score
             if (data.getPvpUltraScore() != null) {
-                pvp_ultra.setTextColor(getPowerColor(data.getPvpUltraScore()));
+                pvp_ultra.setTextColor(getPVPPowerColor(data.getPvpUltraScore()));
                 pvp_ultra.setText(scoreFormat.format(data.getPvpUltraScore()));
             } else {
                 pvp_ultra.setTextColor(Color.parseColor("#d84315"));
@@ -396,7 +409,7 @@ public class MovesetFraction extends MovableFraction implements ReactiveColorLis
 
             // PVP Master score
             if (data.getPvpMasterScore() != null) {
-                pvp_master.setTextColor(getPowerColor(data.getPvpMasterScore()));
+                pvp_master.setTextColor(getPVPPowerColor(data.getPvpMasterScore()));
                 pvp_master.setText(scoreFormat.format(data.getPvpMasterScore()));
             } else {
                 pvp_master.setTextColor(Color.parseColor("#d84315"));
