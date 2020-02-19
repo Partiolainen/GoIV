@@ -266,9 +266,9 @@ public class UniIndexToken extends ClipboardToken {
     {
         double ivValue = 100.0*(IV.att+IV.def+IV.sta)/45.0;
         if (ivValue <= 49) return "·";
-        if (ivValue > 49 && ivValue < 64.4) return "*";
-        if (ivValue >= 64.4 && ivValue < 80 && !IsLucky) return "⁑";
-        if (ivValue >= 80 && ivValue < 90 && !IsLucky) return "⁂";
+        if (ivValue > 49 && ivValue < 64.5) return "*";
+        if (ivValue >= 64.5 && ivValue <= 80 && !IsLucky) return "⁑";
+        if (ivValue > 80 && ivValue < 90 && !IsLucky) return "⁂";
         if (ivValue >= 90 && ivValue < 100 && !IsLucky || ivValue < 90 && IsLucky) return "☆";
         if (ivValue==100.0 && !IsLucky || IsLucky && ivValue >= 90) return "★";
         return "·";
