@@ -119,7 +119,7 @@ public class UniIndexToken extends ClipboardToken {
                     (0.55 + 0.25 * 0.55 / 0.75) * (profiledCP / profiledCP40);
 
             PVPMark pvpMark = isFinalForm ? GetPVPMark(scanResult) : GetPVPMark(evolvedPokemon, aeCP);
-            String rate_mark = (pvpMark.Mark >= 0.6 && isFinalForm || !isFinalForm && pvpMark.Mark >= 0.5)
+            String rate_mark = (pvpMark.Mark >= GetMinLeagueRate(pvpMark.League) && isFinalForm || !isFinalForm && pvpMark.Mark >= 0.5)
                     ? blackDigits[(int) (21.0 * GetPVPRate(scanResult, aeCP, mlCP, isFinalForm))] +
                       blackDigits[(int) (21.0 * GetPVPMaxRate(scanResult, evolvedPokemon, aeCP, mlCP, isFinalForm, pokeInfoCalculator))]
                     : whiteLetters[(int) (25.0 * rate)];
@@ -150,9 +150,9 @@ public class UniIndexToken extends ClipboardToken {
 
         int cp = scanResult.cp;
         if (!isFinalForm) {
-            if (aeCP <= 1500) return 0.6 * cpAtLev / 1500.0;
-            if (aeCP <= 2500) return 0.6 * cpAtLev / 2500.0;
-            return 0.6 * cpAtLev / mlCP;
+            if (aeCP <= 1500) return GetMinLeagueRate(PVPLeague.GREAT) * cpAtLev / 1500.0;
+            if (aeCP <= 2500) return GetMinLeagueRate(PVPLeague.ULTRA) * cpAtLev / 2500.0;
+            return GetMinLeagueRate(PVPLeague.MASTER) * cpAtLev / mlCP;
         }
         Double pvpGreatScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpGreatScore() == null) ? 0 : scanResult.selectedMoveset.getPvpGreatScore();
         Double pvpUltraScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpUltraScore() == null) ? 0 : scanResult.selectedMoveset.getPvpUltraScore();
@@ -193,28 +193,40 @@ public class UniIndexToken extends ClipboardToken {
     private PVPMark GetPVPMark(Pokemon evolvedPokemon, double aeCP){
         String name = evolvedPokemon.name.split(" - ")[0].trim().toUpperCase();
         if(aeCP<=1500){
-            String[] topArray = new String[]{"DIALGA", "LATIAS", "GIRATINA", "KYUREM", "ZEKROM", "RESHIRAM", "REGISTEEL", "MEW", "ARCEUS", "URSARING", "AZUMARILL", "PALKIA", "MEGANIUM", "VENUSAUR", "LANTURN", "SKARMORY", "TRANQUILL", "UNFEZANT", "KYOGRE", "MANAPHY", "MEWTWO", "MILOTIC", "PHIONE", "ALTARIA", "DITTO", "FERROTHORN", "LUDICOLO", "POLITOED", "POLIWRATH", "PRINPLUP", "TOGEKISS", "DEOXYS", "JIRACHI", "JELLICENT", "TROPIUS", "CLEFABLE", "SCRAFTY", "CRESSELIA", "LEAVANNY", "TORTERRA", "WHIMSICOTT", "SABLEYE", "SHEDINJA", "KELDEO", "SALAMENCE", "BASTIODON", "GRANBULL", "BELLOSSOM", "LEAFEON", "NUZLEAF", "SHIFTRY", "VICTREEBEL", "DEINO", "DRAGONAIR", "GYARADOS", "HYDREIGON", "SEADRA", "SHELGON", "ZWEILOUS", "GLOOM", "IVYSAUR", "ODDISH", "ROSELIA", "ROSERADE", "SUNFLORA", "VILEPLUME", "WEEPINBELL", "BRONZONG", "STEELIX", "LUNATONE", "ESCAVALIER", "HERACROSS", "RAMPARDOS", "FORRETRESS", "HEATRAN", "MAGMORTAR", "MAROWAK", "MOLTRES", "NINETALES", "RAPIDASH", "SIMISEAR", "WIGGLYTUFF", "AZURILL", "FRILLISH", "LOMBRE", "MANTINE", "MANTYKE", "MELOETTA", "STARAPTOR", "VIRIZION", "BRONZOR", "DROWZEE", "GOTHITA", "HYPNO", "JYNX", "MEDITITE", "MIME_JR", "RALTS", "SLOWPOKE", "WOOBAT", "MANDIBUZZ", "TORNADUS", "VULLABY", "LUCARIO", "MEDICHAM", "REGIROCK", "GALLADE", "GARDEVOIR", "GOTHITELLE", "ELECTRODE", "GALVANTULA", "JOLTEON", "KLINK", "LAPRAS", "SERPERIOR", "SERVINE", "BAYLEEF", "BUDEW", "COTTONEE", "PARASECT", "RAYQUAZA", "SUNKERN", "MELMETAL", "GEODUDE", "GRAVELER", "PACHIRISU", "RAIKOU", "STUNFISK", "BRELOOM", "EMPOLEON", "FERALIGATR", "CHERRIM", "KLANG", "KLINKLANG", "MAGNETON", "NOCTOWL", "SWELLOW", "VIGOROTH", "GROUDON", "BLAZIKEN", "ALOMOMOLA", "KINGDRA", "LUMINEON", "SAMUROTT", "WALREIN", "CONKELDURR", "HARIYAMA", "TOXICROAK", "EMOLGA", "MAGNEMITE", "MAREEP", "MELTAN", "PICHU", "PIKACHU", "ROTOM", "SIMISAGE", "TANGROWTH", "ZAPDOS", "AMOONGUSS", "FOONGUS", "SIGILYPH", "TYPHLOSION", "REGICE", "AMPHAROS", "HITMONCHAN", "HITMONTOP", "MACHAMP", "PRIMEAPE", "UXIE", "VICTINI", "GROTLE", "TURTWIG", "MAWILE", "MIGHTYENA", "JUMPLUFF", "METAGROSS", "RIOLU", "FLOATZEL", "SHARPEDO", "ABOMASNOW", "PROBOPASS", "RAICHU", "LUGIA", "BLASTOISE", "SWAMPERT", "TERRAKION", "MAGNEZONE"};
+            String[] topArray = new String[]{"MEDICHAM", "ALTARIA", "REGISTEEL", "DEOXYS_DEFENSE", "AZUMARILL", "ZWEILOUS", "TROPIUS", "VIGOROTH", "SCRAFTY", "BASTIODON", "MACHAMP", "SKARMORY", "UMBREON", "MAROWAK_ALOLA", "VENUSAUR", "DEWGONG", "SWAMPERT", "LUCARIO", "MANTINE", "GLISCOR", "DRAGONAIR", "PRIMEAPE", "MEGANIUM", "FLYGON", "WHISCASH", "MEW", "HITMONTOP", "SABLEYE", "WIGGLYTUFF", "CRESSELIA", "REGIROCK", "MELMETAL", "HARIYAMA", "CLEFABLE", "MUK_ALOLA", "MUNCHLAX", "JIRACHI", "CASTFORM_RAINY", "NOCTOWL", "HYPNO", "LAPRAS", "TOXICROAK", "DRAGONITE", "TOGEKISS", "ZANGOOSE", "HAUNTER", "LICKITUNG", "REGICE", "BLAZIKEN", "BLASTOISE", "CRUSTLE", "FORRETRESS", "IVYSAUR", "PROBOPASS", "CHARIZARD", "HERACROSS", "EMPOLEON", "ALOMOMOLA", "LATIOS", "POLIWRATH", "LANTURN", "SCEPTILE", "BELLOSSOM", "QUAGSIRE", "DRAPION", "NINETALES_ALOLA", "GLIGAR", "GOLBAT", "SHIFTRY", "STEELIX", "GROTLE", "LUGIA", "SNORLAX", "HITMONCHAN", "VICTREEBEL", "BRONZONG", "LICKILICKY", "MARSHTOMP", "CASTFORM_SNOWY", "SKUNTANK", "TANGROWTH", "ARTICUNO", "GLOOM", "DRIFBLIM", "SPIRITOMB", "CASTFORM_SUNNY", "HAXORUS", "MAGNEZONE", "TYPHLOSION", "GRANBULL", "NINETALES", "VILEPLUME", "MUK", "POLITOED", "WORMADAM_TRASH", "ESCAVALIER", "RELICANTH", "SUDOWOODO", "WEEPINBELL", "LINOONE", "MAWILE", "SUICUNE"};
             List<String> topList = Arrays.asList(topArray);
             if(topList.contains(name)) return new PVPMark(PVPLeague.GREAT, 0.5);
             return new PVPMark(PVPLeague.GREAT, 0);
         }
 
         if(aeCP<=2500){
-            String[] topArray = new String[]{"CRESSELIA", "LUNATONE", "GIRATINA", "REGISTEEL", "JIRACHI", "KYUREM", "JELLICENT", "SABLEYE", "SHEDINJA", "EMPOLEON", "FERALIGATR", "SCRAFTY", "TOGEKISS", "CLEFABLE", "WHIMSICOTT", "KINGDRA", "GARDEVOIR", "NINETALES", "POLIWRATH", "WIGGLYTUFF", "LUCARIO", "SWAMPERT", "UXIE", "LUGIA", "MEGANIUM", "VENUSAUR", "DIALGA", "LATIAS", "ESCAVALIER", "HERACROSS", "TYPHLOSION", "GALLADE", "GOTHITELLE", "HYDREIGON", "ZWEILOUS", "REGICE", "NOCTOWL", "REGIROCK", "ARTICUNO", "CLOYSTER", "DELIBIRD", "DEWGONG", "GLACEON", "SEEL", "SHELLDER", "METAGROSS", "PALKIA", "RESHIRAM", "MELMETAL", "AMPHAROS", "BLASTOISE", "JOLTEON", "PACHIRISU", "TORTERRA", "GRANBULL", "BRELOOM", "CONKELDURR", "HARIYAMA", "MACHAMP", "MEDICHAM", "MEW", "TOXICROAK", "LEAVANNY", "AGGRON", "BASTIODON", "BOLDORE", "RHYPERIOR", "ROGGENROLA", "SEADRA", "TYRANITAR", "FERROTHORN", "GENGAR", "HAUNTER", "LICKILICKY", "FLYGON", "RAIKOU", "GLISCOR", "NIDOKING", "SCEPTILE", "BANETTE", "PRIMEAPE", "RIOLU", "POLITOED", "ZEKROM", "MEWTWO", "MUK", "TANGROWTH", "RAICHU", "DRAGONITE", "GYARADOS", "SHIFTRY", "LAPRAS", "HITMONCHAN", "HITMONTOP", "MAGNETON", "MAGNEZONE", "URSARING", "ARCEUS", "LATIOS", "CELEBI", "DEOXYS", "KADABRA", "KROOKODILE", "MILOTIC", "KLINKLANG", "MELTAN", "BRONZONG", "HONCHKROW", "FORRETRESS", "MANDIBUZZ", "VULLABY", "LANTURN", "EXEGGCUTE", "EXEGGUTOR", "SCIZOR", "STEELIX", "LEAFEON", "GOLEM", "SNORLAX", "VICTINI"};
+            String[] topArray = new String[]{"GIRATINA_ALTERED", "GIRATINA_ORIGIN", "REGISTEEL", "MEW", "SWAMPERT", "CRESSELIA", "MACHAMP", "REGIROCK", "MEWTWO_ARMORED", "LUCARIO", "REGICE", "VENUSAUR", "GLISCOR", "BLAZIKEN", "MUK_ALOLA", "HERACROSS", "DRAGONITE", "LUGIA", "MEGANIUM", "ZAPDOS", "SUICUNE", "TYPHLOSION", "FLYGON", "SCEPTILE", "SNORLAX", "BLASTOISE", "DEOXYS_DEFENSE", "LAPRAS", "GALLADE", "JIRACHI", "HARIYAMA", "LICKILICKY", "ZANGOOSE", "ARTICUNO", "ESCAVALIER", "VIRIZION", "LATIOS", "POLITOED", "CLEFABLE", "GENGAR", "MILOTIC", "EMPOLEON", "TOXICROAK", "CHARIZARD", "TOGEKISS", "PRIMEAPE", "SCRAFTY", "KINGDRA", "MELMETAL", "POLIWRATH", "STEELIX", "SCIZOR", "TANGROWTH", "CONKELDURR", "CRUSTLE", "AMPHAROS", "SHIFTRY", "MEWTWO", "HONCHKROW", "MUK", "HAXORUS", "ALTARIA", "HIPPOWDON", "MAGNEZONE", "MOLTRES", "SKARMORY", "GYARADOS", "DRIFBLIM", "GRANBULL", "BRELOOM", "NIDOQUEEN", "DRAPION", "GARCHOMP", "URSARING", "GLACEON", "PINSIR", "SKUNTANK", "STARAPTOR", "INFERNAPE", "RELICANTH", "MAGNETON", "METAGROSS", "DIALGA", "FORRETRESS", "SEISMITOAD", "FERALIGATR", "GARDEVOIR", "UMBREON", "RAIKOU", "JOLTEON", "CLOYSTER", "SANDSLASH_ALOLA", "HITMONTOP", "HOUNDOOM", "BANETTE", "PILOSWINE", "KLINKLANG", "CELEBI", "HYDREIGON", "DURANT", "LATIAS", "KYOGRE"};
             List<String> topList = Arrays.asList(topArray);
             if(topList.contains(name)) return new PVPMark(PVPLeague.ULTRA, 0.5);
             return new PVPMark(PVPLeague.ULTRA, 0);
         }
 
-        String[] topArray = new String[]{"DIALGA", "LATIAS", "KYUREM", "PALKIA", "RESHIRAM", "ARCEUS", "URSARING", "ZEKROM", "GARCHOMP", "LANDORUS", "METAGROSS", "HYDREIGON", "ZWEILOUS", "GIRATINA", "LUGIA", "MEW", "MELMETAL", "TYRANITAR", "TOGEKISS", "KYOGRE", "MANAPHY", "MILOTIC", "PHIONE", "JIRACHI", "DRAGONITE", "LATIOS", "SABLEYE", "SHEDINJA", "GYARADOS", "KINGDRA", "NOCTOWL", "SALAMENCE", "RAIKOU", "RAYQUAZA", "RHYPERIOR", "TERRAKION", "GARDEVOIR", "KROOKODILE", "DARKRAI", "MANDIBUZZ", "REGIGIGAS", "MEWTWO", "REGIROCK", "HOUNDOUR", "MURKROW", "PERSIAN", "UMBREON", "VULLABY", "ZORUA", "GROUDON", "WEAVILE", "AGGRON", "FLYGON", "BASTIODON", "BOLDORE", "ROGGENROLA", "FERROTHORN", "IGGLYBUFF", "SPIRITOMB", "HEATRAN", "EMPOLEON", "FERALIGATR", "ARTICUNO", "CLOYSTER", "DELIBIRD", "GLACEON", "SEEL", "SHELLDER", "SEADRA", "MELOETTA", "STARAPTOR", "VIRIZION", "SNORLAX", "DRUDDIGON", "FRAXURE", "HAXORUS", "HIPPOWDON", "MAGMORTAR", "MAROWAK", "MOLTRES", "RAPIDASH", "SIMISEAR"};
+        String[] topArray = new String[]{"GIRATINA_ORIGIN", "GIRATINA_ALTERED", "MEWTWO", "DIALGA", "DRAGONITE", "KYOGRE", "METAGROSS", "MEW", "LUGIA", "LATIOS", "GARCHOMP", "TOGEKISS", "SNORLAX", "MELMETAL", "GROUDON", "DARKRAI", "SWAMPERT", "HAXORUS", "REGIROCK", "GYARADOS", "MACHAMP", "CONKELDURR", "REGICE", "MEWTWO_ARMORED", "HYDREIGON", "RAIKOU", "JIRACHI", "ZAPDOS", "GLACEON", "MAMOSWINE", "HERACROSS", "VIRIZION", "ARTICUNO", "PALKIA", "HEATRAN", "TYRANITAR", "RAYQUAZA", "LATIAS", "GALLADE", "GARDEVOIR", "SUICUNE", "MAGNEZONE", "MILOTIC", "HARIYAMA", "BLAZIKEN", "EMPOLEON", "CELEBI", "MOLTRES", "WEAVILE", "SCIZOR", "TYPHLOSION", "REGISTEEL", "TANGROWTH", "LUCARIO", "VAPOREON", "TERRAKION", "CRESSELIA", "LAPRAS", "RHYPERIOR", "FERALIGATR", "ENTEI", "GENGAR", "TORTERRA", "GIGALITH", "VENUSAUR", "HIPPOWDON", "SALAMENCE", "URSARING", "EXCADRILL", "LEAFEON", "FLYGON", "HO_OH", "GRANBULL", "CHARIZARD", "SCEPTILE", "MEGANIUM", "GOLEM", "CLEFABLE", "COBALION", "BEARTIC", "BLASTOISE", "CLOYSTER"};
         List<String> topList = Arrays.asList(topArray);
         if(topList.contains(name)) return new PVPMark(PVPLeague.MASTER, 0.5);
         return new PVPMark(PVPLeague.MASTER, 0);
     }
 
+    private double GetMinLeagueRate(PVPLeague league){
+        switch (league){
+            case GREAT:
+                return 0.82;
+            case ULTRA:
+                return 0.75;
+            case MASTER:
+                return 0.65;
+        }
+        return 0;
+    }
+
     private String Badge(Pokemon evolvedPokemon, Pokemon pokemon, ScanResult scanResult, boolean isFinalForm, PVPMark pvpMark) {
         GymType gymType = GetGymType(evolvedPokemon);
-        if (pvpMark.Mark >= 0.6 && isFinalForm) return GetLeagueBadge(pvpMark.League, true);
+        if (pvpMark.Mark >= GetMinLeagueRate(pvpMark.League) && isFinalForm) return GetLeagueBadge(pvpMark.League, true);
         if (!isFinalForm && pvpMark.Mark >= 0.5) return GetLeagueBadge(pvpMark.League, false);
         if (!isFinalForm && GetGymType(pokemon) == GymType.DEFENSIVE && scanResult.selectedMoveset.getDefScore() > 0.95) return "Θ";
         if (!isFinalForm && GetGymType(pokemon) == GymType.DEFENSIVE) return "θ";
