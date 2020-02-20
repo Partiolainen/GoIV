@@ -277,8 +277,9 @@ public class UniIndexToken extends ClipboardToken {
     public String GetShortName(String name, int len)
     {
         name = name.split(" - ")[0].trim();
-	    String other = name.substring(1);
+	    String other = name.substring(1, name.length()-1);
         String first = name.substring(0,1);
+        String last =  name.substring(name.length()-1);
         for (int i = 0; i < name.length()-len; i++)
         {
             int a = StringUtils.lastIndexOfAny(other, new String[] {"a", "e", "u", "i", "o"});
@@ -289,7 +290,7 @@ public class UniIndexToken extends ClipboardToken {
             }
         }
 
-        String res = first+other;
+        String res = first+other+last;
         return res.substring(0, Math.min(len, res.length()));
     }
 
