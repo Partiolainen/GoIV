@@ -231,7 +231,7 @@ public class UniIndexToken extends ClipboardToken {
         if (!isFinalForm && GetGymType(pokemon) == GymType.DEFENSIVE && scanResult.selectedMoveset.getDefScore() > 0.95) return "Θ";
         if (!isFinalForm && GetGymType(pokemon) == GymType.DEFENSIVE) return "θ";
         if (!isFinalForm) return "";
-        if ((gymType == GymType.DEFENSIVE || gymType == GymType.UNIVERSAL) && scanResult.selectedMoveset.getDefScore() == 1.0)
+        if (gymType == GymType.DEFENSIVE || gymType == GymType.UNIVERSAL && scanResult.selectedMoveset.getDefScore() == 1.0)
             return "Θ";
         if (gymType == GymType.DEFENSIVE || gymType == GymType.UNIVERSAL && scanResult.selectedMoveset.getDefScore() > 0.95)
             return "θ";
@@ -249,7 +249,7 @@ public class UniIndexToken extends ClipboardToken {
             case ULTRA:
                 return upper ? "Υ" : "υ";
             case MASTER:
-                return upper ? "Σ" : "σ";
+                return upper ? "Ω" : "ω";
         }
         return "";
     }
