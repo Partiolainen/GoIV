@@ -11948,7 +11948,7 @@
 {
   "fast": "CONFUSION_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.9,
   "defScore": 0.0,
@@ -11961,7 +11961,7 @@
 {
   "fast": "PSYCHO_CUT_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.8,
   "defScore": 0.0,
@@ -13844,7 +13844,7 @@
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.68070730523327938,
   "defScore": 0.88916527854790994,
-  "pvpGreatScore": 0.5,
+  "pvpGreatScore": 0.0,
   "pvpUltraScore": null,
   "pvpMasterScore": null,
   "fastIsLegacy": false,
@@ -18265,7 +18265,7 @@
 {
   "fast": "CONFUSION_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.9,
   "defScore": 0.9,
@@ -18291,7 +18291,7 @@
 {
   "fast": "ZEN_HEADBUTT_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.7,
   "defScore": 0.0,
@@ -28433,7 +28433,7 @@
 {
   "fast": "CONFUSION_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.4840936256107447,
   "defScore": 0.70921854965965314,
@@ -28498,7 +28498,7 @@
 {
   "fast": "IRON_TAIL_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.38514665491299732,
   "defScore": 0.85431427789744308,
@@ -33611,7 +33611,7 @@
 {
   "fast": "AIR_SLASH_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 1.0,
   "defScore": 1.0,
@@ -33624,7 +33624,7 @@
 {
   "fast": "FEINT_ATTACK_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 1.0,
   "defScore": 0.9,
@@ -36130,7 +36130,7 @@
 {
   "fast": "CONFUSION_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.9,
   "defScore": 0.9,
@@ -36169,7 +36169,7 @@
 {
   "fast": "ZEN_HEADBUTT_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.8,
   "defScore": 0.0,
@@ -44803,7 +44803,7 @@
 {
   "fast": "EXTRASENSORY_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.78058549600790372,
   "defScore": 0.7890580009468775,
@@ -44816,7 +44816,7 @@
 {
   "fast": "DRAGON_TAIL_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.75585089220455137,
   "defScore": 0.90606480427136149,
@@ -68117,8 +68117,8 @@
   "fastMoveType": "UNKNOWN",
   "charge": "BUG_BUZZ",
   "chargeMoveType": "UNKNOWN",
-  "atkScore": 0.0,
-  "defScore": 0.0,
+  "atkScore": 1.0,
+  "defScore": 0.7,
   "pvpGreatScore": null,
   "pvpUltraScore": null,
   "pvpMasterScore": null,
@@ -68143,8 +68143,8 @@
   "fastMoveType": "UNKNOWN",
   "charge": "BUG_BUZZ",
   "chargeMoveType": "UNKNOWN",
-  "atkScore": 0.0,
-  "defScore": 0.0,
+  "atkScore": 0.9,
+  "defScore": 0.95,
   "pvpGreatScore": null,
   "pvpUltraScore": null,
   "pvpMasterScore": null,
@@ -68170,7 +68170,7 @@
   "charge": "PSYBEAM",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.0,
-  "defScore": 0.0,
+  "defScore": 0.7,
   "pvpGreatScore": null,
   "pvpUltraScore": null,
   "pvpMasterScore": null,
@@ -68182,8 +68182,8 @@
   "fastMoveType": "UNKNOWN",
   "charge": "PSYBEAM",
   "chargeMoveType": "UNKNOWN",
-  "atkScore": 0.0,
-  "defScore": 0.0,
+  "atkScore": 0.7,
+  "defScore": 0.9,
   "pvpGreatScore": null,
   "pvpUltraScore": null,
   "pvpMasterScore": null,
@@ -78298,7 +78298,7 @@
 {
   "fast": "CONFUSION_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 1.0,
   "defScore": 0.87050700141038329,
@@ -78311,7 +78311,7 @@
 {
   "fast": "EXTRASENSORY_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.94705338255322979,
   "defScore": 0.84403813954443785,
@@ -78430,7 +78430,7 @@
 {
   "fast": "CONFUSION_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 1.0,
   "defScore": 0.84815365058516257,
@@ -78443,7 +78443,7 @@
 {
   "fast": "EXTRASENSORY_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.98010535614015748,
   "defScore": 0.82970788073317514,
@@ -78562,7 +78562,7 @@
 {
   "fast": "CONFUSION_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 1.0,
   "defScore": 0.94953590056966475,
@@ -78575,7 +78575,7 @@
 {
   "fast": "EXTRASENSORY_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.98335553834097167,
   "defScore": 0.854573524001043,
@@ -79393,7 +79393,7 @@
 {
   "fast": "CONFUSION_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 1.0,
   "defScore": 0.81593071092579761,
@@ -79406,7 +79406,7 @@
 {
   "fast": "PSYCHO_CUT_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.9875774240570806,
   "defScore": 0.745807991838211,
@@ -80040,7 +80040,7 @@
 {
   "fast": "SHADOW_CLAW_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.85884877318880026,
   "defScore": 0.88109535835855157,
@@ -80053,7 +80053,7 @@
 {
   "fast": "IRON_TAIL_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.77276869237578294,
   "defScore": 0.95321346945740781,
@@ -83301,7 +83301,7 @@
 {
   "fast": "ZEN_HEADBUTT_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 1.0,
   "defScore": 0.81017274709026266,
@@ -83340,7 +83340,7 @@
 {
   "fast": "CHARGE_BEAM_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.9312265513498581,
   "defScore": 0.83787328284272489,
@@ -84699,7 +84699,7 @@
 {
   "fast": "CONFUSION_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.80632460542865581,
   "defScore": 0.90784991407808091,
@@ -84712,7 +84712,7 @@
 {
   "fast": "AIR_SLASH_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.82217637449789727,
   "defScore": 0.851015320247601,
@@ -90864,7 +90864,7 @@
 {
   "fast": "CONFUSION_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.76355492477291587,
   "defScore": 0.893341491797499,
@@ -90877,7 +90877,7 @@
 {
   "fast": "POUND_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.83270369937556032,
   "defScore": 0.79781969816691423,
@@ -90983,7 +90983,7 @@
 {
   "fast": "CONFUSION_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.88696178206932852,
   "defScore": 0.78214166995338663,
@@ -91022,7 +91022,7 @@
 {
   "fast": "CHARM_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.7627300110532218,
   "defScore": 0.944287312687965,
@@ -91314,7 +91314,7 @@
 {
   "fast": "HIDDEN_POWER_FIGHTING_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.94405853329572387,
   "defScore": 0.84849207842013818,
@@ -91327,7 +91327,7 @@
 {
   "fast": "HIDDEN_POWER_GROUND_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 1.0,
   "defScore": null,
@@ -91366,7 +91366,7 @@
 {
   "fast": "HIDDEN_POWER_DARK_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.91768478677674681,
   "defScore": null,
@@ -91392,7 +91392,7 @@
 {
   "fast": "HIDDEN_POWER_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.8814087369172795,
   "defScore": 0.74835241580165213,
@@ -91405,7 +91405,7 @@
 {
   "fast": "HIDDEN_POWER_WATER_FAST",
   "fastMoveType": "UNKNOWN",
-  "charge": "FUTURE_SIGHT",
+  "charge": "FUTURESIGHT",
   "chargeMoveType": "UNKNOWN",
   "atkScore": 0.88804255563470791,
   "defScore": null,
