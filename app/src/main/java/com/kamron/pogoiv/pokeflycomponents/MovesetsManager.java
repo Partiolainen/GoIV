@@ -111,6 +111,9 @@ public class MovesetsManager {
                 case 31: // Nidoran♂
                     upperCaseName = "NIDORAN_MALE";
                     break;
+                case 438: // Mime Jr.
+                    upperCaseName = "MIME_JR";
+                    break;
                 default:
                     upperCaseName = enMonNamesArray[i].trim().toUpperCase();
                     break;
