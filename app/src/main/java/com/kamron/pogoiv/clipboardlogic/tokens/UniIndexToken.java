@@ -193,20 +193,20 @@ public class UniIndexToken extends ClipboardToken {
     private PVPMark GetPVPMark(Pokemon evolvedPokemon, double aeCP){
         String name = evolvedPokemon.name.split(" - ")[0].trim().toUpperCase();
         if(aeCP<=1500){
-            String[] topArray = new String[]{"AZUMARILL", "SKARMORY", "ALTARIA", "REGISTEEL", "SCRAFTY", "SABLEYE", "MEDICHAM", "TROPIUS", "BASTIODON", "LICKITUNG", "HYPNO", "LUGIA", "CRUSTLE", "PROBOPASS", "ROSELIA", "RAICHU", "CLEFABLE", "MAROWAK", "LAPRAS", "LANTURN", "STEELIX", "VIGOROTH", "JIRACHI", "CARRACOSTA", "ZWEILOUS", "MELMETAL", "KLANG", "SERVINE", "WAILMER", "DEWOTT", "MACHOKE", "CROCONAW", "GROVYLE", "LUXIO", "CHARMELEON", "TIRTOUGA", "DUGTRIO", "OMASTAR", "HAUNTER", "QUAGSIRE", "BRONZONG", "GURDURR", "CASTFORM", "KRICKETUNE", "WARTORTLE"};
+            String[] topArray = new String[]{"REGISTEEL", "AZUMARILL", "SKARMORY", "ALTARIA", "BASTIODON", "MEDICHAM", "HYPNO", "PROBOPASS", "SABLEYE", "TROPIUS", "MELMETAL", "WHISCASH", "QUAGSIRE", "TOXICROAK", "STEELIX", "LANTURN", "CRESSELIA", "VIGOROTH", "CLEFABLE", "JIRACHI", "ZWEILOUS", "BRONZONG", "LAPRAS", "HAUNTER", "MANTINE", "REGICE", "REGIROCK", "IVYSAUR", "LUGIA", "FORRETRESS", "UXIE", "SHIFTRY", "GALLADE", "WIGGLYTUFF", "MAWILE", "VICTREEBEL", "TOGEKISS", "SKUNTANK"};
             List<String> topList = Arrays.asList(topArray);
             if(topList.contains(name)) return new PVPMark(PVPLeague.GREAT, 0.5);
             return new PVPMark(PVPLeague.GREAT, 0);
         }
 
         if(aeCP<=2500){
-            String[] topArray = new String[]{"REGISTEEL", "GIRATINA", "POLIWRATH", "REGICE", "LICKILICKY", "LUGIA", "CRUSTLE", "MUK", "SNORLAX", "CLEFABLE", "GYARADOS", "LAPRAS", "STEELIX", "SUICUNE", "REGIROCK", "TOGEKISS", "UXIE", "OMASTAR", "MEWTWO", "SCRAFTY", "CARRACOSTA", "KANGASKHAN", "CRESSELIA", "MACHAMP", "CLOYSTER", "SHIFTRY", "ZANGOOSE", "JIRACHI", "DRIFBLIM", "DRAPION", "CONKELDURR", "SEISMITOAD", "MELMETAL", "GRUMPIG", "SAWK", "PRIMEAPE", "POLITOED", "CHIMECHO", "GARBODOR", "DODRIO", "SIGILYPH", "DRAGONITE", "KINGDRA", "FLYGON", "GARCHOMP", "TOXICROAK", "GURDURR", "SANDSLASH", "NOCTOWL", "GRANBULL", "URSARING", "DONPHAN", "BRELOOM", "HONCHKROW", "LUCARIO", "GALLADE", "VIRIZION"};
+            String[] topArray = new String[]{"REGISTEEL", "GIRATINA", "REGICE", "SNORLAX", "POLIWRATH", "REGIROCK", "KANGASKHAN", "STEELIX", "UXIE", "CRESSELIA", "CLEFABLE", "GYARADOS", "TOGEKISS", "SUICUNE", "LAPRAS", "MELMETAL", "POLITOED", "WHISCASH", "LUGIA", "DRAPION", "TOXICROAK", "ZANGOOSE", "KINGDRA", "FLYGON", "SHIFTRY", "CONKELDURR", "DRAGONITE", "SEISMITOAD", "MACHAMP", "JIRACHI", "GARCHOMP", "PRIMEAPE", "CLOYSTER", "DRIFBLIM", "GRANBULL", "HARIYAMA", "GOLURK", "URSARING", "HONCHKROW", "GALLADE", "HERACROSS", "BLAZIKEN", "LUCARIO", "SANDSLASH", "GLISCOR", "DONPHAN", "VIRIZION", "BRELOOM"};
             List<String> topList = Arrays.asList(topArray);
             if(topList.contains(name)) return new PVPMark(PVPLeague.ULTRA, 0.5);
             return new PVPMark(PVPLeague.ULTRA, 0);
         }
 
-        String[] topArray = new String[]{"TOGEKISS", "DIALGA", "GIRATINA", "MEWTWO", "MELMETAL", "HEATRAN", "LUGIA", "SNORLAX", "GARCHOMP", "MACHAMP", "ARTICUNO", "REGIROCK", "REGICE", "GROUDON", "DARKRAI", "CONKELDURR", "HYDREIGON", "TYRANITAR", "KYOGRE", "RHYPERIOR", "DRAGONITE", "GYARADOS", "ZAPDOS", "RAIKOU", "SUICUNE", "LATIOS", "LUCARIO", "HERACROSS", "BLAZIKEN", "HARIYAMA", "MAGNEZONE", "SCRAFTY", "SCIZOR", "URSARING", "MILOTIC", "RAYQUAZA", "JIRACHI", "PALKIA"};
+        String[] topArray = new String[]{"DIALGA", "GIRATINA", "TOGEKISS", "MELMETAL", "SNORLAX", "HEATRAN", "GARCHOMP", "REGICE", "REGIROCK", "LUGIA", "KYOGRE", "ARTICUNO", "GROUDON", "CONKELDURR", "DARKRAI", "HYDREIGON", "DRAGONITE", "MACHAMP", "TYRANITAR", "RHYPERIOR", "HARIYAMA", "MAGNEZONE", "ZAPDOS", "LATIOS", "HERACROSS", "BLAZIKEN", "LUCARIO", "GYARADOS", "MAMOSWINE", "RAIKOU", "SUICUNE", "EXCADRILL", "PALKIA", "URSARING", "MILOTIC", "RAYQUAZA", "REGIGIGAS", "SCIZOR", "JIRACHI", "LEAFEON", "LATIAS", "REGISTEEL", "GALLADE", "AGGRON", "MOLTRES", "WEAVILE", "GARDEVOIR", "VAPOREON", "VIRIZION"};
         List<String> topList = Arrays.asList(topArray);
         if(topList.contains(name)) return new PVPMark(PVPLeague.MASTER, 0.5);
         return new PVPMark(PVPLeague.MASTER, 0);
@@ -215,11 +215,11 @@ public class UniIndexToken extends ClipboardToken {
     private double GetMinLeagueRate(PVPLeague league){
         switch (league){
             case GREAT:
-                return 0.75;
+                return 0.7;
             case ULTRA:
                 return 0.6;
             case MASTER:
-                return 0.6;
+                return 0.5;
         }
         return 0;
     }
