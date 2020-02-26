@@ -228,16 +228,16 @@ public class UniIndexToken extends ClipboardToken {
         GymType gymType = GetGymType(evolvedPokemon);
         if (pvpMark.Mark >= GetMinLeagueRate(pvpMark.League) && isFinalForm) return GetLeagueBadge(pvpMark.League, true);
         if (!isFinalForm && pvpMark.Mark >= 0.5) return GetLeagueBadge(pvpMark.League, false);
-        if (!isFinalForm && GetGymType(pokemon) == GymType.DEFENSIVE && scanResult.selectedMoveset.getDefScore() > 0.95) return "Θ";
+        if (!isFinalForm && GetGymType(pokemon) == GymType.DEFENSIVE && scanResult.selectedMoveset.getDefScore() >= 0.95) return "Θ";
         if (!isFinalForm && GetGymType(pokemon) == GymType.DEFENSIVE) return "θ";
         if (!isFinalForm) return "";
-        if (gymType == GymType.DEFENSIVE || gymType == GymType.UNIVERSAL && scanResult.selectedMoveset.getDefScore() == 1.0)
+        if ((gymType == GymType.DEFENSIVE || gymType == GymType.UNIVERSAL) && scanResult.selectedMoveset.getDefScore() == 1.0)
             return "Θ";
-        if (gymType == GymType.DEFENSIVE || gymType == GymType.UNIVERSAL && scanResult.selectedMoveset.getDefScore() > 0.95)
+        if (gymType == GymType.DEFENSIVE || gymType == GymType.UNIVERSAL && scanResult.selectedMoveset.getDefScore() >= 0.95)
             return "θ";
         if (scanResult.selectedMoveset.getAtkScore() == 1.0)
             return "Ψ";
-        if ((gymType == GymType.OFFENSIVE || gymType == GymType.UNIVERSAL) && scanResult.selectedMoveset.getAtkScore() > 0.95)
+        if ((gymType == GymType.OFFENSIVE || gymType == GymType.UNIVERSAL) && scanResult.selectedMoveset.getAtkScore() >= 0.95)
             return "ψ";
         return "";
     }
@@ -257,8 +257,8 @@ public class UniIndexToken extends ClipboardToken {
     private GymType GetGymType(Pokemon pokemon){
         GymType gymType = GymType.UNIVERSAL;
         int baseDefSta = (int) Math.floor(Math.sqrt(pokemon.baseDefense) * Math.sqrt(pokemon.baseStamina));
+        if (pokemon.baseAttack < 198 && baseDefSta >= 180 || pokemon.baseStamina >= 280) gymType = GymType.DEFENSIVE;
         if (pokemon.baseAttack >= 198 && baseDefSta < 180) gymType = GymType.OFFENSIVE;
-        if (pokemon.baseAttack < 198 && baseDefSta >= 180) gymType = GymType.DEFENSIVE;
         return gymType;
     }
 
