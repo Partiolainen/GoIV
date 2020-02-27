@@ -200,7 +200,7 @@ public class UniIndexToken extends ClipboardToken {
         }
 
         if(aeCP<=2500){
-            String[] topArray = new String[]{"REGISTEEL", "GIRATINA", "REGICE", "SNORLAX", "POLIWRATH", "REGIROCK", "KANGASKHAN", "STEELIX", "UXIE", "CRESSELIA", "CLEFABLE", "GYARADOS", "TOGEKISS", "SUICUNE", "LAPRAS", "MELMETAL", "POLITOED", "WHISCASH", "LUGIA", "DRAPION", "TOXICROAK", "ZANGOOSE", "KINGDRA", "FLYGON", "SHIFTRY", "CONKELDURR", "DRAGONITE", "SEISMITOAD", "MACHAMP", "JIRACHI", "GARCHOMP", "PRIMEAPE", "CLOYSTER", "DRIFBLIM", "GRANBULL", "HARIYAMA", "GOLURK", "URSARING", "HONCHKROW", "GALLADE", "HERACROSS", "BLAZIKEN", "LUCARIO", "SANDSLASH", "GLISCOR", "DONPHAN", "VIRIZION", "BRELOOM"};
+            String[] topArray = new String[]{"REGISTEEL", "GIRATINA", "REGICE", "SNORLAX", "POLIWRATH", "REGIROCK", "KANGASKHAN", "STEELIX", "UXIE", "CRESSELIA", "CLEFABLE", "GYARADOS", "TOGEKISS", "SUICUNE", "LAPRAS", "MELMETAL", "POLITOED", "WHISCASH", "LUGIA", "DRAPION", "TOXICROAK", "ZANGOOSE", "KINGDRA", "FLYGON", "SHIFTRY", "CONKELDURR", "DRAGONITE", "SEISMITOAD", "MACHAMP", "JIRACHI", "GARCHOMP", "PRIMEAPE", "CLOYSTER", "DRIFBLIM", "GRANBULL", "HARIYAMA", "GOLURK", "URSARING", "HONCHKROW", "GALLADE", "HERACROSS", "BLAZIKEN", "LUCARIO", "GLISCOR", "DONPHAN", "VIRIZION", "BRELOOM"};
             List<String> topList = Arrays.asList(topArray);
             if(topList.contains(name)) return new PVPMark(PVPLeague.ULTRA, 0.5);
             return new PVPMark(PVPLeague.ULTRA, 0);
@@ -228,15 +228,16 @@ public class UniIndexToken extends ClipboardToken {
         GymType gymType = GetGymType(evolvedPokemon);
         if (pvpMark.Mark >= GetMinLeagueRate(pvpMark.League) && isFinalForm) return GetLeagueBadge(pvpMark.League, true);
         if (!isFinalForm && pvpMark.Mark >= 0.5) return GetLeagueBadge(pvpMark.League, false);
-        if (!isFinalForm && GetGymType(pokemon) == GymType.DEFENSIVE && scanResult.selectedMoveset.getDefScore() >= 0.95) return "Θ";
+        if (!isFinalForm && GetGymType(pokemon) == GymType.DEFENSIVE && scanResult.selectedMoveset.getDefScore() >= 0.95)
+            return "Θ";
         if (!isFinalForm && GetGymType(pokemon) == GymType.DEFENSIVE) return "θ";
         if (!isFinalForm) return "";
         if ((gymType == GymType.DEFENSIVE || gymType == GymType.UNIVERSAL) && scanResult.selectedMoveset.getDefScore() == 1.0)
             return "Θ";
-        if (gymType == GymType.DEFENSIVE || gymType == GymType.UNIVERSAL && scanResult.selectedMoveset.getDefScore() >= 0.95)
-            return "θ";
         if (scanResult.selectedMoveset.getAtkScore() == 1.0)
             return "Ψ";
+        if (gymType == GymType.DEFENSIVE || gymType == GymType.UNIVERSAL && scanResult.selectedMoveset.getDefScore() >= 0.95)
+            return "θ";
         if ((gymType == GymType.OFFENSIVE || gymType == GymType.UNIVERSAL) && scanResult.selectedMoveset.getAtkScore() >= 0.95)
             return "ψ";
         return "";
