@@ -277,7 +277,13 @@ public class UniIndexToken extends ClipboardToken {
 
     public String GetShortName(String name, int len)
     {
-        name = name.split(" - ")[0].trim();
+        name = name.split(" - ")[0].trim().replace("'", "").replace(".", "").replace(" ", "");
+        //if(name.length()<=len) return name;
+        //name = name.replace(".", "").replace(" ", "");
+        if(name.length()<=len) return name;
+        if(name.endsWith("e")) name = name.substring(0, name.length()-1);
+        if(name.length()<=len) return name;
+
 	    String other = name.substring(1, name.length()-1);
         String first = name.substring(0,1);
         String last =  name.substring(name.length()-1);
