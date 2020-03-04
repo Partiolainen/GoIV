@@ -193,20 +193,20 @@ public class UniIndexToken extends ClipboardToken {
     private PVPMark GetPVPMark(Pokemon evolvedPokemon, double aeCP){
         String name = evolvedPokemon.name.split(" - ")[0].trim().toUpperCase();
         if(aeCP<=1500){
-            String[] topArray = new String[]{"REGISTEEL", "AZUMARILL", "SKARMORY", "ALTARIA", "BASTIODON", "MEDICHAM", "HYPNO", "PROBOPASS", "SABLEYE", "TROPIUS", "MELMETAL", "WHISCASH", "QUAGSIRE", "TOXICROAK", "STEELIX", "LANTURN", "CRESSELIA", "VIGOROTH", "CLEFABLE", "JIRACHI", "ZWEILOUS", "BRONZONG", "LAPRAS", "HAUNTER", "MANTINE", "REGICE", "REGIROCK", "IVYSAUR", "LUGIA", "FORRETRESS", "UXIE", "SHIFTRY", "GALLADE", "WIGGLYTUFF", "MAWILE", "VICTREEBEL", "TOGEKISS", "SKUNTANK"};
+            String[] topArray = new String[]{"REGISTEEL", "ALTARIA", "SKARMORY", "AZUMARILL", "UMBREON", "PROBOPASS", "SABLEYE", "DEOXYS", "MEDICHAM", "HYPNO", "BASTIODON", "TROPIUS", "WHISCASH", "LAPRAS", "CLEFABLE", "ZWEILOUS", "LANTURN", "VIGOROTH", "JIRACHI", "CRESSELIA", "BRONZONG", "STEELIX", "TOXICROAK", "MELMETAL"};
             List<String> topList = Arrays.asList(topArray);
             if(topList.contains(name)) return new PVPMark(PVPLeague.GREAT, 0.5);
             return new PVPMark(PVPLeague.GREAT, 0);
         }
 
         if(aeCP<=2500){
-            String[] topArray = new String[]{"REGISTEEL", "GIRATINA", "REGICE", "SNORLAX", "POLIWRATH", "REGIROCK", "KANGASKHAN", "STEELIX", "UXIE", "CRESSELIA", "CLEFABLE", "GYARADOS", "TOGEKISS", "SUICUNE", "LAPRAS", "MELMETAL", "POLITOED", "WHISCASH", "LUGIA", "DRAPION", "TOXICROAK", "ZANGOOSE", "KINGDRA", "FLYGON", "SHIFTRY", "CONKELDURR", "DRAGONITE", "SEISMITOAD", "MACHAMP", "JIRACHI", "GARCHOMP", "PRIMEAPE", "CLOYSTER", "DRIFBLIM", "GRANBULL", "HARIYAMA", "GOLURK", "URSARING", "HONCHKROW", "GALLADE", "HERACROSS", "BLAZIKEN", "LUCARIO", "GLISCOR", "DONPHAN", "VIRIZION", "BRELOOM"};
+            String[] topArray = new String[]{"REGISTEEL", "GIRATINA", "REGICE", "SNORLAX", "POLIWRATH", "SUICUNE", "LAPRAS", "GYARADOS", "CLEFABLE", "UXIE", "REGIROCK", "CRESSELIA", "STEELIX", "KANGASKHAN", "TOGEKISS", "DRAGONITE", "UMBREON", "KINGDRA", "WHISCASH", "CONKELDURR", "LUGIA", "FLYGON", "SEISMITOAD", "SHIFTRY", "POLITOED", "JIRACHI", "WIGGLYTUFF", "MACHAMP", "GARCHOMP", "TOXICROAK", "ZANGOOSE", "DRAPION", "MELMETAL"};
             List<String> topList = Arrays.asList(topArray);
             if(topList.contains(name)) return new PVPMark(PVPLeague.ULTRA, 0.5);
             return new PVPMark(PVPLeague.ULTRA, 0);
         }
 
-        String[] topArray = new String[]{"DIALGA", "GIRATINA", "TOGEKISS", "MELMETAL", "SNORLAX", "HEATRAN", "GARCHOMP", "REGICE", "REGIROCK", "LUGIA", "KYOGRE", "ARTICUNO", "GROUDON", "CONKELDURR", "DARKRAI", "HYDREIGON", "DRAGONITE", "MACHAMP", "TYRANITAR", "RHYPERIOR", "HARIYAMA", "MAGNEZONE", "ZAPDOS", "LATIOS", "HERACROSS", "BLAZIKEN", "LUCARIO", "GYARADOS", "MAMOSWINE", "RAIKOU", "SUICUNE", "EXCADRILL", "PALKIA", "URSARING", "MILOTIC", "RAYQUAZA", "REGIGIGAS", "SCIZOR", "JIRACHI", "LEAFEON", "LATIAS", "REGISTEEL", "GALLADE", "AGGRON", "MOLTRES", "WEAVILE", "GARDEVOIR", "VAPOREON", "VIRIZION"};
+        String[] topArray = new String[]{"DIALGA", "GIRATINA", "TOGEKISS", "HEATRAN", "SNORLAX", "GARCHOMP", "MELMETAL", "DRAGONITE", "HYDREIGON", "CONKELDURR", "LUGIA", "ARTICUNO", "REGICE", "KYOGRE", "REGIROCK", "MACHAMP", "GROUDON", "DARKRAI", "RHYPERIOR", "TYRANITAR", "SUICUNE", "LUCARIO", "LATIOS", "HARIYAMA", "BLAZIKEN", "RAIKOU", "GYARADOS", "MAGNEZONE", "HERACROSS", "MAMOSWINE"};
         List<String> topList = Arrays.asList(topArray);
         if(topList.contains(name)) return new PVPMark(PVPLeague.MASTER, 0.5);
         return new PVPMark(PVPLeague.MASTER, 0);
@@ -215,9 +215,9 @@ public class UniIndexToken extends ClipboardToken {
     private double GetMinLeagueRate(PVPLeague league){
         switch (league){
             case GREAT:
-                return 0.7;
-            case ULTRA:
                 return 0.6;
+            case ULTRA:
+                //return 0.6;
             case MASTER:
                 return 0.5;
         }
