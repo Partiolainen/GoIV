@@ -14,10 +14,13 @@ import java.util.Objects;
 public class MovesetData {
     private String fast;
     private String charge;
+    private String charge2;
     private String fastKey;
     private String chargeKey;
+    private String charge2Key;
     private boolean fastIsLegacy;
     private boolean chargeIsLegacy;
+    private Boolean charge2IsLegacy;
     private Double atkScore;
     private Double defScore;
     private Double pvpGreatScore;
@@ -25,6 +28,7 @@ public class MovesetData {
     private Double pvpMasterScore;
     private String fastMoveType;
     private String chargeMoveType;
+    private String charge2MoveType;
 
     /**
      * Create a new Moveset.
@@ -32,29 +36,36 @@ public class MovesetData {
      * @param fast   Localized fast move name
      * @param charge Localized charge move name
      */
-    public MovesetData(String fast, String charge) {
+    public MovesetData(String fast, String charge, String charge2) {
         this.fast = fast;
         this.charge = charge;
+        this.charge2 = charge2;
     }
 
     public MovesetData(String quick,
                        String charge,
+                       String charge2,
                        boolean quickIsLegacy,
                        boolean chargeIsLegacy,
+                       Boolean charge2IsLegacy,
                        Double atkScore,
                        Double defScore,
                        Double pvpGreatScore,
                        Double pvpUltraScore,
                        Double pvpMasterScore,
                        String chargeMoveType,
+                       String charge2MoveType,
                        String quickMoveType) {
 
         this.fast = quick;
         this.charge = charge;
+        this.charge2 = charge2;
         this.fastMoveType = quickMoveType;
         this.chargeMoveType = chargeMoveType;
+        this.charge2MoveType = charge2MoveType;
         this.fastIsLegacy = quickIsLegacy;
         this.chargeIsLegacy = chargeIsLegacy;
+        this.charge2IsLegacy = charge2IsLegacy;
         this.atkScore = atkScore;
         this.defScore = defScore;
         this.pvpGreatScore = pvpGreatScore;
@@ -76,20 +87,24 @@ public class MovesetData {
      * @param atkScore       A score for the attack power of this moveset
      * @param defScore       A score for the defense power of this moveset
      */
-    public MovesetData(String fastKey, String chargeKey,
-                       String fast, String charge,
-                       String fastMoveType, String chargeMoveType,
-                       boolean fastIsLegacy, boolean chargeIsLegacy,
+    public MovesetData(String fastKey, String chargeKey, String charge2Key,
+                       String fast, String charge, String charge2,
+                       String fastMoveType, String chargeMoveType, String charge2MoveType,
+                       boolean fastIsLegacy, boolean chargeIsLegacy, Boolean charge2IsLegacy,
                        Double atkScore, Double defScore,
                        Double pvpGreatScore, Double pvpUltraScore, Double pvpMasterScore) {
         this.fastKey = fastKey;
         this.chargeKey = chargeKey;
+        this.charge2Key = charge2Key;
         this.fast = fast;
         this.charge = charge;
+        this.charge2 = charge2;
         this.fastMoveType = fastMoveType;
         this.chargeMoveType = chargeMoveType;
+        this.charge2MoveType = charge2MoveType;
         this.fastIsLegacy = fastIsLegacy;
         this.chargeIsLegacy = chargeIsLegacy;
+        this.charge2IsLegacy = charge2IsLegacy;
         this.atkScore = atkScore;
         this.defScore = defScore;
         this.pvpGreatScore = pvpGreatScore;
@@ -105,13 +120,15 @@ public class MovesetData {
         return chargeMoveType;
     }
 
-    public String getFast() {
-        return fast;
+    public String getCharge2MoveType() {
+        return charge2MoveType;
     }
 
-    public String getCharge() {
-        return charge;
-    }
+    public String getFast() { return fast; }
+
+    public String getCharge() { return charge; }
+
+    public String getCharge2() { return charge2; }
 
     public String getFastKey() {
         return fastKey;
@@ -119,6 +136,10 @@ public class MovesetData {
 
     public String getChargeKey() {
         return chargeKey;
+    }
+
+    public String getCharge2Key() {
+        return charge2Key;
     }
 
     public boolean isFastIsLegacy() {
@@ -129,9 +150,11 @@ public class MovesetData {
         return chargeIsLegacy;
     }
 
-    public Double getAtkScore() {
-        return atkScore;
+    public Boolean isCharge2IsLegacy() {
+        return charge2IsLegacy;
     }
+
+    public Double getAtkScore() { return atkScore; }
 
     public Double getDefScore() {
         return defScore;
@@ -182,10 +205,12 @@ public class MovesetData {
     public static class Key implements Comparable<Key> {
         private final String quick;
         private final String charge;
+        private final String charge2;
 
-        public Key(String quick, String charge) {
+        public Key(String quick, String charge, String charge2) {
             this.quick = quick;
             this.charge = charge;
+            this.charge2 = charge2;
         }
 
         public String getQuick() {
@@ -194,6 +219,10 @@ public class MovesetData {
 
         public String getCharge() {
             return charge;
+        }
+
+        public String getCharge2() {
+            return charge2;
         }
 
         @Override public boolean equals(Object o) {
@@ -206,15 +235,17 @@ public class MovesetData {
 
             Key key = (Key) o;
 
-            if (quick != null ? !quick.equals(key.quick) : key.quick != null) {
-                return false;
-            }
-            return charge != null ? charge.equals(key.charge) : key.charge == null;
+            if (!Objects.equals(quick, key.quick)) return false;
+
+            if (!Objects.equals(charge, key.charge)) return false;
+
+            return Objects.equals(charge2, key.charge2);
         }
 
         @Override public int hashCode() {
             int result = quick != null ? quick.hashCode() : 0;
             result = 31 * result + (charge != null ? charge.hashCode() : 0);
+            result = 31 * result + (charge2 != null ? charge2.hashCode() : 0);
             return result;
         }
 
@@ -222,6 +253,9 @@ public class MovesetData {
             int retval = this.getQuick().compareTo(other.getQuick());
             if (retval == 0) {
                 retval = this.getCharge().compareTo(other.getCharge());
+            }
+            if (retval == 0) {
+                retval = this.getCharge2().compareTo(other.getCharge2());
             }
             return retval;
         }
@@ -236,12 +270,12 @@ public class MovesetData {
             return false;
         }
         MovesetData that = (MovesetData) o;
-        return Objects.equals(fast, that.fast) && Objects.equals(charge, that.charge);
+        return Objects.equals(fast, that.fast) && Objects.equals(charge, that.charge) && Objects.equals(charge2, that.charge2);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(fast, charge);
+        return Objects.hash(fast, charge, charge2);
     }
 
 }

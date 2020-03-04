@@ -16,7 +16,7 @@ import java.util.LinkedHashSet;
 
 public class MovesetInitialsToken extends ClipboardToken {
 
-    private static final MovesetData BACKUP_MOVESET = new MovesetData("Razor Leaf", "Frenzy Pla");
+    private static final MovesetData BACKUP_MOVESET = new MovesetData("Razor Leaf", "Frenzy Pla", null);
 
 
     private int maxInitials;

@@ -167,6 +167,7 @@ public class MovesetsManager {
             for (LinkedTreeMap<String, Object> jsonMoveset : jsonMovesets) {
                 String fastMove = translatedMoveNames.get(jsonMoveset.get("fast"));
                 String chargeMove = translatedMoveNames.get(jsonMoveset.get("charge"));
+                String chargeMove2 = translatedMoveNames.get(jsonMoveset.get("charge2"));
 
                 if (Strings.isNullOrEmpty(fastMove)) {
                     Timber.w("Missing fast move " + jsonMoveset.get("fast")
@@ -178,17 +179,26 @@ public class MovesetsManager {
                             + " translation in " + getLanguage(context.getResources()));
                     continue;
                 }
+                if (chargeMove2!=null && Strings.isNullOrEmpty(chargeMove2)) {
+                    Timber.w("Missing charge move " + jsonMoveset.get("charge2")
+                            + " translation in " + getLanguage(context.getResources()));
+                    continue;
+                }
 
                 //noinspection SuspiciousMethodCalls
                 MovesetData movesetData = new MovesetData(
                         (String) jsonMoveset.get("fast"),
                         (String) jsonMoveset.get("charge"),
+                        (String) jsonMoveset.get("charge2"),
                         fastMove,
                         chargeMove,
+                        chargeMove2,
                         translatedTypeNames.get("POKEMON_TYPE_" + jsonMoveset.get("fastMoveType")),
                         translatedTypeNames.get("POKEMON_TYPE_" + jsonMoveset.get("chargeMoveType")),
+                        translatedTypeNames.get("POKEMON_TYPE_" + jsonMoveset.get("chargeMoveType2")),
                         (Boolean) jsonMoveset.get("fastIsLegacy"),
                         (Boolean) jsonMoveset.get("chargeIsLegacy"),
+                        (Boolean) jsonMoveset.get("charge2IsLegacy"),
                         (Double) jsonMoveset.get("atkScore"),
                         (Double) jsonMoveset.get("defScore"),
                         (Double) jsonMoveset.get("pvpGreatScore"),

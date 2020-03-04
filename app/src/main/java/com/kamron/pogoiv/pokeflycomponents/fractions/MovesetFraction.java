@@ -364,7 +364,8 @@ public class MovesetFraction extends MovableFraction implements ReactiveColorLis
 
             // Charge move
             charge.setTextColor(getMoveColor(data.isChargeIsLegacy()));
-            charge.setText(data.getCharge());
+            String charged = data.getCharge2() == null || data.getCharge2().isEmpty() ? data.getCharge() : data.getCharge() + "\n" + data.getCharge2();
+            charge.setText(charged);
             if (data.equals(Pokefly.scanResult.selectedMoveset)) {
                 charge.setTypeface(null, Typeface.BOLD);
             } else {

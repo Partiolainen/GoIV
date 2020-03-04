@@ -31,7 +31,7 @@
         android:paddingRight="4dp"
         android:paddingBottom="2dp"
         android:textAlignment="textStart"
-        android:maxLines="1"
+        android:maxLines="4"
         android:ellipsize="end"
         tools:text="@string/table_header_move_charge" />
 
