@@ -234,7 +234,7 @@ public class UniIndexToken extends ClipboardToken {
         if (!isFinalForm) return "";
         if ((gymType == GymType.DEFENSIVE || gymType == GymType.UNIVERSAL) && scanResult.selectedMoveset.getDefScore() == 1.0)
             return "Θ";
-        if (scanResult.selectedMoveset.getAtkScore() == 1.0)
+        if ((gymType == GymType.OFFENSIVE || gymType == GymType.UNIVERSAL) && scanResult.selectedMoveset.getAtkScore() == 1.0)
             return "Ψ";
         if (gymType == GymType.DEFENSIVE || gymType == GymType.UNIVERSAL && scanResult.selectedMoveset.getDefScore() >= 0.95)
             return "θ";
