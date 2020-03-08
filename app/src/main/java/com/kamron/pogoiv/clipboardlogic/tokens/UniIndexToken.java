@@ -246,11 +246,14 @@ public class UniIndexToken extends ClipboardToken {
     private String GetLeagueBadge(PVPLeague league, boolean upper){
         switch (league) {
             case GREAT:
-                return upper ? "Ξ" : "ξ";
+                //return upper ? "Ξ" : "ξ";
+                return upper ? "Ξ" : "α";
             case ULTRA:
-                return upper ? "Υ" : "υ";
+                //return upper ? "Υ" : "υ";
+                return upper ? "Υ" : "β";
             case MASTER:
-                return upper ? "Ω" : "ω";
+                //return upper ? "Ω" : "ω";
+                return upper ? "Ω" : "γ";
         }
         return "";
     }
