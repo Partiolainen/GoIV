@@ -118,10 +118,10 @@ public class UniIndexToken extends ClipboardToken {
                     : (0.2 + 0.25 * 0.2 / 0.75) * (iv.att + iv.def + iv.sta) / 45.0 +
                     (0.55 + 0.25 * 0.55 / 0.75) * (profiledCP / profiledCP40);
 
-            PVPMark pvpMark = isFinalForm ? GetPVPMark(scanResult) : GetPVPMark(evolvedPokemon, aeCP);
+            PVPMark pvpMark = new PVPMark(scanResult, pokeInfoCalculator); //isFinalForm ? GetPVPMark(scanResult) : GetPVPMark(evolvedPokemon, aeCP);
             String rate_mark = (pvpMark.Mark >= GetMinLeagueRate(pvpMark.League) && isFinalForm || !isFinalForm && pvpMark.Mark >= 0.5)
-                    ? blackDigits[(int) (21.0 * GetPVPRate(scanResult, aeCP, mlCP, isFinalForm))] +
-                      blackDigits[(int) (21.0 * GetPVPMaxRate(scanResult, evolvedPokemon, aeCP, mlCP, isFinalForm, pokeInfoCalculator))]
+                    ? blackDigits[(int) (21.0 * pvpMark.Rate)] +
+                      blackDigits[(int) (21.0 * pvpMark.MaxRate)]
                     : whiteLetters[(int) (25.0 * rate)];
             String badge = Badge(evolvedPokemon, pokemon, scanResult, isFinalForm, pvpMark);
 
@@ -131,85 +131,6 @@ public class UniIndexToken extends ClipboardToken {
         } catch (Throwable t) {
             throw new Error(t.getMessage());
         }
-    }
-
-    private double GetPVPMaxRate(ScanResult scanResult, Pokemon evolvedPokemon, double aeCP, double mlCP, boolean isFinalForm, PokeInfoCalculator calc){
-        double targetCP = mlCP;
-        if(aeCP<=2500) targetCP = 2500;
-        if(aeCP<=1500) targetCP = 1500;
-        double level = scanResult.levelRange.max;
-        IVCombination iv = scanResult.getHighestIVCombination();
-        double cpAtLev = aeCP;
-        while (targetCP > cpAtLev) {
-            if(level>=40) break;
-            level = level + 0.5;
-            double tCP = calc.getCpRangeAtLevel(evolvedPokemon, iv, iv, level).high;
-            if (tCP>targetCP) break;
-            cpAtLev = tCP;
-        }
-
-        int cp = scanResult.cp;
-        if (!isFinalForm) {
-            if (aeCP <= 1500) return GetMinLeagueRate(PVPLeague.GREAT) * cpAtLev / 1500.0;
-            if (aeCP <= 2500) return GetMinLeagueRate(PVPLeague.ULTRA) * cpAtLev / 2500.0;
-            return GetMinLeagueRate(PVPLeague.MASTER) * cpAtLev / mlCP;
-        }
-        Double pvpGreatScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpGreatScore() == null) ? 0 : scanResult.selectedMoveset.getPvpGreatScore();
-        Double pvpUltraScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpUltraScore() == null) ? 0 : scanResult.selectedMoveset.getPvpUltraScore();
-        Double pvpMasterScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpMasterScore() == null) ? 0 : scanResult.selectedMoveset.getPvpMasterScore();
-
-        if (cp <= 1500) return pvpGreatScore * cpAtLev / 1500.0;
-        if (cp <= 2500) return pvpUltraScore * cpAtLev / 2500.0;
-        return pvpMasterScore * cpAtLev / mlCP;
-    }
-
-    private double GetPVPRate(ScanResult scanResult, double aeCP, double mlCP, boolean isFinalForm) {
-        int cp = scanResult.cp;
-        if (!isFinalForm) {
-            if (aeCP <= 1500) return 0.5 * aeCP / 1500.0;
-            if (aeCP <= 2500) return 0.5 * aeCP / 2500.0;
-            return 0.5 * aeCP / mlCP;
-        }
-        Double pvpGreatScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpGreatScore() == null) ? 0 : scanResult.selectedMoveset.getPvpGreatScore();
-        Double pvpUltraScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpUltraScore() == null) ? 0 : scanResult.selectedMoveset.getPvpUltraScore();
-        Double pvpMasterScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpMasterScore() == null) ? 0 : scanResult.selectedMoveset.getPvpMasterScore();
-
-        if (cp <= 1500) return pvpGreatScore * (double) cp / 1500.0;
-        if (cp <= 2500) return pvpUltraScore * (double) cp / 2500.0;
-        return pvpMasterScore * (double) cp / mlCP;
-    }
-
-    private PVPMark GetPVPMark(ScanResult scanResult){
-        Double pvpGreatScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpGreatScore() == null) ? 0 : scanResult.selectedMoveset.getPvpGreatScore();
-        Double pvpUltraScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpUltraScore() == null) ? 0 : scanResult.selectedMoveset.getPvpUltraScore();
-        Double pvpMasterScore = (scanResult == null || scanResult.selectedMoveset == null || scanResult.selectedMoveset.getPvpMasterScore() == null) ? 0 : scanResult.selectedMoveset.getPvpMasterScore();
-
-        int cp = scanResult.cp;
-        if(cp <= 1500) return new PVPMark(PVPLeague.GREAT, pvpGreatScore);
-        if(cp <= 2500) return new PVPMark(PVPLeague.ULTRA, pvpUltraScore);
-        return new PVPMark(PVPLeague.MASTER, pvpMasterScore);
-    }
-
-    private PVPMark GetPVPMark(Pokemon evolvedPokemon, double aeCP){
-        String name = evolvedPokemon.name.split(" - ")[0].trim().toUpperCase();
-        if(aeCP<=1500){
-            String[] topArray = new String[]{"REGISTEEL", "ALTARIA", "SKARMORY", "AZUMARILL", "UMBREON", "PROBOPASS", "SABLEYE", "DEOXYS", "MEDICHAM", "HYPNO", "BASTIODON", "TROPIUS", "WHISCASH", "LAPRAS", "CLEFABLE", "ZWEILOUS", "LANTURN", "VIGOROTH", "JIRACHI", "CRESSELIA", "BRONZONG", "STEELIX", "TOXICROAK", "MELMETAL"};
-            List<String> topList = Arrays.asList(topArray);
-            if(topList.contains(name)) return new PVPMark(PVPLeague.GREAT, 0.5);
-            return new PVPMark(PVPLeague.GREAT, 0);
-        }
-
-        if(aeCP<=2500){
-            String[] topArray = new String[]{"REGISTEEL", "GIRATINA", "REGICE", "SNORLAX", "POLIWRATH", "SUICUNE", "LAPRAS", "GYARADOS", "CLEFABLE", "UXIE", "REGIROCK", "CRESSELIA", "STEELIX", "KANGASKHAN", "TOGEKISS", "DRAGONITE", "UMBREON", "KINGDRA", "WHISCASH", "CONKELDURR", "LUGIA", "FLYGON", "SEISMITOAD", "SHIFTRY", "POLITOED", "JIRACHI", "WIGGLYTUFF", "MACHAMP", "GARCHOMP", "TOXICROAK", "ZANGOOSE", "DRAPION", "MELMETAL"};
-            List<String> topList = Arrays.asList(topArray);
-            if(topList.contains(name)) return new PVPMark(PVPLeague.ULTRA, 0.5);
-            return new PVPMark(PVPLeague.ULTRA, 0);
-        }
-
-        String[] topArray = new String[]{"DIALGA", "GIRATINA", "TOGEKISS", "HEATRAN", "SNORLAX", "GARCHOMP", "MELMETAL", "DRAGONITE", "HYDREIGON", "CONKELDURR", "LUGIA", "ARTICUNO", "REGICE", "KYOGRE", "REGIROCK", "MACHAMP", "GROUDON", "DARKRAI", "RHYPERIOR", "TYRANITAR", "SUICUNE", "LUCARIO", "LATIOS", "HARIYAMA", "BLAZIKEN", "RAIKOU", "GYARADOS", "MAGNEZONE", "HERACROSS", "MAMOSWINE"};
-        List<String> topList = Arrays.asList(topArray);
-        if(topList.contains(name)) return new PVPMark(PVPLeague.MASTER, 0.5);
-        return new PVPMark(PVPLeague.MASTER, 0);
     }
 
     private double GetMinLeagueRate(PVPLeague league){
