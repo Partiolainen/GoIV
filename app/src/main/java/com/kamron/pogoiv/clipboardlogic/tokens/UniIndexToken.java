@@ -120,8 +120,8 @@ public class UniIndexToken extends ClipboardToken {
 
             PVPMark pvpMark = new PVPMark(scanResult, pokeInfoCalculator); //isFinalForm ? GetPVPMark(scanResult) : GetPVPMark(evolvedPokemon, aeCP);
             String rate_mark = (pvpMark.Mark >= GetMinLeagueRate(pvpMark.League) && isFinalForm || !isFinalForm && pvpMark.Mark >= 0.5)
-                    ? blackDigits[(int) (21.0 * pvpMark.Rate)] +
-                      blackDigits[(int) (21.0 * pvpMark.MaxRate)]
+                    ? blackDigits[(int) (20.0 * pvpMark.Rate)] +
+                      blackDigits[(int) (20.0 * pvpMark.MaxRate)]
                     : whiteLetters[(int) (25.0 * rate)];
             String badge = Badge(evolvedPokemon, pokemon, scanResult, isFinalForm, pvpMark);
 
