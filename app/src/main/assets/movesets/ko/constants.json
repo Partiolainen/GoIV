@@ -1310,7 +1310,7 @@
       "PINSIR_NORMAL_FORM": "$t(constants:pokemon.NORMAL_FORM) $t(constants:pokemon.PINSIR)",
       "PINSIR_SHADOW_FORM": "$t(constants:pokemon.SHADOW_FORM) $t(constants:pokemon.PINSIR)",
       "PINSIR_PURIFIED_FORM": "$t(constants:pokemon.PURIFIED_FORM) $t(constants:pokemon.PINSIR)",
-        "PIKACHU_VS_FORM": "Pikachu Vs",
+        "PIKACHU_VS_2019_FORM": "Libre $t(constants:pokemon.PIKACHU)",
         "ONIX_NORMAL_FORM": "$t(constants:pokemon.NORMAL_FORM) $t(constants:pokemon.ONIX)",
         "ONIX_SHADOW_FORM": "$t(constants:pokemon.SHADOW_FORM) $t(constants:pokemon.ONIX)",
         "ONIX_PURIFIED_FORM": "$t(constants:pokemon.PURIFIED_FORM) $t(constants:pokemon.ONIX)",
@@ -2887,7 +2887,7 @@
         }
     },
     "autoBattlePartyTypes": {
-        "label": "Auto Raid Party (Coming Soon)",
+        "label": "Auto Raid Party",
         "BATTLE_PARTY_POKEBOX": {
             "label": "Pokebox",
             "description": "Use the best Pokemon from your Pokebox"
