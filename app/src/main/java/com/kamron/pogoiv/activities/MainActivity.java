@@ -8,16 +8,21 @@ import android.animation.PropertyValuesHolder;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.ServiceConnection;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.media.projection.MediaProjection;
 import android.media.projection.MediaProjectionManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.IBinder;
+import android.provider.MediaStore;
 import android.provider.Settings;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
@@ -54,6 +59,8 @@ import com.kamron.pogoiv.updater.AppUpdate;
 import com.kamron.pogoiv.updater.AppUpdateUtil;
 import com.kamron.pogoiv.widgets.behaviors.DisableableAppBarLayoutBehavior;
 
+import java.io.IOException;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import timber.log.Timber;
@@ -67,12 +74,15 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String ACTION_SHOW_UPDATE_DIALOG = "com.kamron.pogoiv.SHOW_UPDATE_DIALOG";
     public static final String ACTION_START_POKEFLY = "com.kamron.pogoiv.ACTION_START_POKEFLY";
+    public static final String ACTION_STOP_POKEFLY = "com.kamron.pogoiv.ACTION_STOP_POKEFLY";
     public static final String ACTION_RESTART_POKEFLY = "com.kamron.pogoiv.ACTION_RESTART_POKEFLY";
 
     private static final int OVERLAY_PERMISSION_REQ_CODE = 1234;
     private static final int WRITE_STORAGE_REQ_CODE = 1236;
     private static final int SCREEN_CAPTURE_REQ_CODE = 1235;
 
+    public static final int PICK_IMAGE = 9919;
+    private static Pokefly pokefly;
 
     @BindView(R.id.collapsingToolbarLayout)
     CollapsingToolbarLayout collapsingToolbarLayout;
@@ -180,6 +190,20 @@ public class MainActivity extends AppCompatActivity {
 
         runActionOnIntent(getIntent());
     }
+
+    public static ServiceConnection serviceConnection = new ServiceConnection() {
+
+        @Override
+        public void onServiceConnected(ComponentName className, IBinder service) {
+            Pokefly.Binder binder = (Pokefly.Binder) service;
+            pokefly = binder.getService();
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+
+        }
+    };
 
     private boolean showSection(final @IdRes int sectionId) {
         final Class<? extends Fragment> newSectionClass;
@@ -311,6 +335,7 @@ public class MainActivity extends AppCompatActivity {
     private void stopGoIV() {
         Intent stopIntent = Pokefly.createStopIntent(this);
         startService(stopIntent);
+        unbindService(serviceConnection);
         if (screen != null) {
             screen.exit();
         }
@@ -402,6 +427,8 @@ public class MainActivity extends AppCompatActivity {
                 .createStartIntent(this, GoIVSettings.getInstance(this).getLevel());
         startService(intent);
 
+        bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
+
         skipStartPogo = false;
     }
 
@@ -448,6 +475,15 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 updateLaunchButtonText(false, null);
             }
+        } else if (requestCode == PICK_IMAGE && resultCode == RESULT_OK && data != null) {
+            Uri imageUri = data.getData();
+            try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
+
+                OcrCalibrationResultActivity.startCalibration(this, bitmap, pokefly.getCurrentStatusBarHeight(), pokefly.getCurrentNavigationBarHeight());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -491,6 +527,10 @@ public class MainActivity extends AppCompatActivity {
         if (intent != null) {
             if (ACTION_START_POKEFLY.equals(intent.getAction()) && !Pokefly.isRunning()) {
                 runStartButtonLogic();
+            }
+
+            if(ACTION_STOP_POKEFLY.equals(intent.getAction()) && Pokefly.isRunning()){
+                stopGoIV();
             }
         }
     }

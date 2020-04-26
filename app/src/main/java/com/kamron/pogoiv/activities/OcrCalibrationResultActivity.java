@@ -105,7 +105,9 @@ public class OcrCalibrationResultActivity extends AppCompatActivity {
             sCalibrationImage = bitmap;
         } else {
             // Make a mutable copy of the bitmap so we can draw on it with a Canvas
-            sCalibrationImage = bitmap.copy(sCalibrationImage.getConfig() ,true);
+            //sCalibrationImage can be null
+            Bitmap.Config config = sCalibrationImage == null ? bitmap.getConfig() : sCalibrationImage.getConfig();
+            sCalibrationImage = bitmap.copy(config, true);
         }
 
         if (!sCalibrationImage.isMutable()) {
