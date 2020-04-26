@@ -120,8 +120,8 @@ android {
             buildConfigField "boolean", "DISTRIBUTION_PLAYSTORE", "false"
             ext.enableCrashlytics = false
             dimension "default"
-            versionCode 65
-            versionName '5.4.4.p.10.2.11'
+            versionCode 66
+            versionName '5.4.5.p.10.3.0'
         }
 
         online {
