@@ -30,8 +30,12 @@ import com.kamron.pogoiv.clipboardlogic.tokens.CustomAppraiseSign;
 import com.kamron.pogoiv.clipboardlogic.tokens.CustomNameToken;
 import com.kamron.pogoiv.clipboardlogic.tokens.CustomSeparatorToken;
 import com.kamron.pogoiv.clipboardlogic.tokens.HasBeenAppraisedToken;
+import com.kamron.pogoiv.clipboardlogic.tokens.PartIndexCustomSepToken;
+import com.kamron.pogoiv.clipboardlogic.tokens.PartIndexToken;
 import com.kamron.pogoiv.clipboardlogic.tokens.PokemonNameToken;
 import com.kamron.pogoiv.clipboardlogic.tokens.SeparatorToken;
+import com.kamron.pogoiv.clipboardlogic.tokens.UniIndexCustomSepToken;
+import com.kamron.pogoiv.clipboardlogic.tokens.UniIndexToken;
 import com.kamron.pogoiv.widgets.recyclerviews.adapters.TokensPreviewAdapter;
 import com.kamron.pogoiv.widgets.recyclerviews.adapters.TokensShowcaseAdapter;
 import com.kamron.pogoiv.widgets.recyclerviews.decorators.MarginItemDecorator;
@@ -201,6 +205,10 @@ public class ClipboardModifierChildFragment
         if (selectedToken != null) {
             if (selectedToken instanceof CustomSeparatorToken) {
                 buildCustomSeparatorToken();
+            }else if(selectedToken instanceof PartIndexCustomSepToken){
+                buildPartSeparatorToken();
+            }else if(selectedToken instanceof UniIndexCustomSepToken){
+                buildUniSeparatorToken();
             }else if (selectedToken instanceof CustomAppraiseSign) {
                 buildCustomAppraiseToken();
             }else if (selectedToken instanceof CustomNameToken) {
@@ -238,6 +246,69 @@ public class ClipboardModifierChildFragment
                                     R.string.token_not_dot_separator, Toast.LENGTH_LONG).show();
                         } else {
                             selectedToken = new SeparatorToken(separator);
+                            addToken();
+                        }
+                    }
+                })
+                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                    @Override public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                })
+                .show();
+    }
+
+    /**
+     * Builds a Dialog to create a custom string token to be added to the user settings.
+     */
+    public void buildPartSeparatorToken() {
+        // The custom separator will be written in this EditText
+        @SuppressLint("InflateParams")
+        final View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.edittext_dialog, null);
+        final EditText editText = (EditText) dialogView.findViewById(R.id.editText);
+
+        // This dialog will implement the user interaction
+        new AlertDialog.Builder(getContext())
+                .setView(dialogView)
+                .setMessage(R.string.token_input_custom_separator)
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override public void onClick(DialogInterface dialogInterface, int i) {
+                        String separator = editText.getText().toString();
+                        if (separator.contains(".")) {
+                            Toast.makeText(getContext(),
+                                    R.string.token_not_dot_separator, Toast.LENGTH_LONG).show();
+                        } else {
+                            selectedToken = new PartIndexToken(maxEvolutionVariant, separator);
+                            addToken();
+                        }
+                    }
+                })
+                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                    @Override public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                })
+                .show();
+    }
+
+    public void buildUniSeparatorToken() {
+        // The custom separator will be written in this EditText
+        @SuppressLint("InflateParams")
+        final View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.edittext_dialog, null);
+        final EditText editText = (EditText) dialogView.findViewById(R.id.editText);
+
+        // This dialog will implement the user interaction
+        new AlertDialog.Builder(getContext())
+                .setView(dialogView)
+                .setMessage(R.string.token_input_custom_separator)
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override public void onClick(DialogInterface dialogInterface, int i) {
+                        String separator = editText.getText().toString();
+                        if (separator.contains(".")) {
+                            Toast.makeText(getContext(),
+                                    R.string.token_not_dot_separator, Toast.LENGTH_LONG).show();
+                        } else {
+                            selectedToken = new UniIndexToken(maxEvolutionVariant, separator);
                             addToken();
                         }
                     }

@@ -118,9 +118,9 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="3"
+                        android:layout_weight="2"
                         android:padding="4dp"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:textAlignment="textStart"
                         android:text="@string/table_header_move_fast"
                         android:maxLines="1"
@@ -129,9 +129,9 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="3"
+                        android:layout_weight="2"
                         android:padding="4dp"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:textAlignment="textStart"
                         android:text="@string/table_header_move_charge"
                         android:maxLines="1"
@@ -142,24 +142,24 @@
                         android:orientation="horizontal"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="2"
+                        android:layout_weight="1"
                         android:padding="4dp"
-                        android:gravity="end|center_vertical"
+                        android:gravity="left|center_vertical"
                         tools:ignore="UseCompoundDrawables">
 
-                        <ImageView
+                        <!--ImageView
                             android:id="@+id/header_icon_attack"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/ic_sort_none"
-                            tools:ignore="ContentDescription" />
+                            tools:ignore="ContentDescription" /-->
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingStart="2dp"
                             android:paddingEnd="2dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
                             android:text="@string/table_header_attack"
                             android:maxLines="1"
                             android:ellipsize="end" />
@@ -171,25 +171,91 @@
                         android:orientation="horizontal"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="2"
+                        android:layout_weight="1"
                         android:padding="4dp"
-                        android:gravity="end|center_vertical"
+                        android:gravity="left|center_vertical"
                         tools:ignore="UseCompoundDrawables">
 
-                        <ImageView
+                        <!--ImageView
                             android:id="@+id/header_icon_defense"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/ic_sort_none"
-                            tools:ignore="ContentDescription" />
+                            tools:ignore="ContentDescription" /-->
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingStart="2dp"
                             android:paddingEnd="2dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
                             android:text="@string/table_header_defense"
+                            android:maxLines="1"
+                            android:ellipsize="end" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/header_pvp_great"
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="2dp"
+                            android:paddingEnd="2dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/table_header_pvp_great"
+                            android:maxLines="1"
+                            android:ellipsize="end" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/header_pvp_ultra"
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="2dp"
+                            android:paddingEnd="2dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/table_header_pvp_ultra"
+                            android:maxLines="1"
+                            android:ellipsize="end" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/header_pvp_master"
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="2dp"
+                            android:paddingEnd="2dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/table_header_pvp_master"
                             android:maxLines="1"
                             android:ellipsize="end" />
 

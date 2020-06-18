@@ -26,7 +26,6 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
-import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -106,6 +105,7 @@ public class Pokefly extends Service {
 
     private static final String PREF_USER_CORRECTIONS = "com.kamron.pogoiv.USER_CORRECTIONS";
 
+    private Binder binder;
 
     private static final ScanScreenRunnable scanScreenRunnable = new ScanScreenRunnable();
 
@@ -233,8 +233,13 @@ public class Pokefly extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        // TODO Auto-generated method stub
-        return null;
+        return binder;
+    }
+
+    public class Binder extends android.os.Binder {
+        public Pokefly getService() {
+            return Pokefly.this;
+        }
     }
 
     public ScreenWatcher getScreenWatcher() {
@@ -289,6 +294,8 @@ public class Pokefly extends Service {
 
         sizeDetector1 = new View(this);
         sizeDetector2 = new View(this);
+
+        binder = new Binder();
     }
 
     @Override
@@ -314,6 +321,9 @@ public class Pokefly extends Service {
         } else if (ACTION_START.equals(intent.getAction())) {
             GoIVSettings.reloadPreferences(this);
             trainerLevel = intent.getIntExtra(KEY_TRAINER_LEVEL, Data.MINIMUM_TRAINER_LEVEL);
+
+            Data.trainerLevel = trainerLevel;
+            Data.maximumPokemonCurrentLevel = Data.trainerLevelToMaxPokeLevel(trainerLevel);
 
             setupDisplaySizeInfo();
 

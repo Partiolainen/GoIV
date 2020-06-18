@@ -65,6 +65,12 @@ android {
             storeFile file(keystoreProperties['storeFilePlaystore'])
             storePassword keystoreProperties['storePasswordPlaystore']
         }
+        partConfig {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
     }
 
     /**
@@ -104,6 +110,18 @@ android {
             buildConfigField "boolean", "DISTRIBUTION_PLAYSTORE", "false"
             ext.enableCrashlytics = false
             dimension "default"
+        }
+
+        part {
+            signingConfig signingConfigs.partConfig
+            applicationId "com.swanberg.pogoiv.part"
+            buildConfigField "boolean", "INTERNET_AVAILABLE", "false"
+            buildConfigField "boolean", "DISTRIBUTION_GITHUB", "false"
+            buildConfigField "boolean", "DISTRIBUTION_PLAYSTORE", "false"
+            ext.enableCrashlytics = false
+            dimension "default"
+            versionCode 66
+            versionName '5.4.5.p.10.4.4'
         }
 
         online {
@@ -152,7 +170,7 @@ android {
         abi {
             enable true
             reset()
-            include 'armeabi-v7a'/**, 'arm64-v8a', 'x86', 'x86_64'**/
+            include 'armeabi-v7a'/**, 'x86', 'arm64-v8a', 'x86_64'**/
         }
     }
     sourceSets {
@@ -202,6 +220,7 @@ dependencies {
     implementation 'io.apptik.widget:multislider:1.2'
     implementation 'com.pavelsikun:material-seekbar-preference:2.3.0'
     implementation 'com.android.support:palette-v7:27.1.1'
+    implementation 'org.apache.commons:commons-text:1.6'
     implementation project(':openCVLibrary330')
 
     /**

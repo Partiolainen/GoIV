@@ -8,8 +8,10 @@ import com.google.common.collect.ListMultimap;
 import com.kamron.pogoiv.GoIVSettings;
 import com.kamron.pogoiv.R;
 import com.kamron.pogoiv.clipboardlogic.tokens.HasBeenAppraisedToken;
+import com.kamron.pogoiv.clipboardlogic.tokens.PartIndexToken;
 import com.kamron.pogoiv.clipboardlogic.tokens.PokemonNameToken;
 import com.kamron.pogoiv.clipboardlogic.tokens.SeparatorToken;
+import com.kamron.pogoiv.clipboardlogic.tokens.UniIndexToken;
 import com.kamron.pogoiv.scanlogic.PokeInfoCalculator;
 import com.kamron.pogoiv.scanlogic.ScanResult;
 
@@ -130,6 +132,22 @@ public class ClipboardTokenHandler {
                 saveTo.add(new HasBeenAppraisedToken(true,
                         representation.substring(classLength,classLength+1),
                         representation.substring(classLength+1, classLength+2)));
+                continue;
+            }
+            String partClassName = PartIndexToken.class.getSimpleName();
+            if (representation.contains(partClassName)) {
+                int classLength = partClassName.length();
+                boolean maxEv = representation.contains("max");
+                saveTo.add(new PartIndexToken(maxEv,
+                        representation.substring((maxEv ? 3 : 0) + classLength)));
+                continue;
+            }
+            String uniClassName = UniIndexToken.class.getSimpleName();
+            if (representation.contains(uniClassName)) {
+                int classLength = uniClassName.length();
+                boolean maxEv = representation.contains("max");
+                saveTo.add(new UniIndexToken(maxEv,
+                        representation.substring((maxEv ? 3 : 0) + classLength)));
                 continue;
             }
 

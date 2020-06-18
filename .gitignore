@@ -44,3 +44,4 @@ fabric.properties
 
 # OS files
 .DS_Store
+**/output.json

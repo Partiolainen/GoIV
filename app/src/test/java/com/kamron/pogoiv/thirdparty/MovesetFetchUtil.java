@@ -62,9 +62,11 @@ public class MovesetFetchUtil {
         FileWriter writer = null;
         try {
             writer = new FileWriter(new File
-                    ("app/src/main/assets/movesets/movesets.json"));
+                    ("../app/src/main/assets/movesets/movesets.json"));
             writer.write(toDump.toString(2));
             //System.out.println(toDump.toString(2));
+            writer.flush();
+            writer.close();
         } catch (FileNotFoundException e) {
 
             System.out.println(toDump.toString(2));
@@ -150,7 +152,7 @@ public class MovesetFetchUtil {
             Double defenseScore = defenseScores.get(key);
             //TODO merge with https://fight.pokebattler.com/pokemon and https://fight.pokebattler.com/moves
             retval.add(new MovesetData(key.getQuick(), key.getCharge(), false, false, attackScoreEntry.getValue(),
-                    defenseScore, "UNKNOWN", "UNKNOWN"));
+                    defenseScore,0.0,0.0,0.0, "UNKNOWN", "UNKNOWN"));
         }
         // then add moves that are only good on defense
         for (Map.Entry<MovesetData.Key, Double> defenseScoreEntry : defenseScores.entrySet()) {
@@ -159,7 +161,7 @@ public class MovesetFetchUtil {
                 continue;
             }
             retval.add(new MovesetData(key.getQuick(), key.getCharge(), false, false, null,
-                    defenseScoreEntry.getValue(), "UNKNOWN", "UNKNOWN"));
+                    defenseScoreEntry.getValue(), 0.0,0.0,0.0,"UNKNOWN", "UNKNOWN"));
         }
         return retval;
     }

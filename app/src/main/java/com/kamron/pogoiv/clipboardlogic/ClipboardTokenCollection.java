@@ -20,6 +20,8 @@ import com.kamron.pogoiv.clipboardlogic.tokens.IVPercentageTokenMode;
 import com.kamron.pogoiv.clipboardlogic.tokens.IVSum;
 import com.kamron.pogoiv.clipboardlogic.tokens.LevelToken;
 import com.kamron.pogoiv.clipboardlogic.tokens.LevelUnicodeToken;
+import com.kamron.pogoiv.clipboardlogic.tokens.PartIndexCustomSepToken;
+import com.kamron.pogoiv.clipboardlogic.tokens.PartIndexToken;
 import com.kamron.pogoiv.clipboardlogic.tokens.MixedUnicodeToken;
 import com.kamron.pogoiv.clipboardlogic.tokens.MovesetInitialsToken;
 import com.kamron.pogoiv.clipboardlogic.tokens.PerfectionCPPercentageToken;
@@ -28,6 +30,7 @@ import com.kamron.pogoiv.clipboardlogic.tokens.PokemonGenderToken;
 import com.kamron.pogoiv.clipboardlogic.tokens.PokemonNameToken;
 import com.kamron.pogoiv.clipboardlogic.tokens.PowerupsToMaxToken;
 import com.kamron.pogoiv.clipboardlogic.tokens.SeparatorToken;
+import com.kamron.pogoiv.clipboardlogic.tokens.UniIndexCustomSepToken;
 import com.kamron.pogoiv.clipboardlogic.tokens.UnicodeToken;
 import com.kamron.pogoiv.clipboardlogic.tokens.WorthTrainingToken;
 
@@ -64,7 +67,10 @@ public class ClipboardTokenCollection {
         tokens.add(new LevelToken(false, 2)); //level  representation of pokemon ex: 11.5
 
         tokens.add(new LevelUnicodeToken(false));//level representation ex: ㉒½
-
+        tokens.add(new PartIndexCustomSepToken(true));
+        tokens.add(new PartIndexCustomSepToken(false));
+        tokens.add(new UniIndexCustomSepToken(true));
+        tokens.add(new UniIndexCustomSepToken(false));
         tokens.add(new PowerupsToMaxToken(false));//Powerups left to pokemon level 40
 
         tokens.add(new PokemonGenderToken(false, PokemonGenderToken.Type.SYMBOL)); // Gender symbol

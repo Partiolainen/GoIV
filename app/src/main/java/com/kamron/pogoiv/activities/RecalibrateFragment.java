@@ -29,7 +29,7 @@ import butterknife.ButterKnife;
 public class RecalibrateFragment extends Fragment {
 
     private static final String URL_YOUTUBE_TUTORIAL = "https://www.youtube.com/embed/w7dNEW1FLjQ?rel=0";
-
+    public static final int PICK_IMAGE = 9919;
 
     @BindView(R.id.mainScrollView)
     NestedScrollView mainScrollView;
@@ -49,16 +49,16 @@ public class RecalibrateFragment extends Fragment {
     @BindView(R.id.recalibrationHelpButton)
     Button recalibrationHelpButton;
 
+    @BindView(R.id.recalibrationFromScreenshot)
+    Button recalibrateScreenshotButton;
+
     @BindView(R.id.optimizationVideoTutorialLayout)
     LinearLayout optimizationVideoTutorialLayout;
 
     @BindView(R.id.optimizationVideoTutorial)
     WebView optimizationVideoTutorial;
 
-
-    public RecalibrateFragment() {
-        super();
-    }
+    public RecalibrateFragment() { super(); }
 
     @Override
     @Nullable
@@ -75,13 +75,26 @@ public class RecalibrateFragment extends Fragment {
 
         initiateOptimizationWarning();
         setupTutorialButton();
+        setupCalibrateScreenshotButton();
 
         // Hide
-        if (BuildConfig.FLAVOR.toLowerCase().contains("offline")) {
+        if (BuildConfig.FLAVOR.toLowerCase().contains("offline") || BuildConfig.FLAVOR.toLowerCase().contains("part")) {
             optimizationVideoTutorial.setVisibility(View.GONE);
         }
     }
 
+    private void setupCalibrateScreenshotButton() {
+        View.OnClickListener calibrateScreenshotListener = new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                getActivity().startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
+            }
+        };
+
+        recalibrateScreenshotButton.setOnClickListener(calibrateScreenshotListener);
+    }
 
     /**
      * Show the optimization-warning and its components depending on if the user hasn't a manual screen calibration

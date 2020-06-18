@@ -111,6 +111,9 @@ public class MovesetsManager {
                 case 31: // Nidoran♂
                     upperCaseName = "NIDORAN_MALE";
                     break;
+                case 438: // Mime Jr.
+                    upperCaseName = "MIME_JR";
+                    break;
                 default:
                     upperCaseName = enMonNamesArray[i].trim().toUpperCase();
                     break;
@@ -149,6 +152,11 @@ public class MovesetsManager {
 
             LinkedHashSet<MovesetData> movesetList;
             if (result.indexOfKey(dexIndex) < 0) {
+                if(jsonMovesets==null){
+                    Timber.w("Missing Movesets"
+                            + " for " + monName);
+                    continue;
+                }
                 movesetList = new LinkedHashSet<>(jsonMovesets.size());
             } else {
                 // This might happen for different forms of the same species. Add the movesets to the list of the
@@ -159,6 +167,7 @@ public class MovesetsManager {
             for (LinkedTreeMap<String, Object> jsonMoveset : jsonMovesets) {
                 String fastMove = translatedMoveNames.get(jsonMoveset.get("fast"));
                 String chargeMove = translatedMoveNames.get(jsonMoveset.get("charge"));
+                String chargeMove2 = translatedMoveNames.get(jsonMoveset.get("charge2"));
 
                 if (Strings.isNullOrEmpty(fastMove)) {
                     Timber.w("Missing fast move " + jsonMoveset.get("fast")
@@ -170,19 +179,31 @@ public class MovesetsManager {
                             + " translation in " + getLanguage(context.getResources()));
                     continue;
                 }
+                if (chargeMove2!=null && Strings.isNullOrEmpty(chargeMove2)) {
+                    Timber.w("Missing charge move " + jsonMoveset.get("charge2")
+                            + " translation in " + getLanguage(context.getResources()));
+                    continue;
+                }
 
                 //noinspection SuspiciousMethodCalls
                 MovesetData movesetData = new MovesetData(
                         (String) jsonMoveset.get("fast"),
                         (String) jsonMoveset.get("charge"),
+                        (String) jsonMoveset.get("charge2"),
                         fastMove,
                         chargeMove,
+                        chargeMove2,
                         translatedTypeNames.get("POKEMON_TYPE_" + jsonMoveset.get("fastMoveType")),
                         translatedTypeNames.get("POKEMON_TYPE_" + jsonMoveset.get("chargeMoveType")),
+                        translatedTypeNames.get("POKEMON_TYPE_" + jsonMoveset.get("chargeMoveType2")),
                         (Boolean) jsonMoveset.get("fastIsLegacy"),
                         (Boolean) jsonMoveset.get("chargeIsLegacy"),
+                        (Boolean) jsonMoveset.get("charge2IsLegacy"),
                         (Double) jsonMoveset.get("atkScore"),
-                        (Double) jsonMoveset.get("defScore"));
+                        (Double) jsonMoveset.get("defScore"),
+                        (Double) jsonMoveset.get("pvpGreatScore"),
+                        (Double) jsonMoveset.get("pvpUltraScore"),
+                        (Double) jsonMoveset.get("pvpMasterScore"));
                 movesetList.add(movesetData);
             }
 

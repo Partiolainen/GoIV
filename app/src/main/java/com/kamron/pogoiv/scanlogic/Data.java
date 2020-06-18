@@ -43,6 +43,9 @@ public class Data {
     public static int[] arcX;
     public static int[] arcY;
 
+    public static int trainerLevel;
+    public static double maximumPokemonCurrentLevel=10;
+
     /**
      * setupArcPoints
      * Sets up the x,y coordinates of the arc using the trainer level, stores it in Data.arcX/arcY

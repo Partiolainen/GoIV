@@ -127,8 +127,10 @@ public class GoIVNotificationManager {
         contentBigView.setOnClickPendingIntent(R.id.recalibrate, recalibrateScreenScanningPendingIntent);
 
         // Stop service action
-        Intent stopServiceIntent = Pokefly.createStopIntent(pokefly);
-        PendingIntent stopServicePendingIntent = PendingIntent.getService(
+        // Was connected to pokefly service directly
+        Intent stopServiceIntent = new Intent(pokefly, MainActivity.class)
+                .setAction(MainActivity.ACTION_STOP_POKEFLY);
+        PendingIntent stopServicePendingIntent = PendingIntent.getActivity(
                 pokefly, 0, stopServiceIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         contentView.setOnClickPendingIntent(R.id.pause, stopServicePendingIntent);
         contentBigView.setOnClickPendingIntent(R.id.pause, stopServicePendingIntent);
