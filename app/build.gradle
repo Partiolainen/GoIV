@@ -88,6 +88,7 @@ android {
     defaultConfig {
         minSdkVersion 19 /*Dont change this unless you know why*/
         targetSdkVersion 28 /*Dont change this unless you know why*/
+        multiDexEnabled true
         versionCode 66
         versionName "5.4.5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -221,6 +222,8 @@ dependencies {
     implementation 'com.pavelsikun:material-seekbar-preference:2.3.0'
     implementation 'com.android.support:palette-v7:27.1.1'
     implementation 'org.apache.commons:commons-text:1.6'
+    implementation 'com.squareup.okhttp3:okhttp:3.7.0'
+    implementation 'com.github.kittinunf.fuel:fuel-android:2.3.0'
     implementation project(':openCVLibrary330')
 
     /**
