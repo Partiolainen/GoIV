@@ -712,7 +712,7 @@
         "SCRAFTY": "Scrafty",
         "SIGILYPH": "Sigilyph",
         "YAMASK": "Yamask",
-        "COFAGRIGUS": "Cofagrius",
+        "COFAGRIGUS": "Cofagrigus",
         "TIRTOUGA": "Tirtouga",
         "CARRACOSTA": "Carracosta",
         "ARCHEN": "Archen",
@@ -743,7 +743,7 @@
         "AMOONGUSS": "Amoonguss",
         "FRILLISH": "Frillish",
         "JELLICENT": "Jellicent",
-        "ALOMOMOLA": "Alomomla",
+        "ALOMOMOLA": "Alomomola",
         "JOLTIK": "Joltik",
         "GALVANTULA": "Galvantula",
         "FERROSEED": "Ferroseed",
@@ -816,6 +816,7 @@
         "KELDEO_RESOLUTE_FORM": "Resolute Keldeo",
         "MELOETTA_ARIA_FORM": "Aria Meloetta",
         "MELOETTA_PIROUETTE_FORM": "Pirouette Meloetta",
+        "DIANCIE": "Diancie",
 
       
         "MELTAN": "Meltan",
@@ -823,6 +824,7 @@
         "OBSTAGOON": "Obstagoon",
         "PERRSERKER": "Perrserker",
         "SIRFETCHD": "SirFetchd",
+        "RUNERIGUS": "Runerigus",
 
 
         "BURMY_PLANT_FORM": "Burmy - Plant",
@@ -832,6 +834,10 @@
         "MEWTWO_A_INTRO_FORM": "Armored Mewtwo (Intro)",
         "MEWTWO_NORMAL_FORM": "Mewtwo - Normal",
 
+        "MEGA_EVO": "Mega",
+        "MEGA_X_EVO": "X",
+        "MEGA_Y_EVO": "Y",
+
         "NORMAL_FORM": "Normal",
         "SHADOW_FORM": "Shadow",
         "PURIFIED_FORM": "Purified",
@@ -839,6 +845,57 @@
         "FALL_FORM": "Fall",
         "2020_FORM": "2020",
         "FEMALE_FORM": "Female",
+        "2020_COSTUME_FORM": "2020 Event",
+        "SPRING_FORM": "Spring",
+        "VENUSAUR_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.VENUSAUR)",
+        "CHARIZARD_MEGA_X":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.CHARIZARD) $t(constants:pokemon.MEGA_X_EVO)",
+        "CHARIZARD_MEGA_Y":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.CHARIZARD) $t(constants:pokemon.MEGA_Y_EVO)",
+        "BLASTOISE_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.BLASTOISE)",
+        "BEEDRILL_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.BEEDRILL)",
+        "PIDGEOT_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.PIDGEOT)",
+        "ALAKAZAM_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.ALAKAZAM)",
+        "SLOWBRO_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.SLOWBRO)",
+        "GENGAR_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.GENGAR)",
+        "KANGASKHAN_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.KANGASKHAN)",
+        "PINSIR_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.PINSIR)",
+        "GYARADOS_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.GYARADOS)",
+        "AERODACTYL_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.AERODACTYL)",
+        "MEWTWO_MEGA_X":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.MEWTWO) $t(constants:pokemon.MEGA_X_EVO)",
+        "MEWTWO_MEGA_Y":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.MEWTWO) $t(constants:pokemon.MEGA_Y_EVO)",
+        "AMPHAROS_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.AMPHAROS)",
+        "STEELIX_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.STEELIX)",
+        "SCIZOR_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.SCIZOR)",
+        "HERACROSS_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.HERACROSS)",
+        "HOUNDOOM_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.HOUNDOOM)",
+        "TYRANITAR_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.TYRANITAR)",
+        "SCEPTILE_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.SCEPTILE)",
+        "BLAZIKEN_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.BLAZIKEN)",
+        "SWAMPERT_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.SWAMPERT)",
+        "GARDEVOIR_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.GARDEVOIR)",
+        "SABLEYE_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.SABLEYE)",
+        "MAWILE_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.MAWILE)",
+        "AGGRON_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.AGGRON)",
+        "MEDICHAM_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.MEDICHAM)",
+        "MANECTRIC_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.MANECTRIC)",
+        "SHARPEDO_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.SHARPEDO)",
+        "CAMERUPT_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.CAMERUPT)",
+        "ALTARIA_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.ALTARIA)",
+        "BANETTE_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.BANETTE)",
+        "ABSOL_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.ABSOL)",
+        "GLALIE_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.GLALIE)",
+        "SALAMENCE_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.SALAMENCE)",
+        "METAGROSS_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.METAGROSS)",
+        "LATIAS_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.LATIAS)",
+        "LATIOS_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.LATIOS)",
+        "RAYQUAZA_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.RAYQUAZA)",
+        "LOPUNNY_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.LOPUNNY)",
+        "GARCHOMP_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.GARCHOMP)",
+        "LUCARIO_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.LUCARIO)",
+        "ABOMASNOW_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.ABOMASNOW)",
+        "GALLADE_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.GALLADE)",
+        "AUDINO_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.AUDINO)",
+        "DIANCIE_MEGA":  "$t(constants:pokemon.MEGA_EVO) $t(constants:pokemon.DIANCIE)",
+
         "RATTATA_SHADOW_FORM": "$t(constants:pokemon.SHADOW_FORM) $t(constants:pokemon.RATTATA)",
         "RATTATA_PURIFIED_FORM": "$t(constants:pokemon.PURIFIED_FORM) $t(constants:pokemon.RATTATA)",
         "RATICATE_SHADOW_FORM": "$t(constants:pokemon.SHADOW_FORM) $t(constants:pokemon.RATICATE)",
@@ -1189,9 +1246,12 @@
         "ZAPDOS_NORMAL_FORM": "$t(constants:pokemon.NORMAL_FORM) $t(constants:pokemon.ZAPDOS)",
         "ZAPDOS_SHADOW_FORM": "$t(constants:pokemon.SHADOW_FORM) $t(constants:pokemon.ZAPDOS)",
         "ZAPDOS_PURIFIED_FORM": "$t(constants:pokemon.PURIFIED_FORM) $t(constants:pokemon.ZAPDOS)",
-        "NIDORAN_NORMAL_FORM": "$t(constants:pokemon.NORMAL_FORM) $t(constants:pokemon.NIDORAN)",
-        "NIDORAN_SHADOW_FORM": "$t(constants:pokemon.SHADOW_FORM) $t(constants:pokemon.NIDORAN)",
-        "NIDORAN_PURIFIED_FORM": "$t(constants:pokemon.PURIFIED_FORM) $t(constants:pokemon.NIDORAN)",
+        "NIDORAN_SHADOW_FORM": "$t(constants:pokemon.SHADOW_FORM) $t(constants:pokemon.NIDORAN_FEMALE)",
+        "NIDORAN_PURIFIED_FORM": "$t(constants:pokemon.PURIFIED_FORM) $t(constants:pokemon.NIDORAN_FEMALE)",
+        "NIDORAN_FEMALE_SHADOW_FORM": "$t(constants:pokemon.SHADOW_FORM) $t(constants:pokemon.NIDORAN_FEMALE)",
+        "NIDORAN_FEMALE_PURIFIED_FORM": "$t(constants:pokemon.PURIFIED_FORM) $t(constants:pokemon.NIDORAN_FEMALE)",
+        "NIDORAN_MALE_SHADOW_FORM": "$t(constants:pokemon.SHADOW_FORM) $t(constants:pokemon.NIDORAN_MALE)",
+        "NIDORAN_MALE_PURIFIED_FORM": "$t(constants:pokemon.PURIFIED_FORM) $t(constants:pokemon.NIDORAN_MALE)",
         "NIDORINA_NORMAL_FORM": "$t(constants:pokemon.NORMAL_FORM) $t(constants:pokemon.NIDORINA)",
         "NIDORINA_SHADOW_FORM": "$t(constants:pokemon.SHADOW_FORM) $t(constants:pokemon.NIDORINA)",
         "NIDORINA_PURIFIED_FORM": "$t(constants:pokemon.PURIFIED_FORM) $t(constants:pokemon.NIDORINA)",
@@ -2293,17 +2353,38 @@
         "FRILLISH_FEMALE_FORM": "$t(constants:pokemon.FEMALE_FORM) $t(constants:pokemon.FRILLISH)",
         "JELLICENT_FEMALE_FORM": "$t(constants:pokemon.FEMALE_FORM) $t(constants:pokemon.JELLICENT)",
         "MEOWTH_GALARIAN_FORM": "$t(constants:pokemon.GALARIAN_FORM) $t(constants:pokemon.MEOWTH)",
+        "PONYTA_GALARIAN_FORM": "$t(constants:pokemon.GALARIAN_FORM) $t(constants:pokemon.PONYTA)",
+        "RAPIDASH_GALARIAN_FORM": "$t(constants:pokemon.GALARIAN_FORM) $t(constants:pokemon.RAPIDASH)",
         "FARFETCHD_GALARIAN_FORM": "$t(constants:pokemon.GALARIAN_FORM) $t(constants:pokemon.FARFETCHD)",
+        "MR_MIME_GALARIAN_FORM": "$t(constants:pokemon.GALARIAN_FORM) $t(constants:pokemon.MR_MIME)",
+        "CORSOLA_GALARIAN_FORM": "$t(constants:pokemon.GALARIAN_FORM) $t(constants:pokemon.CORSOLA)",
         "DARUMAKA_GALARIAN_FORM": "$t(constants:pokemon.GALARIAN_FORM) $t(constants:pokemon.DARUMAKA)",
         "DARMANITAN_GALARIAN_STANDARD_FORM": "$t(constants:pokemon.GALARIAN_FORM) $t(constants:pokemon.DARMANITAN)",
         "DARMANITAN_GALARIAN_ZEN_FORM": "$t(constants:pokemon.GALARIAN_FORM) $t(constants:pokemon.DARMANITAN_ZEN_FORM)",
+        "YAMASK_GALARIAN_FORM": "$t(constants:pokemon.GALARIAN_FORM) $t(constants:pokemon.YAMASK)",
         "STUNFISK_GALARIAN_FORM": "$t(constants:pokemon.GALARIAN_FORM) $t(constants:pokemon.STUNFISK)",
-        "OBSTAGOON_SHADOW_FORM": "$t(constants:pokemon.SHADOW_FORM) $t(constants:pokemon.WEEZING)",
-        "OBSTAGOON_PURIFIED_FORM": "$t(constants:pokemon.PURIFIED_FORM) $t(constants:pokemon.WEEZING)",
-        "PERRSERKER_SHADOW_FORM": "$t(constants:pokemon.SHADOW_FORM) $t(constants:pokemon.WEEZING)",
-        "PERRSERKER_PURIFIED_FORM": "$t(constants:pokemon.PURIFIED_FORM) $t(constants:pokemon.WEEZING)",
-        "SIRFETCHD_SHADOW_FORM": "$t(constants:pokemon.SHADOW_FORM) $t(constants:pokemon.WEEZING)",
-        "SIRFETCHD_PURIFIED_FORM": "$t(constants:pokemon.PURIFIED_FORM) $t(constants:pokemon.WEEZING)"
+        "OBSTAGOON_SHADOW_FORM": "$t(constants:pokemon.SHADOW_FORM) $t(constants:pokemon.OBSTAGOON)",
+        "OBSTAGOON_PURIFIED_FORM": "$t(constants:pokemon.PURIFIED_FORM) $t(constants:pokemon.OBSTAGOON)",
+        "PERRSERKER_SHADOW_FORM": "$t(constants:pokemon.SHADOW_FORM) $t(constants:pokemon.PERRSERKER)",
+        "PERRSERKER_PURIFIED_FORM": "$t(constants:pokemon.PURIFIED_FORM) $t(constants:pokemon.PERRSERKER)",
+        "RUNERIGUS_SHADOW_FORM": "$t(constants:pokemon.SHADOW_FORM) $t(constants:pokemon.RUNERIGUS)",
+        "RUNERIGUS_PURIFIED_FORM": "$t(constants:pokemon.PURIFIED_FORM) $t(constants:pokemon.RUNERIGUS)",
+        "SIRFETCHD_SHADOW_FORM": "$t(constants:pokemon.SHADOW_FORM) $t(constants:pokemon.SIRFETCHD)",
+        "SIRFETCHD_PURIFIED_FORM": "$t(constants:pokemon.PURIFIED_FORM) $t(constants:pokemon.SIRFETCHD)",
+
+        "PIKACHU_COSTUME_2020_FORM": "Flying Pikachu",
+        "DRAGONITE_COSTUME_2020_FORM": "$t(constants:pokemon.2020_COSTUME_FORM) $t(constants:pokemon.DRAGONITE)",
+        "ONIX_COSTUME_2020_FORM": "$t(constants:pokemon.2020_COSTUME_FORM) $t(constants:pokemon.ONIX)",
+        "NOEVOLVE_FORM": "No Evolve",
+        "MISSINGNO": "MissingNo",
+        "RATICATE_SPRING": "$t(constants:pokemon.SPRING_FORM) $t(constants:pokemon.RATICATE)",
+        "WOBBUFFET_SPRING": "$t(constants:pokemon.SPRING_FORM) $t(constants:pokemon.WOBBUFFET)",
+        "WURMPLE_SPRING": "$t(constants:pokemon.SPRING_FORM) $t(constants:pokemon.WURMPLE)",
+        "SLOWPOKE_GALARIAN_FORM":  "$t(constants:pokemon.GALARIAN_FORM) $t(constants:pokemon.SLOWPOKE)",
+        "SLOWBRO_GALARIAN_FORM":  "$t(constants:pokemon.GALARIAN_FORM) $t(constants:pokemon.SLOWBRO)",
+        "LAPRAS_COSTUME_2020_FORM":  "$t(constants:pokemon.2020_COSTUME_FORM) $t(constants:pokemon.LAPRAS)",
+        "GENGAR_COSTUME_2020_FORM ":  "$t(constants:pokemon.2020_COSTUME_FORM) $t(constants:pokemon.GENGAR)",
+        "SABLEYE_COSTUME_2020_FORM ":  "$t(constants:pokemon.2020_COSTUME_FORM) $t(constants:pokemon.SABLEYE)"
     },
     "moves": {
         "undefined": "Undefined",
@@ -2477,7 +2558,7 @@
         "THUNDER_SHOCK_FAST": "Thunder Shock",
         "TRANSFORM_FAST": "Transform",
         "TWISTER": "Twister",
-        "VISE_GRIP": "Vise Grip",
+        "VICE_GRIP": "Vise Grip",
         "VINE_WHIP_FAST": "Vine Whip",
         "VOLT_SWITCH_FAST": "Volt Switch",
         "WATERFALL_FAST": "Waterfall",
@@ -2562,7 +2643,18 @@
         "FLYING_PRESS": "Flying Press",
         "AURA_SPHERE": "Aura Sphere",
         "PAYBACK": "Payback",
-        "ROCK_WRECKER": "Rock Wrecker"
+        "ROCK_WRECKER": "Rock Wrecker",
+        "AEROBLAST": "Aeroblast",
+        "TECHNO_BLAST_NORMAL": "Techno Blast",
+        "TECHNO_BLAST_BURN": "Techno Blast Burn",
+        "TECHNO_BLAST_CHILL":"Techno Blast Chill",
+        "TECHNO_BLAST_WATER":"Techno Blast Water",
+        "TECHNO_BLAST_SHOCK":"Techno Blast Shock",
+        "FLY": "Fly",
+        "V_CREATE": "V Create",
+        "LEAF_STORM": "Leaf Storm",
+        "TRI_ATTACK": "Tri Attack",
+        "GUST_FAST": "Gust"
     },
     "types": {
         "POKEMON_TYPE_ALL": "All",
@@ -2711,7 +2803,7 @@
                 "label": "Dual Charge Moves - Current 3",
                 "description": "All Pokemon use the best charge move combinations. Up to 3 currently available movesets are considered"
             },
-            "SINGLE_MOVE_3": {
+            "CURRENT_SINGLE_MOVE_3": {
                 "label": "Single Charge Move - Current 3 ",
                 "description": "All Pokemon use the best charge moves without learning a second move. Up to 3 currently available movesets are considered"
             },
@@ -3016,9 +3108,22 @@
             "label": "Master League",
             "description": "3 Pokemon with no limits."
         },
+        "COMBAT_LEAGUE_VS_SEEKER_GREAT_FLYING": {
+            "label": "Flying Cup",
+            "description": "3 Flying Pokemon with a maximum CP of 1500."
+        },
+        "COMBAT_LEAGUE_VS_SEEKER_GREAT_HALLOWEEN": {
+            "label": "Halloween Cup",
+            "description": "3 Pokemon of Poison, Bug, Ghost, Dark or Fairy types with a maximum CP of 1500."
+        },
+
         "COMBAT_LEAGUE_PREMIER_CUP": {
             "label": "Premier Cup",
             "description": "3 non-legendary, non-mythical Pokemon."
+        },
+        "COMBAT_LEAGUE_ULTRA_PREMIER_CUP": {
+            "label": "Ultra Premier Cup",
+            "description": "3 non-legendary, non-mythical Pokemon with a maximum CP of 2500."
         },
         "COMBAT_LEAGUE_SILPH_CUP": {
             "label": "Silph Arena Cup",
@@ -3124,8 +3229,19 @@
         "COMBAT_LEAGUE_SILPH_SORCEROUS_CUP": {
             "label": "Silph Arena Sorcerous Cup",
             "description": "The June Silph Arena Season 2 Cup tournament."
+        },
+        "COMBAT_LEAGUE_SILPH_CATACOMB_CUP": {
+            "label": "Silph Arena Catacomb Cup",
+            "description": "The July Silph Arena Season 2 Cup tournament."
+        },
+        "COMBAT_LEAGUE_SILPH_SUNRISE_CUP": {
+            "label": "Silph Arena Sunrise Cup",
+            "description": "The October Silph Arena Season 3 Cup tournament."
+        },
+        "COMBAT_LEAGUE_SILPH_MARSH_CUP": {
+            "label": "Silph Arena Marsh Cup",
+            "description": "The November Silph Arena Season 3 Cup tournament."
         }
-
     },
     "levelVs": "Level {{attackerLevel}} Attacker Vs. Level {{defenderLevel}} Defender",
     "levelVsPokebox": "Level {{attackerLevel}} Attacker Vs. Pokebox {{userId}} Defenders",
